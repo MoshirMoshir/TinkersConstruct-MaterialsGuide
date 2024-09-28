@@ -7,16 +7,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: '/TinkersConstruct-MaterialsGuide/', // GitHub Pages repository name
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
       '@assets': path.resolve(__dirname, 'src/assets'),
       '@components': path.resolve(__dirname, 'src/components'),
-      '@pages': path.resolve(__dirname, 'src/pages')
+      '@pages': path.resolve(__dirname, 'src/pages'),
     },
   },
   build: {
     outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
   },
 });
