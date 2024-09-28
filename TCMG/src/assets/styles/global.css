@@ -1,0 +1,36 @@
+:root {
+    --background-color: #2C2F33;
+    --primary-color: #7289DA;
+    --secondary-color: #99AAB5;
+    --text-color: #FFFFFF;
+    --text-secondary-color: #B9BBBE;
+    --card-background-color: #23272A;
+    --card-border-color: #99AAB5;
+    --hover-background-color: #7289DA;
+    --hover-text-color: #FFFFFF;
+    --active-tab-background-color: #7289DA;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
