@@ -1196,8 +1196,34 @@
         }
     },
     {
-        "name": "Dragonsteel",
-        "image": "/assets/materials/dragonsteel.png",
+        "name": "Ice Dragonsteel",
+        "image": "/assets/materials/ice_dragonsteel.png",
+        "head": {
+            "durability": 1500,
+            "miningLevel": "TBD",
+            "miningSpeed": 7.0,
+            "attack": 17.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.4,
+            "durability": 400,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 510,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Fire Dragonsteel",
+        "image": "/assets/materials/fire_dragonsteel.png",
         "head": {
             "durability": 1500,
             "miningLevel": "TBD",
@@ -1248,8 +1274,8 @@
         }
     },
     {
-        "name": "Knightly",
-        "image": "/assets/materials/knightly.png",
+        "name": "Knightmetal",
+        "image": "/assets/materials/knightmetal.png",
         "head": {
             "durability": 900,
             "miningLevel": "Cobalt",
@@ -1586,8 +1612,8 @@
         }
     },
     {
-        "name": "Enchanted Metal",
-        "image": "/assets/materials/enchanted_metal.png",
+        "name": "Enchanted Ingot",
+        "image": "/assets/materials/enchanted_ingot.png",
         "head": {
             "durability": 350,
             "miningLevel": "Cobalt",
@@ -2652,8 +2678,8 @@
         }
     },
     {
-        "name": "Slime (Green)",
-        "image": "/assets/materials/slime_(green).png",
+        "name": "Slime",
+        "image": "/assets/materials/slimecrystal_green.png",
         "head": {
             "durability": 1000,
             "miningLevel": "Stone",
@@ -2678,8 +2704,8 @@
         }
     },
     {
-        "name": "Slime (Blue)",
-        "image": "/assets/materials/slime_(blue).png",
+        "name": "Blue Slime",
+        "image": "/assets/materials/slimecrystal_blue.png",
         "head": {
             "durability": 780,
             "miningLevel": "Stone",
@@ -2730,8 +2756,34 @@
         }
     },
     {
-        "name": "Myrmex Chitin",
-        "image": "/assets/materials/myrmex_chitin.png",
+        "name": "Desert Myrmex Chitin",
+        "image": "/assets/materials/desert_myrmex_chitin.png",
+        "head": {
+            "durability": 400,
+            "miningLevel": "TBD",
+            "miningSpeed": 4.0,
+            "attack": 5.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.7,
+            "durability": 300,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Jungle Myrmex Chitin",
+        "image": "/assets/materials/jungle_myrmex_chitin.png",
         "head": {
             "durability": 400,
             "miningLevel": "TBD",
@@ -2912,8 +2964,8 @@
         }
     },
     {
-        "name": "End (Stone)",
-        "image": "/assets/materials/end_(stone).png",
+        "name": "End Stone",
+        "image": "/assets/materials/end_stone.png",
         "head": {
             "durability": 420,
             "miningLevel": "Obsidian",
@@ -3043,7 +3095,7 @@
     },
     {
         "name": "Dragon Bone",
-        "image": "/assets/materials/dragon_bone.png",
+        "image": "/assets/materials/dragonbone.png",
         "head": {
             "durability": 300,
             "miningLevel": "Iron",
@@ -3121,7 +3173,7 @@
     },
     {
         "name": "Magma Slime",
-        "image": "/assets/materials/magma_slime.png",
+        "image": "/assets/materials/slimecrystal_magma.png",
         "head": {
             "durability": 600,
             "miningLevel": "Stone",
@@ -3244,32 +3296,6 @@
         },
         "extra": {
             "durability": 20,
-            "modifiers": [
-                "TBD"
-            ]
-        }
-    },
-    {
-        "name": "Fake Iron (Iron Alloy)",
-        "image": "/assets/materials/fake_iron_(iron_alloy).png",
-        "head": {
-            "durability": 50,
-            "miningLevel": "TBD",
-            "miningSpeed": 1.25,
-            "attack": 1.0,
-            "modifiers": [
-                "TBD"
-            ]
-        },
-        "handle": {
-            "modifier": 1.0,
-            "durability": 0,
-            "modifiers": [
-                "TBD"
-            ]
-        },
-        "extra": {
-            "durability": 0,
             "modifiers": [
                 "TBD"
             ]
