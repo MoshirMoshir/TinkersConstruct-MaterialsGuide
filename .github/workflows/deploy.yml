@@ -20,14 +20,14 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
-      working-directory: ./TCGM  # Adjust this to the correct directory
+      working-directory: ./TCMG  # Adjust this to the correct directory
 
     - name: Build Project
       run: npm run build
-      working-directory: ./TCGM  # Adjust this to the correct directory
+      working-directory: ./TCMG  # Adjust this to the correct directory
 
     - name: Deploy to GitHub Pages
       run: npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This is automatically provided by GitHub
-        publish_dir: ./TCGM/dist  # Adjust this to the correct directory
+        publish_dir: ./TCMG/dist  # Adjust this to the correct directory
