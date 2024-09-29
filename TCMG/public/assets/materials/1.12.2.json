@@ -1,0 +1,3382 @@
+[
+    {
+        "name": "Supremium",
+        "image": "/assets/materials/supremium.png",
+        "head": {
+            "durability": 5520,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 22.25,
+            "attack": 15.03,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.35,
+            "durability": 200,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 300,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Infinity",
+        "image": "/assets/materials/infinity.png",
+        "head": {
+            "durability": 7000,
+            "miningLevel": "10",
+            "miningSpeed": 18.0,
+            "attack": 40.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 2.0,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 1400,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Superium",
+        "image": "/assets/materials/superium.png",
+        "head": {
+            "durability": 2760,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 16.53,
+            "attack": 11.62,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.12,
+            "durability": 165,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 225,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Aethium",
+        "image": "/assets/materials/aethium.png",
+        "head": {
+            "durability": 2200,
+            "miningLevel": "TBD",
+            "miningSpeed": 14.2,
+            "attack": 13.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 227,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Dreadium",
+        "image": "/assets/materials/dreadium.png",
+        "head": {
+            "durability": 1150,
+            "miningLevel": "Manyullyn",
+            "miningSpeed": 14.0,
+            "attack": 8.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Evil Infused Iron",
+        "image": "/assets/materials/evil_infused_iron.png",
+        "head": {
+            "durability": 666,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 13.0,
+            "attack": 13.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 66,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Ionite",
+        "image": "/assets/materials/ionite.png",
+        "head": {
+            "durability": 1900,
+            "miningLevel": "TBD",
+            "miningSpeed": 12.9,
+            "attack": 12.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 227,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Chaotic",
+        "image": "/assets/materials/chaotic.png",
+        "head": {
+            "durability": 10000,
+            "miningLevel": "12",
+            "miningSpeed": 12.0,
+            "attack": 48.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 2.3,
+            "durability": 700,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 800,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Cubic Boron Nitride",
+        "image": "/assets/materials/cubic_boron_nitride.png",
+        "head": {
+            "durability": 1542,
+            "miningLevel": "TBD",
+            "miningSpeed": 12.0,
+            "attack": 5.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.75,
+            "durability": 192,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 160,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Refined Coralium",
+        "image": "/assets/materials/refined_coralium.png",
+        "head": {
+            "durability": 900,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 12.0,
+            "attack": 7.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Cobalt",
+        "image": "/assets/materials/cobalt.png",
+        "head": {
+            "durability": 780,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 12.0,
+            "attack": 4.1,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 300,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Electrum",
+        "image": "/assets/materials/electrum.png",
+        "head": {
+            "durability": 50,
+            "miningLevel": "Iron",
+            "miningSpeed": 12.0,
+            "attack": 3.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": -25,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Pladium",
+        "image": "/assets/materials/pladium.png",
+        "head": {
+            "durability": 1600,
+            "miningLevel": "TBD",
+            "miningSpeed": 11.6,
+            "attack": 10.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 198,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Intermedium",
+        "image": "/assets/materials/intermedium.png",
+        "head": {
+            "durability": 1380,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 11.08,
+            "attack": 9.23,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.97,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Hard Carbon Alloy",
+        "image": "/assets/materials/hard_carbon_alloy.png",
+        "head": {
+            "durability": 996,
+            "miningLevel": "TBD",
+            "miningSpeed": 11.0,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 311,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 46,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Magnesium",
+        "image": "/assets/materials/magnesium.png",
+        "head": {
+            "durability": 157,
+            "miningLevel": "TBD",
+            "miningSpeed": 11.0,
+            "attack": 3.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 49,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 7,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Kryonite",
+        "image": "/assets/materials/kryonite.png",
+        "head": {
+            "durability": 1300,
+            "miningLevel": "TBD",
+            "miningSpeed": 10.3,
+            "attack": 9.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 169,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Tough Alloy",
+        "image": "/assets/materials/tough_alloy.png",
+        "head": {
+            "durability": 743,
+            "miningLevel": "TBD",
+            "miningSpeed": 10.0,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 232,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 31,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Abyssalnite",
+        "image": "/assets/materials/abyssalnite.png",
+        "head": {
+            "durability": 630,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 10.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Awakened",
+        "image": "/assets/materials/awakened.png",
+        "head": {
+            "durability": 5000,
+            "miningLevel": "10",
+            "miningSpeed": 9.0,
+            "attack": 35.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.8,
+            "durability": 500,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 500,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Mirion",
+        "image": "/assets/materials/mirion.png",
+        "head": {
+            "durability": 1919,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 9.0,
+            "attack": 9.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 40,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 90,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Terrasteel",
+        "image": "/assets/materials/terrasteel.png",
+        "head": {
+            "durability": 1562,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 9.0,
+            "attack": 6.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.4,
+            "durability": 10,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 10,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Erodium",
+        "image": "/assets/materials/erodium.png",
+        "head": {
+            "durability": 1000,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 9.0,
+            "attack": 7.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 140,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Refined Glowstone",
+        "image": "/assets/materials/refined_glowstone.png",
+        "head": {
+            "durability": 450,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 9.0,
+            "attack": 10.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Thorium",
+        "image": "/assets/materials/thorium.png",
+        "head": {
+            "durability": 180,
+            "miningLevel": "TBD",
+            "miningSpeed": 9.0,
+            "attack": 4.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.75,
+            "durability": 56,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 11,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Naga Scale",
+        "image": "/assets/materials/naga_scale.png",
+        "head": {
+            "durability": 460,
+            "miningLevel": "Iron",
+            "miningSpeed": 8.9,
+            "attack": 4.3,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Restonia",
+        "image": "/assets/materials/restonia.png",
+        "head": {
+            "durability": 640,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 8.8,
+            "attack": 6.1,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 90,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "End Steel",
+        "image": "/assets/materials/end_steel.png",
+        "head": {
+            "durability": 400,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 8.25,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Prudentium",
+        "image": "/assets/materials/prudentium.png",
+        "head": {
+            "durability": 690,
+            "miningLevel": "Diamond",
+            "miningSpeed": 8.01,
+            "attack": 6.62,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.78,
+            "durability": 75,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Wyvern",
+        "image": "/assets/materials/wyvern.png",
+        "head": {
+            "durability": 2000,
+            "miningLevel": "8",
+            "miningSpeed": 8.0,
+            "attack": 15.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.6,
+            "durability": 130,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 240,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Diamatine",
+        "image": "/assets/materials/diamatine.png",
+        "head": {
+            "durability": 1700,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 8.0,
+            "attack": 6.3,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.2,
+            "durability": 10,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 88,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Emeradic",
+        "image": "/assets/materials/emeradic.png",
+        "head": {
+            "durability": 1400,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 8.0,
+            "attack": 7.7,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 77,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Platinum",
+        "image": "/assets/materials/platinum.png",
+        "head": {
+            "durability": 720,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 8.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.05,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Boron",
+        "image": "/assets/materials/boron.png",
+        "head": {
+            "durability": 437,
+            "miningLevel": "TBD",
+            "miningSpeed": 8.0,
+            "attack": 4.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.85,
+            "durability": 136,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 24,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Litherite",
+        "image": "/assets/materials/litherite.png",
+        "head": {
+            "durability": 700,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.7,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 111,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Osgloglas",
+        "image": "/assets/materials/osgloglas.png",
+        "head": {
+            "durability": 2800,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.5,
+            "attack": 11.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.5,
+            "durability": -50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Reinforced Pink Slime",
+        "image": "/assets/materials/reinforced_pink_slime.png",
+        "head": {
+            "durability": 2800,
+            "miningLevel": "TBD",
+            "miningSpeed": 7.5,
+            "attack": 5.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 3.2,
+            "durability": 2350,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 270,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Enderium",
+        "image": "/assets/materials/enderium.png",
+        "head": {
+            "durability": 800,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.5,
+            "attack": 7.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.05,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 65,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Palis",
+        "image": "/assets/materials/palis.png",
+        "head": {
+            "durability": 800,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.5,
+            "attack": 5.8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": 7,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Signalum",
+        "image": "/assets/materials/signalum.png",
+        "head": {
+            "durability": 690,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.5,
+            "attack": 5.2,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.2,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 55,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Uranium",
+        "image": "/assets/materials/uranium.png",
+        "head": {
+            "durability": 193,
+            "miningLevel": "TBD",
+            "miningSpeed": 7.5,
+            "attack": 4.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.8,
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 11,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Fiery",
+        "image": "/assets/materials/fiery.png",
+        "head": {
+            "durability": 720,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.2,
+            "attack": 6.6,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.7,
+            "durability": 400,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 200,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Obsidian",
+        "image": "/assets/materials/obsidian.png",
+        "head": {
+            "durability": 139,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.07,
+            "attack": 4.2,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 90,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Manyullyn",
+        "image": "/assets/materials/manyullyn.png",
+        "head": {
+            "durability": 820,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.02,
+            "attack": 8.72,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Inferium",
+        "image": "/assets/materials/inferium.png",
+        "head": {
+            "durability": 345,
+            "miningLevel": "Diamond",
+            "miningSpeed": 7.02,
+            "attack": 4.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.63,
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 75,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Refined Obsidian",
+        "image": "/assets/materials/refined_obsidian.png",
+        "head": {
+            "durability": 2500,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.0,
+            "attack": 11.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.5,
+            "durability": -100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 160,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Dragonsteel",
+        "image": "/assets/materials/dragonsteel.png",
+        "head": {
+            "durability": 1500,
+            "miningLevel": "TBD",
+            "miningSpeed": 7.0,
+            "attack": 17.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.4,
+            "durability": 400,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 510,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Emerald",
+        "image": "/assets/materials/emerald.png",
+        "head": {
+            "durability": 1222,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.0,
+            "attack": 7.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 70,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Knightly",
+        "image": "/assets/materials/knightly.png",
+        "head": {
+            "durability": 900,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.25,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 400,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Lumium",
+        "image": "/assets/materials/lumium.png",
+        "head": {
+            "durability": 830,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.0,
+            "attack": 6.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 40,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Fluix Crystal",
+        "image": "/assets/materials/fluix_crystal.png",
+        "head": {
+            "durability": 700,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 6.2,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 75,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Psigem",
+        "image": "/assets/materials/psigem.png",
+        "head": {
+            "durability": 620,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": -10,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 30,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Psimetal",
+        "image": "/assets/materials/psimetal.png",
+        "head": {
+            "durability": 620,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": -10,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 30,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Enori",
+        "image": "/assets/materials/enori.png",
+        "head": {
+            "durability": 600,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 5.2,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.2,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 75,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Bloodwood",
+        "image": "/assets/materials/bloodwood.png",
+        "head": {
+            "durability": 550,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.0,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.4,
+            "durability": -60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 170,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Dark Steel",
+        "image": "/assets/materials/dark_steel.png",
+        "head": {
+            "durability": 550,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Elementium",
+        "image": "/assets/materials/elementium.png",
+        "head": {
+            "durability": 540,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.25,
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Manasteel",
+        "image": "/assets/materials/manasteel.png",
+        "head": {
+            "durability": 540,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.25,
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Steel",
+        "image": "/assets/materials/steel.png",
+        "head": {
+            "durability": 540,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 25,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Void",
+        "image": "/assets/materials/void.png",
+        "head": {
+            "durability": 480,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 4.4,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 140,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Thaumium",
+        "image": "/assets/materials/thaumium.png",
+        "head": {
+            "durability": 400,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 7.0,
+            "attack": 4.25,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 30,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 111,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Enchanted Metal",
+        "image": "/assets/materials/enchanted_metal.png",
+        "head": {
+            "durability": 350,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.0,
+            "attack": 3.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 80,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Steeleaf",
+        "image": "/assets/materials/steeleaf.png",
+        "head": {
+            "durability": 180,
+            "miningLevel": "Diamond",
+            "miningSpeed": 7.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.8,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 90,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Osmiridium",
+        "image": "/assets/materials/osmiridium.png",
+        "head": {
+            "durability": 1300,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 6.8,
+            "attack": 8.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.5,
+            "durability": 30,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 80,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Alumite",
+        "image": "/assets/materials/alumite.png",
+        "head": {
+            "durability": 700,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 6.8,
+            "attack": 5.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 70,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 80,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Bronze",
+        "image": "/assets/materials/bronze.png",
+        "head": {
+            "durability": 430,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.8,
+            "attack": 3.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 70,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 80,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Conductive Iron",
+        "image": "/assets/materials/conductive_iron.png",
+        "head": {
+            "durability": 106,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.75,
+            "attack": 1.25,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.25,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Base Essence",
+        "image": "/assets/materials/base_essence.png",
+        "head": {
+            "durability": 244,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.65,
+            "attack": 4.33,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.7,
+            "durability": 65,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Electrical Steel",
+        "image": "/assets/materials/electrical_steel.png",
+        "head": {
+            "durability": 306,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.5,
+            "attack": 2.25,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.75,
+            "durability": 80,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 75,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Certus Quartz",
+        "image": "/assets/materials/certus_quartz.png",
+        "head": {
+            "durability": 250,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.4,
+            "attack": 4.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.8,
+            "durability": 80,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 70,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Soulium",
+        "image": "/assets/materials/soulium.png",
+        "head": {
+            "durability": 310,
+            "miningLevel": "Iron",
+            "miningSpeed": 6.35,
+            "attack": 4.6,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.8,
+            "durability": 55,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 48,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Pig Iron",
+        "image": "/assets/materials/pig_iron.png",
+        "head": {
+            "durability": 380,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.2,
+            "attack": 4.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.2,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 170,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Plastic",
+        "image": "/assets/materials/plastic.png",
+        "head": {
+            "durability": 1500,
+            "miningLevel": "Stone",
+            "miningSpeed": 6.0,
+            "attack": -1.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.1,
+            "durability": 1500,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Amethyst",
+        "image": "/assets/materials/amethyst.png",
+        "head": {
+            "durability": 1100,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 6.0,
+            "attack": 8.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.5,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Pulsating Iron",
+        "image": "/assets/materials/pulsating_iron.png",
+        "head": {
+            "durability": 920,
+            "miningLevel": "Iron",
+            "miningSpeed": 6.0,
+            "attack": 2.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.05,
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Topaz",
+        "image": "/assets/materials/topaz.png",
+        "head": {
+            "durability": 690,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 6.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.8,
+            "durability": 70,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 65,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Invar",
+        "image": "/assets/materials/invar.png",
+        "head": {
+            "durability": 600,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 6.0,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Titanium",
+        "image": "/assets/materials/titanium.png",
+        "head": {
+            "durability": 560,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 6.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.4,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 40,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Firewood",
+        "image": "/assets/materials/firewood.png",
+        "head": {
+            "durability": 550,
+            "miningLevel": "Stone",
+            "miningSpeed": 6.0,
+            "attack": 5.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": -200,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Iridium",
+        "image": "/assets/materials/iridium.png",
+        "head": {
+            "durability": 520,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.0,
+            "attack": 5.8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.15,
+            "durability": -20,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Osmium",
+        "image": "/assets/materials/osmium.png",
+        "head": {
+            "durability": 500,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.0,
+            "attack": 5.8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.2,
+            "durability": 45,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 40,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Nickel",
+        "image": "/assets/materials/nickel.png",
+        "head": {
+            "durability": 460,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 6.0,
+            "attack": 4.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 70,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Fusewood",
+        "image": "/assets/materials/fusewood.png",
+        "head": {
+            "durability": 430,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 6.0,
+            "attack": 4.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": -20,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Black Quartz",
+        "image": "/assets/materials/black_quartz.png",
+        "head": {
+            "durability": 380,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.0,
+            "attack": 4.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.8,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Iron",
+        "image": "/assets/materials/iron.png",
+        "head": {
+            "durability": 204,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6.0,
+            "attack": 4.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.85,
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Starmetal",
+        "image": "/assets/materials/starmetal.png",
+        "head": {
+            "durability": 204,
+            "miningLevel": "TBD",
+            "miningSpeed": 6.0,
+            "attack": 4.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Knightslime",
+        "image": "/assets/materials/knightslime.png",
+        "head": {
+            "durability": 850,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 5.8,
+            "attack": 5.1,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": 500,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 125,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Mica",
+        "image": "/assets/materials/mica.png",
+        "head": {
+            "durability": 680,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 5.5,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 90,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Prismarine",
+        "image": "/assets/materials/prismarine.png",
+        "head": {
+            "durability": 430,
+            "miningLevel": "Iron",
+            "miningSpeed": 5.5,
+            "attack": 6.2,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.6,
+            "durability": -150,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Copper",
+        "image": "/assets/materials/copper.png",
+        "head": {
+            "durability": 210,
+            "miningLevel": "Iron",
+            "miningSpeed": 5.3,
+            "attack": 3.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.05,
+            "durability": 30,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Lead",
+        "image": "/assets/materials/lead.png",
+        "head": {
+            "durability": 434,
+            "miningLevel": "Iron",
+            "miningSpeed": 5.25,
+            "attack": 3.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.7,
+            "durability": -50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Livingwood",
+        "image": "/assets/materials/livingwood.png",
+        "head": {
+            "durability": 50,
+            "miningLevel": "Iron",
+            "miningSpeed": 5.1,
+            "attack": 2.8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.15,
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Bone",
+        "image": "/assets/materials/bone.png",
+        "head": {
+            "durability": 200,
+            "miningLevel": "Iron",
+            "miningSpeed": 5.09,
+            "attack": 2.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 65,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Sapphire",
+        "image": "/assets/materials/sapphire.png",
+        "head": {
+            "durability": 700,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 5.0,
+            "attack": 6.4,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 120,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Darkwood",
+        "image": "/assets/materials/darkwood.png",
+        "head": {
+            "durability": 350,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 5.0,
+            "attack": 3.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 90,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Silver",
+        "image": "/assets/materials/silver.png",
+        "head": {
+            "durability": 250,
+            "miningLevel": "Iron",
+            "miningSpeed": 5.0,
+            "attack": 5.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.95,
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Flint",
+        "image": "/assets/materials/flint.png",
+        "head": {
+            "durability": 150,
+            "miningLevel": "Iron",
+            "miningSpeed": 5.0,
+            "attack": 2.9,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.6,
+            "durability": -60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 40,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Ghostwood",
+        "image": "/assets/materials/ghostwood.png",
+        "head": {
+            "durability": 300,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 4.9,
+            "attack": 2.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Constantan",
+        "image": "/assets/materials/constantan.png",
+        "head": {
+            "durability": 25,
+            "miningLevel": "TBD",
+            "miningSpeed": 4.7,
+            "attack": 4.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.8,
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Amber",
+        "image": "/assets/materials/amber.png",
+        "head": {
+            "durability": 730,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 4.6,
+            "attack": 5.7,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 30,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Ruby",
+        "image": "/assets/materials/ruby.png",
+        "head": {
+            "durability": 660,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 4.6,
+            "attack": 6.4,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.2,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Netherrack",
+        "image": "/assets/materials/netherrack.png",
+        "head": {
+            "durability": 270,
+            "miningLevel": "Iron",
+            "miningSpeed": 4.5,
+            "attack": 3.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.85,
+            "durability": -150,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 75,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Slime (Green)",
+        "image": "/assets/materials/slime_(green).png",
+        "head": {
+            "durability": 1000,
+            "miningLevel": "Stone",
+            "miningSpeed": 4.24,
+            "attack": 1.8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Slime (Blue)",
+        "image": "/assets/materials/slime_(blue).png",
+        "head": {
+            "durability": 780,
+            "miningLevel": "Stone",
+            "miningSpeed": 4.03,
+            "attack": 1.8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": -50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 200,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Peridot",
+        "image": "/assets/materials/peridot.png",
+        "head": {
+            "durability": 640,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 4.0,
+            "attack": 6.1,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": -30,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Myrmex Chitin",
+        "image": "/assets/materials/myrmex_chitin.png",
+        "head": {
+            "durability": 400,
+            "miningLevel": "TBD",
+            "miningSpeed": 4.0,
+            "attack": 5.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.7,
+            "durability": 300,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Cactus",
+        "image": "/assets/materials/cactus.png",
+        "head": {
+            "durability": 210,
+            "miningLevel": "Iron",
+            "miningSpeed": 4.0,
+            "attack": 3.4,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.85,
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Stone",
+        "image": "/assets/materials/stone.png",
+        "head": {
+            "durability": 120,
+            "miningLevel": "Iron",
+            "miningSpeed": 4.0,
+            "attack": 3.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": -50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Dilithium",
+        "image": "/assets/materials/dilithium.png",
+        "head": {
+            "durability": 160,
+            "miningLevel": "Iron",
+            "miningSpeed": 3.9,
+            "attack": -1.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 2.6,
+            "durability": 28,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Tritanium",
+        "image": "/assets/materials/tritanium.png",
+        "head": {
+            "durability": 160,
+            "miningLevel": "Iron",
+            "miningSpeed": 3.9,
+            "attack": -1.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 2.6,
+            "durability": 28,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Ardite",
+        "image": "/assets/materials/ardite.png",
+        "head": {
+            "durability": 990,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 3.5,
+            "attack": 3.6,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.4,
+            "durability": -200,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 450,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Vibrant Alloy",
+        "image": "/assets/materials/vibrant_alloy.png",
+        "head": {
+            "durability": 220,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 3.5,
+            "attack": 9.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": -50,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 60,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "End (Stone)",
+        "image": "/assets/materials/end_(stone).png",
+        "head": {
+            "durability": 420,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 3.23,
+            "attack": 3.23,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.85,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 42,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Sponge",
+        "image": "/assets/materials/sponge.png",
+        "head": {
+            "durability": 1050,
+            "miningLevel": "Stone",
+            "miningSpeed": 3.02,
+            "attack": 0.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.2,
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 250,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Pink Slime",
+        "image": "/assets/materials/pink_slime.png",
+        "head": {
+            "durability": 2000,
+            "miningLevel": "Stone",
+            "miningSpeed": 3.0,
+            "attack": 1.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 2.5,
+            "durability": 2000,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 200,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Tanzanite",
+        "image": "/assets/materials/tanzanite.png",
+        "head": {
+            "durability": 650,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 3.0,
+            "attack": 7.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.7,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 25,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Malachite",
+        "image": "/assets/materials/malachite.png",
+        "head": {
+            "durability": 640,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 3.0,
+            "attack": 6.1,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": -30,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Dragon Bone",
+        "image": "/assets/materials/dragon_bone.png",
+        "head": {
+            "durability": 300,
+            "miningLevel": "Iron",
+            "miningSpeed": 3.0,
+            "attack": 6.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.3,
+            "durability": 130,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 200,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Energetic Alloy",
+        "image": "/assets/materials/energetic_alloy.png",
+        "head": {
+            "durability": 690,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 2.5,
+            "attack": 5.6,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 2.0,
+            "durability": -800,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 400,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Redstone Alloy",
+        "image": "/assets/materials/redstone_alloy.png",
+        "head": {
+            "durability": 120,
+            "miningLevel": "Stone",
+            "miningSpeed": 2.5,
+            "attack": 1.5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": -5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Magma Slime",
+        "image": "/assets/materials/magma_slime.png",
+        "head": {
+            "durability": 600,
+            "miningLevel": "Stone",
+            "miningSpeed": 2.1,
+            "attack": 7.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.85,
+            "durability": -200,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Magical Wood",
+        "image": "/assets/materials/magical_wood.png",
+        "head": {
+            "durability": 35,
+            "miningLevel": "Stone",
+            "miningSpeed": 2.0,
+            "attack": 2.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 25,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 15,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Wood",
+        "image": "/assets/materials/wood.png",
+        "head": {
+            "durability": 35,
+            "miningLevel": "Stone",
+            "miningSpeed": 2.0,
+            "attack": 2.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 25,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 15,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Chocolate",
+        "image": "/assets/materials/chocolate.png",
+        "head": {
+            "durability": 25,
+            "miningLevel": "TBD",
+            "miningSpeed": 2.0,
+            "attack": 2.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.15,
+            "durability": 8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 8,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Treated Wood",
+        "image": "/assets/materials/treated_wood.png",
+        "head": {
+            "durability": 25,
+            "miningLevel": "TBD",
+            "miningSpeed": 2.0,
+            "attack": 2.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 35,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Fake Iron (Iron Alloy)",
+        "image": "/assets/materials/fake_iron_(iron_alloy).png",
+        "head": {
+            "durability": 50,
+            "miningLevel": "TBD",
+            "miningSpeed": 1.25,
+            "attack": 1.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 1.0,
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 0,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Soularium",
+        "image": "/assets/materials/soularium.png",
+        "head": {
+            "durability": 1555,
+            "miningLevel": "Stone",
+            "miningSpeed": 1.0,
+            "attack": 1.0,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": 1500,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 1250,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Prosperity Shard",
+        "image": "/assets/materials/prosperity_shard.png",
+        "head": {
+            "durability": 36,
+            "miningLevel": "Stone",
+            "miningSpeed": 0.83,
+            "attack": 0.1,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.23,
+            "durability": 8,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Paper",
+        "image": "/assets/materials/paper.png",
+        "head": {
+            "durability": 12,
+            "miningLevel": "Stone",
+            "miningSpeed": 0.51,
+            "attack": 0.05,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.1,
+            "durability": 5,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 15,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    },
+    {
+        "name": "Demonic Metal",
+        "image": "/assets/materials/demonic_metal.png",
+        "head": {
+            "durability": 80,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 0.5,
+            "attack": 11.1,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "handle": {
+            "modifier": 0.25,
+            "durability": 100,
+            "modifiers": [
+                "TBD"
+            ]
+        },
+        "extra": {
+            "durability": 20,
+            "modifiers": [
+                "TBD"
+            ]
+        }
+    }
+]
