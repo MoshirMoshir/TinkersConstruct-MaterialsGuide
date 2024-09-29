@@ -660,19 +660,6 @@
             "modifiers": [
                 "TBD"
             ]
-        },
-        "handle": {
-            "modifier": 1.0,
-            "durability": 0,
-            "modifiers": [
-                "TBD"
-            ]
-        },
-        "extra": {
-            "durability": 0,
-            "modifiers": [
-                "TBD"
-            ]
         }
     },
     {
