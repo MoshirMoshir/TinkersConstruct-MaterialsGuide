@@ -12,12 +12,12 @@ interface Material {
     attack: number;
     modifiers: string[];
   };
-  handle: {
+  handle?: {  // Make handle optional
     modifier: number;
     durability: number;
     modifiers: string[];
   };
-  extra: {
+  extra?: {  // Make extra optional
     durability: number;
     modifiers: string[];
   };
@@ -69,8 +69,8 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
           fieldB = b.head.attack;
           break;
         case 'modifier':
-          fieldA = a.handle.modifier;
-          fieldB = b.handle.modifier;
+          fieldA = a.handle?.modifier ?? 0; // Handle optional modifier
+          fieldB = b.handle?.modifier ?? 0; // Handle optional modifier
           break;
         case 'name':
         default:
@@ -132,8 +132,8 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
             name={material.name}
             image={material.image}
             head={material.head}
-            handle={material.handle}
-            extra={material.extra}
+            handle={material.handle}  // Pass only if handle exists
+            extra={material.extra}    // Pass only if extra exists
           />
         ))}
       </div>

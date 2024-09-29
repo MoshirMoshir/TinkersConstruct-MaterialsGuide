@@ -11,12 +11,12 @@ interface MaterialProps {
     attack: number;
     modifiers: string[];
   };
-  handle: {
+  handle?: {  // Make handle optional
     modifier: number;
     durability: number;
     modifiers: string[];
   };
-  extra: {
+  extra?: {  // Make extra optional
     durability: number;
     modifiers: string[];
   };
@@ -39,17 +39,21 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
             <p>Attack: {head.attack}</p>
             <p>Modifiers: {head.modifiers.length > 0 ? head.modifiers.join(', ') : 'None'}</p>
           </div>
-          <div className="material-section">
-            <h4>Handle</h4>
-            <p>Modifier: {handle.modifier}</p>
-            <p>Durability: {handle.durability}</p>
-            <p>Modifiers: {handle.modifiers.length > 0 ? handle.modifiers.join(', ') : 'None'}</p>
-          </div>
-          <div className="material-section">
-            <h4>Extra</h4>
-            <p>Durability: {extra.durability}</p>
-            <p>Modifiers: {extra.modifiers.length > 0 ? extra.modifiers.join(', ') : 'None'}</p>
-          </div>
+          {handle && (
+            <div className="material-section">
+              <h4>Handle</h4>
+              <p>Modifier: {handle.modifier}</p>
+              <p>Durability: {handle.durability}</p>
+              <p>Modifiers: {handle.modifiers.length > 0 ? handle.modifiers.join(', ') : 'None'}</p>
+            </div>
+          )}
+          {extra && (
+            <div className="material-section">
+              <h4>Extra</h4>
+              <p>Durability: {extra.durability}</p>
+              <p>Modifiers: {extra.modifiers.length > 0 ? extra.modifiers.join(', ') : 'None'}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
