@@ -3,7 +3,7 @@ name: Deploy on commit
 on:
   push:
     branches:
-      - main  # Change this to the branch you want to deploy from
+      - noworky  # Change this to the branch you want to deploy from
 
 jobs:
   deploy:
