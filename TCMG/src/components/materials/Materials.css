@@ -1,0 +1,60 @@
+.materials-page {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 1rem;
+}
+
+/* Controls container */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Search Bar */
+.search-bar {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--background2-color); /* Use darker background */
+  color: var(--text-color);
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sort controls */
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sort-controls label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.sort-controls select,
+.sort-controls button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--background2-color); /* Use darker background */
+  color: var(--text-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Ensure selected option is readable */
+.sort-controls select option {
+  background-color: var(--selection-background-color); /* Dark background for selected */
+  color: var(--text-color); /* Keep the text readable */
+}
