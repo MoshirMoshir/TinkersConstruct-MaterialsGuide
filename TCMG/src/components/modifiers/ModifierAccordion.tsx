@@ -9,6 +9,7 @@ interface Modifier {
 
 const ModifierAccordion: React.FC = () => {
   const [modifiers, setModifiers] = useState<Modifier[]>([]);
+  const [activeKey, setActiveKey] = useState<string | null>(null); // State for active accordion item
 
   useEffect(() => {
     const fetchModifiers = async () => {
@@ -28,10 +29,25 @@ const ModifierAccordion: React.FC = () => {
     fetchModifiers();
   }, []);
 
+  // Handle mouse enter to open accordion item
+  const handleMouseEnter = (index: string) => {
+    setActiveKey(index); // Set the accordion item to be open
+  };
+
+  // Handle mouse leave to close accordion item
+  const handleMouseLeave = () => {
+    setActiveKey(null); // Reset the accordion to close all items
+  };
+
   return (
-    <Accordion defaultActiveKey="0">
+    <Accordion activeKey={activeKey}>
       {modifiers.map((modifier, index) => (
-        <Accordion.Item eventKey={String(index)} key={index}>
+        <Accordion.Item
+          eventKey={String(index)}
+          key={index}
+          onMouseEnter={() => handleMouseEnter(String(index))}
+          onMouseLeave={handleMouseLeave}
+        >
           <Accordion.Header>{modifier.name}</Accordion.Header>
           <Accordion.Body>{modifier.description}</Accordion.Body>
         </Accordion.Item>
