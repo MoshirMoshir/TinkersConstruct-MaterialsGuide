@@ -1,6 +1,6 @@
 import { Material } from '@components/builder/ToolBuilder.tsx'; // Import Material type from ToolBuilder
 
-const Builder1_12_2 = (toolName: string, head: Material['head'] | null, handle: Material['handle'] | null, extra: Material['extra'] | null) => {
+const Builder1_12_2 = (_toolName: string, head: Material['head'] | null, handle: Material['handle'] | null, extra: Material['extra'] | null) => {
   const calculateDurability = () => {
     const headDurability = head?.durability || 0;
     const handleDurability = handle?.durability || 0;

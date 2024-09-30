@@ -33,7 +33,7 @@ interface ToolBuilderProps {
   version: string;
 }
 
-type ToolPart = 'Pick Head' | 'Sword Blade' | 'Hammer Head' | 'Binding' | 'Wide Guard' | 'Plate' | 'Tool Rod' | 'Tough Tool Rod';
+type ToolPart = 'Large Sword Blade' | 'Pickaxe Head' | 'Shovel Head' | 'Axe Head' | 'Kama Head' | 'Hammer Head' | 'Large Plate' | 'Excavator Head' | 'Broad Axe Head' | 'Scythe Head' | 'Sword Blade' | 'Pan' | 'Sign Plate' | 'Knife Blade' | 'Binding' | 'Tough Binding' | 'Wide Guard' | 'Plate' | 'Hand Guard' | 'Cross Guard' | 'Tool Rod' | 'Tough Tool Rod';
 
 const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   const [selectedTool, setSelectedTool] = useState<string | null>(null);
@@ -48,19 +48,48 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   const [modifiers, setModifiers] = useState<Modifier[]>([]); // State to store the modifier descriptions
 
   const tools = [
-    { name: 'Pickaxe', parts: ['Pick Head', 'Binding', 'Tool Rod'] },
-    { name: 'Broadsword', parts: ['Sword Blade', 'Wide Guard', 'Tool Rod'] },
-    { name: 'Hammer', parts: ['Hammer Head', 'Plate', 'Plate', 'Tough Tool Rod'] },
+    { name: 'Katana', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Sword Blade', 'Large Sword Blade'] },
+    { name: 'Pickaxe', parts: ['Tool Rod', 'Binding', 'Pickaxe Head'] },
+    { name: 'Shovel', parts: ['Tool Rod', 'Binding', 'Shovel Head'] },
+    { name: 'Hatchet', parts: ['Tool Rod', 'Binding', 'Axe Head'] },
+    { name: 'Mattock', parts: ['Tool Rod', 'Axe Head', 'Shovel Head'] },
+    { name: 'Kama', parts: ['Tool Rod', 'Binding', 'Kama Head'] },
+    { name: 'Hammer', parts: ['Tough Tool Rod', 'Large Plate', 'Hammer Head', 'Large Plate'] },
+    { name: 'Excavator', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Plate', 'Excavator Head'] },
+    { name: 'Lumberaxe', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Plate', 'Broad Axe Head'] },
+    { name: 'Scythe', parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Tough Binding', 'Scythe Head'] },
+    { name: 'Broadsword', parts: ['Tool Rod', 'Wide Guard', 'Sword Blade'] },
+    { name: 'Longsword', parts: ['Tool Rod', 'Hand Guard', 'Sword Blade'] },
+    { name: 'Rapier', parts: ['Tool Rod', 'Cross Guard', 'Sword Blade'] },
+    { name: 'Frypan', parts: ['Tool Rod', 'Pan'] },
+    { name: 'Battlesign', parts: ['Tool Rod', 'Sign Plate'] },
+    { name: 'Cleaver', parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Large Plate', 'Large Sword Blade'] },
+    { name: 'Shuriken', parts: ['Knife Blade', 'Knife Blade', 'Knife Blade', 'Knife Blade'] },
+
   ];
 
   // Map tool parts to material categories
   const partToCategory: Record<ToolPart, 'head' | 'extra' | 'handle'> = {
-    'Pick Head': 'head',
-    'Sword Blade': 'head',
+    'Large Sword Blade': 'head',
+    'Pickaxe Head': 'head',
+    'Shovel Head': 'head',
+    'Axe Head': 'head',
+    'Kama Head': 'head',
     'Hammer Head': 'head',
+    'Large Plate': 'head',
+    'Excavator Head': 'head',
+    'Broad Axe Head': 'head',
+    'Scythe Head': 'head',
+    'Sword Blade': 'head',
+    'Pan': 'head',
+    'Sign Plate': 'head',
+    'Knife Blade': 'head',
     'Binding': 'extra',
+    'Tough Binding': 'extra',
     'Wide Guard': 'extra',
     'Plate': 'extra',
+    'Hand Guard': 'extra',
+    'Cross Guard': 'extra',
     'Tool Rod': 'handle',
     'Tough Tool Rod': 'handle',
   };
@@ -116,7 +145,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   };
 
   // Handle material selection for a part
-  const handleMaterialSelection = (material: Material, partIndex: number, partName: ToolPart) => {
+  const handleMaterialSelection = (material: Material, _partIndex: number, partName: ToolPart) => {
     console.log(`Material selected for part ${partName}:`, material);
     const category = partToCategory[partName]; // Get the material category (head/handle/extra)
     
