@@ -80,3 +80,17 @@ p {
     transform: scale(0.55); /* Even more scaling for very small screens */
   }
 }
+
+/* Custom styling for the tooltip */
+.tooltip-inner {
+  background-color: rgba(0, 0, 0, 1) !important; /* Adjust the opacity here */
+  color: #fff !important; /* Ensure text color is white */
+  border-radius: 4px !important; /* Optional: Add some rounding for a smoother look */
+  padding: 0.5rem !important; /* Optional: Adjust padding if needed */
+}
+
+/* Optional: Add some transition for a smoother hover effect */
+.tooltip {
+  opacity: 1; /* Slightly less opaque tooltip overall */
+  transition: opacity 0.3s ease !important;
+}
