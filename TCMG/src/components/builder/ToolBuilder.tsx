@@ -36,16 +36,37 @@ interface ToolBuilderProps {
 
 type ToolPart = 'Large Sword Blade' | 'Pickaxe Head' | 'Shovel Head' | 'Axe Head' | 'Kama Head' | 'Hammer Head' | 'Large Plate' | 'Excavator Head' | 'Broad Axe Head' | 'Scythe Head' | 'Sword Blade' | 'Pan' | 'Sign Plate' | 'Knife Blade' | 'Binding' | 'Tough Binding' | 'Wide Guard' | 'Plate' | 'Hand Guard' | 'Cross Guard' | 'Tool Rod' | 'Tough Tool Rod';
 
+// Map tool parts to material categories
+const partToCategory: Record<ToolPart, 'head' | 'extra' | 'handle'> = {
+  'Large Sword Blade': 'head',
+  'Pickaxe Head': 'head',
+  'Shovel Head': 'head',
+  'Axe Head': 'head',
+  'Kama Head': 'head',
+  'Hammer Head': 'head',
+  'Large Plate': 'head',
+  'Excavator Head': 'head',
+  'Broad Axe Head': 'head',
+  'Scythe Head': 'head',
+  'Sword Blade': 'head',
+  'Pan': 'head',
+  'Sign Plate': 'head',
+  'Knife Blade': 'head',
+  'Binding': 'extra',
+  'Tough Binding': 'extra',
+  'Wide Guard': 'extra',
+  'Plate': 'extra',
+  'Hand Guard': 'extra',
+  'Cross Guard': 'extra',
+  'Tool Rod': 'handle',
+  'Tough Tool Rod': 'handle',
+};
+
 const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   const [selectedTool, setSelectedTool] = useState<string | null>('Katana'); // Default selected tool
-  const [selectedMaterials, setSelectedMaterials] = useState<{ [key: string]: Material | null }>({
-    head: null,
-    handle: null,
-    extra: null,
-  });
+  const [selectedMaterials, setSelectedMaterials] = useState<Array<Material | null>>([]); // Array to hold material selections for each part
   const [toolStats, setToolStats] = useState<any>(null);
   const [materials, setMaterials] = useState<Material[]>([]); // Materials state
-  const [isFocused, setIsFocused] = useState<number | null>(null); // Track which dropdown is focused
   const [modifiers, setModifiers] = useState<Modifier[]>([]); // State to store the modifier descriptions
 
   const tools = [
@@ -66,34 +87,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
     { name: 'Battlesign', parts: ['Tool Rod', 'Sign Plate'] },
     { name: 'Cleaver', parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Large Plate', 'Large Sword Blade'] },
     { name: 'Shuriken', parts: ['Knife Blade', 'Knife Blade', 'Knife Blade', 'Knife Blade'] },
-
   ];
-
-  // Map tool parts to material categories
-  const partToCategory: Record<ToolPart, 'head' | 'extra' | 'handle'> = {
-    'Large Sword Blade': 'head',
-    'Pickaxe Head': 'head',
-    'Shovel Head': 'head',
-    'Axe Head': 'head',
-    'Kama Head': 'head',
-    'Hammer Head': 'head',
-    'Large Plate': 'head',
-    'Excavator Head': 'head',
-    'Broad Axe Head': 'head',
-    'Scythe Head': 'head',
-    'Sword Blade': 'head',
-    'Pan': 'head',
-    'Sign Plate': 'head',
-    'Knife Blade': 'head',
-    'Binding': 'extra',
-    'Tough Binding': 'extra',
-    'Wide Guard': 'extra',
-    'Plate': 'extra',
-    'Hand Guard': 'extra',
-    'Cross Guard': 'extra',
-    'Tool Rod': 'handle',
-    'Tough Tool Rod': 'handle',
-  };
 
   // Fetch materials for the specific version
   useEffect(() => {
@@ -143,68 +137,43 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
     console.log(`Tool selected: ${toolName}`);
     
     // Clear the selected materials when switching tools
-    setSelectedMaterials({
-      head: null,
-      handle: null,
-      extra: null,
-    });
+    setSelectedMaterials(new Array(tools.find(tool => tool.name === toolName)?.parts.length).fill(null));
 
     // Reset stats
     setToolStats(null); 
     setSelectedTool(toolName); // Set the new tool
-    setIsFocused(null); // Reset focused dropdown
   };
 
   // Handle material selection for a part
-  const handleMaterialSelection = (selectedOption: { value: Material | null }, _partIndex: number, partName: ToolPart) => {
-    // Set to null if 'None' is selected
-    const material = selectedOption.value;
-    
-    // Use partName instead of category to track materials for individual parts
-    setSelectedMaterials((prev) => ({
-      ...prev,
-      [partName]: material, // Store the material by the part name directly
-    }));
-  
+  const handleMaterialSelection = (selectedOption: { value: Material | null }, partIndex: number, part: ToolPart) => {
+    const newMaterials = [...selectedMaterials]; // Clone the array
+    newMaterials[partIndex] = selectedOption.value; // Update the material at the specific index
+
+    // Update the state with the newly selected material
+    setSelectedMaterials(newMaterials);
+
     // Recalculate stats with updated materials
-    calculateToolStats({
-      ...selectedMaterials,
-      [partName]: material, // Pass the updated material selection by part name
-    });
+    calculateToolStats(newMaterials, tools.find(tool => tool.name === selectedTool)?.parts || []);
   };
-  
+
   // Modify the calculateToolStats function
-  const calculateToolStats = (materials: { [key: string]: Material | null }) => {
-    if (!selectedTool) {
-      console.error('No tool selected');
-      return;
-    }
-  
-    const heads = Object.entries(materials)
-      .filter(([partName]) => partToCategory[partName as ToolPart] === 'head')
-      .map(([, material]) => material?.head)
-      .filter(Boolean);
-  
-    const handles = Object.entries(materials)
-      .filter(([partName]) => partToCategory[partName as ToolPart] === 'handle')
-      .map(([, material]) => material?.handle)
-      .filter(Boolean);
-  
-    const extras = Object.entries(materials)
-      .filter(([partName]) => partToCategory[partName as ToolPart] === 'extra')
-      .map(([, material]) => material?.extra)
-      .filter(Boolean);
-  
-    // Ensure selectedTool is non-null before passing
-    const stats = Builder1_12_2(selectedTool as string, { heads, handles, extras });
+  const calculateToolStats = (materials: Array<Material | null>, parts: string[]) => {
+    if (!selectedTool) return;
+
+    const heads = materials
+      .filter((material, index) => partToCategory[parts[index] as ToolPart] === 'head')
+      .map((material) => material?.head);
+    const handles = materials
+      .filter((material, index) => partToCategory[parts[index] as ToolPart] === 'handle')
+      .map((material) => material?.handle);
+    const extras = materials
+      .filter((material, index) => partToCategory[parts[index] as ToolPart] === 'extra')
+      .map((material) => material?.extra);
+
+    const stats = Builder1_12_2(selectedTool, { heads, handles, extras });
     console.log('Calculated stats:', stats);
     setToolStats(stats);
   };
-  
-  
-
-
-
 
   // Prepare material options for the dropdown (react-select) with "None" at the top
   const materialOptions = [
@@ -214,7 +183,6 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
       label: material.name,
     })),
   ];
-
 
   const customStyles = {
     control: (styles: any) => ({
@@ -277,12 +245,10 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
                   <Select
                     options={materialOptions}
                     value={materialOptions.find(
-                      (option) => option.value?.name === selectedMaterials[part]?.name || null
+                      (option) => option.value?.name === selectedMaterials[index]?.name || null
                     )} // Ensure selected value is shown
-                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} // Explicitly cast part to ToolPart
-                    placeholder={isFocused === index ? '' : `Select Material for ${part}`}
-                    onFocus={() => setIsFocused(index)}
-                    onBlur={() => setIsFocused(null)}
+                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} // Pass the part index
+                    placeholder={`Select Material for ${part}`}
                     isSearchable
                     styles={customStyles}
                   />
@@ -296,10 +262,10 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
         <h3>Tool Stats</h3>
         <p>Durability: {toolStats?.durability || 'N/A'}</p>
         <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p>
-        <p>Mining Speed: {toolStats?.miningSpeed || 'N/A'}</p> {/* Correct mining speed */}
+        <p>Mining Speed: {toolStats?.miningSpeed || 'N/A'}</p>
         <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
-        <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p> {/* Display attack speed */}
-        <p>DPS: {toolStats?.DPS || 'N/A'}</p> {/* Display DPS */}
+        <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p>
+        <p>DPS: {toolStats?.DPS || 'N/A'}</p>
         <p>Modifiers: </p>
         <ul>
           {toolStats?.modifiers?.length > 0
