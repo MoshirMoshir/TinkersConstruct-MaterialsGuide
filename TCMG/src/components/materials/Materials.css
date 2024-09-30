@@ -1,20 +1,12 @@
-.materials-page {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-.materials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  gap: 1rem;
-}
-
 /* Controls container */
 .controls {
   display: flex;
+  flex-wrap: wrap;  /* Allow wrapping when necessary */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+  gap: 1rem;  /* Optional: Add space between wrapped elements */
+  width: 100%;  /* Ensure it takes full width */
 }
 
 /* Search Bar */
@@ -25,19 +17,24 @@
   border: 1px solid var(--input-border-color);
   background-color: var(--background2-color);
   color: var(--text-color);
-  width: 250px;
+  width: 100%;  /* Adjust to 100% width for smaller screens */
+  max-width: 300px;  /* Adjust the max width to prevent early wrapping */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;  /* Allow the search bar to grow and fill available space */
 }
 
 /* Sort controls */
 .sort-controls {
   display: flex;
+  flex-wrap: wrap;  /* Allow wrapping if content exceeds container width */
   align-items: center;
   gap: 1rem;
+  justify-content: flex-start;  /* Align to the left on smaller screens */
 }
 
 .sort-controls label {
   font-size: 1rem;
+  white-space: nowrap;  /* Prevent wrapping of the label */
 }
 
 .sort-controls select,
@@ -50,6 +47,8 @@
   color: var(--text-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  min-width: 150px;  /* Set minimum width to prevent early wrapping */
+  flex-shrink: 1;  /* Allow shrinking, but within limits */
 }
 
 .sort-controls select option {
@@ -57,6 +56,7 @@
   color: var(--text-color);
 }
 
+/* Search field dropdown */
 .search-field-dropdown {
   padding: 0.5rem;
   font-size: 1rem;
@@ -67,5 +67,20 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   margin-right: 1rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
+  min-width: 150px;  /* Set a minimum width to prevent too small wrapping */
+  flex-shrink: 1;  /* Allow it to shrink, but not too much */
+  max-width: 200px;  /* Ensure a reasonable max width */
+}
+
+/* For mobile/smaller screens */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;  /* Stack controls vertically */
+    align-items: stretch;  /* Make controls take full width */
+  }
+
+  .search-controls, .sort-controls {
+    width: 100%;
+  }
 }
