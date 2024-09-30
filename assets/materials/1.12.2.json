@@ -8,20 +8,21 @@
             "miningSpeed": 22.25,
             "attack": 15.03,
             "modifiers": [
-                "TBD"
+                "Prosperous",
+                "Duritae"
             ]
         },
         "handle": {
             "modifier": 1.35,
             "durability": 200,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "extra": {
             "durability": 300,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         }
     },
@@ -60,20 +61,20 @@
             "miningSpeed": 16.53,
             "attack": 11.62,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "handle": {
             "modifier": 1.12,
             "durability": 165,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "extra": {
             "durability": 225,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         }
     },
@@ -138,21 +139,17 @@
             "miningSpeed": 13.0,
             "attack": 13.0,
             "modifiers": [
-                "TBD"
+                "Evil Aura"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 0,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "extra": {
             "durability": 66,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         }
     },
     {
@@ -216,20 +213,21 @@
             "miningSpeed": 12.0,
             "attack": 5.5,
             "modifiers": [
-                "TBD"
+                "Jagged",
+                "Splintering"
             ]
         },
         "handle": {
             "modifier": 0.75,
             "durability": 192,
             "modifiers": [
-                "TBD"
+                "Splintering"
             ]
         },
         "extra": {
             "durability": 160,
             "modifiers": [
-                "TBD"
+                "Splintering"
             ]
         }
     },
@@ -268,20 +266,20 @@
             "miningSpeed": 12.0,
             "attack": 4.1,
             "modifiers": [
-                "TBD"
+                "Momentum"
             ]
         },
         "handle": {
             "modifier": 0.9,
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         },
         "extra": {
             "durability": 300,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         }
     },
@@ -294,20 +292,20 @@
             "miningSpeed": 12.0,
             "attack": 3.0,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": -25,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         },
         "extra": {
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         }
     },
@@ -346,20 +344,20 @@
             "miningSpeed": 11.08,
             "attack": 9.23,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "handle": {
             "modifier": 0.97,
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         }
     },
@@ -372,20 +370,21 @@
             "miningSpeed": 11.0,
             "attack": 5.0,
             "modifiers": [
-                "TBD"
+                "Lightweight",
+                "Sharp"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 311,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         },
         "extra": {
             "durability": 46,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         }
     },
@@ -398,20 +397,21 @@
             "miningSpeed": 11.0,
             "attack": 3.5,
             "modifiers": [
-                "TBD"
+                "Holy",
+                "Lightweight"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 49,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         },
         "extra": {
             "durability": 7,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         }
     },
@@ -450,20 +450,21 @@
             "miningSpeed": 10.0,
             "attack": 5.0,
             "modifiers": [
-                "TBD"
+                "Dense",
+                "Momentum"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 232,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         },
         "extra": {
             "durability": 31,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         }
     },
@@ -554,20 +555,20 @@
             "miningSpeed": 9.0,
             "attack": 6.5,
             "modifiers": [
-                "TBD"
+                "Mana Eater"
             ]
         },
         "handle": {
             "modifier": 1.4,
             "durability": 10,
             "modifiers": [
-                "TBD"
+                "Mana Eater"
             ]
         },
         "extra": {
             "durability": 10,
             "modifiers": [
-                "TBD"
+                "Mana Eater"
             ]
         }
     },
@@ -606,20 +607,20 @@
             "miningSpeed": 9.0,
             "attack": 10.0,
             "modifiers": [
-                "TBD"
+                "Power of the Sun"
             ]
         },
         "handle": {
             "modifier": 0.9,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Power of the Sun"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Power of the Sun"
             ]
         }
     },
@@ -632,20 +633,22 @@
             "miningSpeed": 9.0,
             "attack": 4.5,
             "modifiers": [
-                "TBD"
+                "Withering"
             ]
         },
         "handle": {
             "modifier": 0.75,
             "durability": 56,
             "modifiers": [
-                "TBD"
+                "Poisonous",
+                "Withering"
             ]
         },
         "extra": {
             "durability": 11,
             "modifiers": [
-                "TBD"
+                "Poisonous",
+                "Withering"
             ]
         }
     },
@@ -658,7 +661,8 @@
             "miningSpeed": 8.9,
             "attack": 4.3,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Precipitate"
             ]
         }
     },
@@ -671,20 +675,20 @@
             "miningSpeed": 8.8,
             "attack": 6.1,
             "modifiers": [
-                "TBD"
+                "Hearts"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Hearts"
             ]
         },
         "extra": {
             "durability": 90,
             "modifiers": [
-                "TBD"
+                "Hearts"
             ]
         }
     },
@@ -697,20 +701,21 @@
             "miningSpeed": 8.25,
             "attack": 5.0,
             "modifiers": [
-                "TBD"
+                "Enderference",
+                "Alien"
             ]
         },
         "handle": {
             "modifier": 0.9,
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Unnatural"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Unnatural"
             ]
         }
     },
@@ -723,20 +728,20 @@
             "miningSpeed": 8.01,
             "attack": 6.62,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "handle": {
             "modifier": 0.78,
             "durability": 75,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         }
     },
@@ -775,20 +780,21 @@
             "miningSpeed": 8.0,
             "attack": 6.3,
             "modifiers": [
-                "TBD"
+                "Lightweight",
+                "Sharp"
             ]
         },
         "handle": {
             "modifier": 1.2,
             "durability": 10,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         },
         "extra": {
             "durability": 88,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         }
     },
@@ -801,20 +807,20 @@
             "miningSpeed": 8.0,
             "attack": 7.7,
             "modifiers": [
-                "TBD"
+                "Vindictive"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Vindictive"
             ]
         },
         "extra": {
             "durability": 77,
             "modifiers": [
-                "TBD"
+                "Vindictive"
             ]
         }
     },
@@ -827,20 +833,22 @@
             "miningSpeed": 8.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Global Traveler"
             ]
         },
         "handle": {
             "modifier": 1.05,
             "durability": -5,
             "modifiers": [
-                "TBD"
+                "Heavy Metal",
+                "Anti-Corrosion"
             ]
         },
         "extra": {
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Heavy Metal",
+                "Anti-Corrosion"
             ]
         }
     },
@@ -853,14 +861,14 @@
             "miningSpeed": 8.0,
             "attack": 4.5,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         },
         "handle": {
             "modifier": 0.85,
             "durability": 136,
             "modifiers": [
-                "TBD"
+                "Stiff"
             ]
         },
         "extra": {
@@ -905,20 +913,26 @@
             "miningSpeed": 7.5,
             "attack": 11.0,
             "modifiers": [
-                "TBD"
+                "Brown Magic",
+                "Sassy",
+                "Global Traveler"
             ]
         },
         "handle": {
             "modifier": 1.5,
             "durability": -50,
             "modifiers": [
-                "TBD"
+                "Brown Magic",
+                "Sassy",
+                "Global Traveler"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Brown Magic",
+                "Sassy",
+                "Global Traveler"
             ]
         }
     },
@@ -931,20 +945,23 @@
             "miningSpeed": 7.5,
             "attack": 5.5,
             "modifiers": [
-                "TBD"
+                "Slimey",
+                "Dense"
             ]
         },
         "handle": {
             "modifier": 3.2,
             "durability": 2350,
             "modifiers": [
-                "TBD"
+                "Slimey",
+                "Unnatural"
             ]
         },
         "extra": {
             "durability": 270,
             "modifiers": [
-                "TBD"
+                "Slimey",
+                "Unnatural"
             ]
         }
     },
@@ -957,20 +974,22 @@
             "miningSpeed": 7.5,
             "attack": 7.0,
             "modifiers": [
-                "TBD"
+                "Portly Gentleman"
             ]
         },
         "handle": {
             "modifier": 1.05,
             "durability": -5,
             "modifiers": [
-                "TBD"
+                "Global Traveler",
+                "Enderference"
             ]
         },
         "extra": {
             "durability": 65,
             "modifiers": [
-                "TBD"
+                "Global Traveler",
+                "Enderference"
             ]
         }
     },
@@ -983,20 +1002,20 @@
             "miningSpeed": 7.5,
             "attack": 5.8,
             "modifiers": [
-                "TBD"
+                "Spades"
             ]
         },
         "handle": {
             "modifier": 1.3,
             "durability": 7,
             "modifiers": [
-                "TBD"
+                "Spades"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Spades"
             ]
         }
     },
@@ -1009,20 +1028,20 @@
             "miningSpeed": 7.5,
             "attack": 5.2,
             "modifiers": [
-                "TBD"
+                "Bloody Mary"
             ]
         },
         "handle": {
             "modifier": 1.2,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Bloody Mary"
             ]
         },
         "extra": {
             "durability": 55,
             "modifiers": [
-                "TBD"
+                "Bloody Mary"
             ]
         }
     },
@@ -1035,20 +1054,22 @@
             "miningSpeed": 7.5,
             "attack": 4.0,
             "modifiers": [
-                "TBD"
+                "Poisonous"
             ]
         },
         "handle": {
             "modifier": 0.8,
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Poisonous",
+                "Withering"
             ]
         },
         "extra": {
             "durability": 11,
             "modifiers": [
-                "TBD"
+                "Poisonous",
+                "Withering"
             ]
         }
     },
@@ -1061,20 +1082,25 @@
             "miningSpeed": 7.2,
             "attack": 6.6,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Autosmelt",
+                "Superheat",
+                "Flammable"
             ]
         },
         "handle": {
             "modifier": 0.7,
             "durability": 400,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Flammable"
             ]
         },
         "extra": {
             "durability": 200,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Flammable"
             ]
         }
     },
@@ -1087,20 +1113,20 @@
             "miningSpeed": 7.07,
             "attack": 4.2,
             "modifiers": [
-                "TBD"
+                "Duritae"
             ]
         },
         "handle": {
             "modifier": 0.9,
             "durability": -100,
             "modifiers": [
-                "TBD"
+                "Duritae"
             ]
         },
         "extra": {
             "durability": 90,
             "modifiers": [
-                "TBD"
+                "Duritae"
             ]
         }
     },
@@ -1113,20 +1139,20 @@
             "miningSpeed": 7.02,
             "attack": 8.72,
             "modifiers": [
-                "TBD"
+                "Insatiable"
             ]
         },
         "handle": {
             "modifier": 0.5,
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Cold-Blooded"
             ]
         },
         "extra": {
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Cold-Blooded"
             ]
         }
     },
@@ -1139,20 +1165,20 @@
             "miningSpeed": 7.02,
             "attack": 4.5,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "handle": {
             "modifier": 0.63,
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "extra": {
             "durability": 75,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         }
     },
@@ -1165,20 +1191,23 @@
             "miningSpeed": 7.0,
             "attack": 11.0,
             "modifiers": [
-                "TBD"
+                "Duritae",
+                "Darkness"
             ]
         },
         "handle": {
             "modifier": 1.5,
             "durability": -100,
             "modifiers": [
-                "TBD"
+                "Duritae",
+                "Darkness"
             ]
         },
         "extra": {
             "durability": 160,
             "modifiers": [
-                "TBD"
+                "Duritae",
+                "Darkness"
             ]
         }
     },
@@ -1191,20 +1220,20 @@
             "miningSpeed": 7.0,
             "attack": 17.0,
             "modifiers": [
-                "TBD"
+                "Freezing"
             ]
         },
         "handle": {
             "modifier": 0.4,
             "durability": 400,
             "modifiers": [
-                "TBD"
+                "Heavy"
             ]
         },
         "extra": {
             "durability": 510,
             "modifiers": [
-                "TBD"
+                "Heavy"
             ]
         }
     },
@@ -1217,20 +1246,20 @@
             "miningSpeed": 7.0,
             "attack": 17.0,
             "modifiers": [
-                "TBD"
+                "Inferno II"
             ]
         },
         "handle": {
             "modifier": 0.4,
             "durability": 400,
             "modifiers": [
-                "TBD"
+                "Sharp"
             ]
         },
         "extra": {
             "durability": 510,
             "modifiers": [
-                "TBD"
+                "Sharp"
             ]
         }
     },
@@ -1269,20 +1298,23 @@
             "miningSpeed": 7.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Stalwart"
             ]
         },
         "handle": {
             "modifier": 1.25,
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Stalwart"
             ]
         },
         "extra": {
             "durability": 400,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Stalwart"
             ]
         }
     },
@@ -1295,20 +1327,23 @@
             "miningSpeed": 7.0,
             "attack": 6.5,
             "modifiers": [
-                "TBD"
+                "Illuminati",
+                "Glowing"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 40,
             "modifiers": [
-                "TBD"
+                "Illuminati",
+                "Glowing"
             ]
         },
         "extra": {
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Illuminati",
+                "Glowing"
             ]
         }
     },
@@ -1398,21 +1433,19 @@
             "miningLevel": "Obsidian",
             "miningSpeed": 7.0,
             "attack": 5.2,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "handle": {
             "modifier": 1.2,
             "durability": -5,
             "modifiers": [
-                "TBD"
+                "Sharp"
             ]
         },
         "extra": {
             "durability": 75,
             "modifiers": [
-                "TBD"
+                "Sharp"
             ]
         }
     },
@@ -1451,20 +1484,20 @@
             "miningSpeed": 7.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Enderference"
             ]
         },
         "handle": {
             "modifier": 0.9,
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Unnatural"
             ]
         },
         "extra": {
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         }
     },
@@ -1477,20 +1510,20 @@
             "miningSpeed": 7.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Mana Repair"
             ]
         },
         "handle": {
             "modifier": 1.25,
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Mana Repair"
             ]
         },
         "extra": {
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Mana Repair"
             ]
         }
     },
@@ -1503,20 +1536,20 @@
             "miningSpeed": 7.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Mana Repair"
             ]
         },
         "handle": {
             "modifier": 1.25,
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Mana Repair"
             ]
         },
         "extra": {
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Mana Repair"
             ]
         }
     },
@@ -1529,20 +1562,20 @@
             "miningSpeed": 7.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Sharp"
             ]
         },
         "handle": {
             "modifier": 0.9,
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Stiff"
             ]
         },
         "extra": {
             "durability": 25,
             "modifiers": [
-                "TBD"
+                "Stiff"
             ]
         }
     },
@@ -1555,20 +1588,21 @@
             "miningSpeed": 7.0,
             "attack": 4.4,
             "modifiers": [
-                "TBD"
+                "He Who Must Not Be Named",
+                "Crude"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Crude"
             ]
         },
         "extra": {
             "durability": 140,
             "modifiers": [
-                "TBD"
+                "Crude"
             ]
         }
     },
@@ -1581,20 +1615,20 @@
             "miningSpeed": 7.0,
             "attack": 4.25,
             "modifiers": [
-                "TBD"
+                "Thaumic"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 30,
             "modifiers": [
-                "TBD"
+                "Thaumic"
             ]
         },
         "extra": {
             "durability": 111,
             "modifiers": [
-                "TBD"
+                "Thaumic"
             ]
         }
     },
@@ -1607,20 +1641,20 @@
             "miningSpeed": 7.0,
             "attack": 3.5,
             "modifiers": [
-                "TBD"
+                "Experience Boost"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Experience Boost"
             ]
         },
         "extra": {
             "durability": 80,
             "modifiers": [
-                "TBD"
+                "Experience Boost"
             ]
         }
     },
@@ -1633,20 +1667,23 @@
             "miningSpeed": 7.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Synergy"
             ]
         },
         "handle": {
             "modifier": 0.8,
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Synergy"
             ]
         },
         "extra": {
             "durability": 90,
             "modifiers": [
-                "TBD"
+                "Twilit",
+                "Synergy"
             ]
         }
     },
@@ -1659,20 +1696,20 @@
             "miningSpeed": 6.8,
             "attack": 8.0,
             "modifiers": [
-                "TBD"
+                "Anti-Corrosion"
             ]
         },
         "handle": {
             "modifier": 1.5,
             "durability": 30,
             "modifiers": [
-                "TBD"
+                "Devil's Strength"
             ]
         },
         "extra": {
             "durability": 80,
             "modifiers": [
-                "TBD"
+                "Devil's Strength"
             ]
         }
     },
@@ -1685,20 +1722,20 @@
             "miningSpeed": 6.8,
             "attack": 5.5,
             "modifiers": [
-                "TBD"
+                "Global Traveler"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 70,
             "modifiers": [
-                "TBD"
+                "Global Traveler"
             ]
         },
         "extra": {
             "durability": 80,
             "modifiers": [
-                "TBD"
+                "Global Traveler"
             ]
         }
     },
@@ -1711,20 +1748,20 @@
             "miningSpeed": 6.8,
             "attack": 3.5,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 70,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         },
         "extra": {
             "durability": 80,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         }
     },
@@ -1737,20 +1774,20 @@
             "miningSpeed": 6.75,
             "attack": 1.25,
             "modifiers": [
-                "TBD"
+                "Crude II"
             ]
         },
         "handle": {
             "modifier": 1.25,
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         },
         "extra": {
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         }
     },
@@ -1763,20 +1800,20 @@
             "miningSpeed": 6.65,
             "attack": 4.33,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "handle": {
             "modifier": 0.7,
             "durability": 65,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         },
         "extra": {
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Prosperous"
             ]
         }
     },
@@ -1789,20 +1826,20 @@
             "miningSpeed": 6.5,
             "attack": 2.25,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         },
         "handle": {
             "modifier": 0.75,
             "durability": 80,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         },
         "extra": {
             "durability": 75,
             "modifiers": [
-                "TBD"
+                "Lightweight"
             ]
         }
     },
@@ -1815,20 +1852,20 @@
             "miningSpeed": 6.4,
             "attack": 4.5,
             "modifiers": [
-                "TBD"
+                "Elemental"
             ]
         },
         "handle": {
             "modifier": 0.8,
             "durability": 80,
             "modifiers": [
-                "TBD"
+                "Elemental"
             ]
         },
         "extra": {
             "durability": 70,
             "modifiers": [
-                "TBD"
+                "Elemental"
             ]
         }
     },
@@ -1841,21 +1878,17 @@
             "miningSpeed": 6.35,
             "attack": 4.6,
             "modifiers": [
-                "TBD"
+                "Chunky"
             ]
         },
         "handle": {
             "modifier": 0.8,
             "durability": 55,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "extra": {
             "durability": 48,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         }
     },
     {
@@ -1867,20 +1900,21 @@
             "miningSpeed": 6.2,
             "attack": 4.5,
             "modifiers": [
-                "TBD"
+                "Baconlicious",
+                "Tasty"
             ]
         },
         "handle": {
             "modifier": 1.2,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Tasty"
             ]
         },
         "extra": {
             "durability": 170,
             "modifiers": [
-                "TBD"
+                "Tasty"
             ]
         }
     },
@@ -1893,20 +1927,20 @@
             "miningSpeed": 6.0,
             "attack": -1.0,
             "modifiers": [
-                "TBD"
+                "Stonebound"
             ]
         },
         "handle": {
             "modifier": 0.1,
             "durability": 1500,
             "modifiers": [
-                "TBD"
+                "Stonebound"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Stonebound"
             ]
         }
     },
@@ -1945,20 +1979,20 @@
             "miningSpeed": 6.0,
             "attack": 2.0,
             "modifiers": [
-                "TBD"
+                "Vanishing III"
             ]
         },
         "handle": {
             "modifier": 1.05,
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Vanishing"
             ]
         },
         "extra": {
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Vanishing"
             ]
         }
     },
@@ -1971,20 +2005,20 @@
             "miningSpeed": 6.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Nature's Power"
             ]
         },
         "handle": {
             "modifier": 0.8,
             "durability": 70,
             "modifiers": [
-                "TBD"
+                "Nature's Power"
             ]
         },
         "extra": {
             "durability": 65,
             "modifiers": [
-                "TBD"
+                "Nature's Power"
             ]
         }
     },
@@ -1997,20 +2031,20 @@
             "miningSpeed": 6.0,
             "attack": 5.0,
             "modifiers": [
-                "TBD"
+                "Magnetic II"
             ]
         },
         "handle": {
             "modifier": 1.3,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Magnetic"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Magnetic"
             ]
         }
     },
@@ -2049,20 +2083,20 @@
             "miningSpeed": 6.0,
             "attack": 5.5,
             "modifiers": [
-                "TBD"
+                "Autosmelt"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": -200,
             "modifiers": [
-                "TBD"
+                "Autosmelt"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Autosmelt"
             ]
         }
     },
@@ -2075,20 +2109,20 @@
             "miningSpeed": 6.0,
             "attack": 5.8,
             "modifiers": [
-                "TBD"
+                "Alien"
             ]
         },
         "handle": {
             "modifier": 1.15,
             "durability": -20,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         },
         "extra": {
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Dense"
             ]
         }
     },
@@ -2100,22 +2134,16 @@
             "miningLevel": "Diamond",
             "miningSpeed": 6.0,
             "attack": 5.8,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "handle": {
             "modifier": 1.2,
             "durability": 45,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "extra": {
             "durability": 40,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         }
     },
     {
@@ -2127,21 +2155,17 @@
             "miningSpeed": 6.0,
             "attack": 4.5,
             "modifiers": [
-                "TBD"
+                "Critikill"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": -5,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "extra": {
             "durability": 70,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         }
     },
     {
@@ -2179,20 +2203,23 @@
             "miningSpeed": 6.0,
             "attack": 4.5,
             "modifiers": [
-                "TBD"
+                "Devil's Strength",
+                "Crude II"
             ]
         },
         "handle": {
             "modifier": 0.8,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Devil's Strength",
+                "Crude II"
             ]
         },
         "extra": {
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Devil's Strength",
+                "Crude II"
             ]
         }
     },
@@ -2205,20 +2232,20 @@
             "miningSpeed": 6.0,
             "attack": 4.0,
             "modifiers": [
-                "TBD"
+                "Magnetic II"
             ]
         },
         "handle": {
             "modifier": 0.85,
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Magnetic"
             ]
         },
         "extra": {
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Magnetic"
             ]
         }
     },
@@ -2231,20 +2258,20 @@
             "miningSpeed": 6.0,
             "attack": 4.0,
             "modifiers": [
-                "TBD"
+                "I'm a Superstar"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Illuminati"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Illuminati"
             ]
         }
     },
@@ -2257,20 +2284,20 @@
             "miningSpeed": 5.8,
             "attack": 5.1,
             "modifiers": [
-                "TBD"
+                "Crumbling"
             ]
         },
         "handle": {
             "modifier": 0.5,
             "durability": 500,
             "modifiers": [
-                "TBD"
+                "Unnatural"
             ]
         },
         "extra": {
             "durability": 125,
             "modifiers": [
-                "TBD"
+                "Unnatural"
             ]
         }
     },
@@ -2309,20 +2336,21 @@
             "miningSpeed": 5.5,
             "attack": 6.2,
             "modifiers": [
-                "TBD"
+                "Jagged",
+                "Aquadynamic"
             ]
         },
         "handle": {
             "modifier": 0.6,
             "durability": -150,
             "modifiers": [
-                "TBD"
+                "Aquadynamic"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Aquadynamic"
             ]
         }
     },
@@ -2335,20 +2363,20 @@
             "miningSpeed": 5.3,
             "attack": 3.0,
             "modifiers": [
-                "TBD"
+                "Well-Established"
             ]
         },
         "handle": {
             "modifier": 1.05,
             "durability": 30,
             "modifiers": [
-                "TBD"
+                "Well-Established"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Well-Established"
             ]
         }
     },
@@ -2361,20 +2389,23 @@
             "miningSpeed": 5.25,
             "attack": 3.5,
             "modifiers": [
-                "TBD"
+                "Poisonous",
+                "Heavy"
             ]
         },
         "handle": {
             "modifier": 0.7,
             "durability": -50,
             "modifiers": [
-                "TBD"
+                "Poisonous",
+                "Heavy"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Poisonous",
+                "Heavy"
             ]
         }
     },
@@ -2387,20 +2418,23 @@
             "miningSpeed": 5.1,
             "attack": 2.8,
             "modifiers": [
-                "TBD"
+                "Botanical II",
+                "Ecological"
             ]
         },
         "handle": {
             "modifier": 1.15,
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Botanical",
+                "Ecological"
             ]
         },
         "extra": {
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Botanical",
+                "Ecological"
             ]
         }
     },
@@ -2413,20 +2447,20 @@
             "miningSpeed": 5.09,
             "attack": 2.5,
             "modifiers": [
-                "TBD"
+                "Splintering"
             ]
         },
         "handle": {
             "modifier": 1.1,
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Fractured"
             ]
         },
         "extra": {
             "durability": 65,
             "modifiers": [
-                "TBD"
+                "Fractured"
             ]
         }
     },
@@ -2491,20 +2525,20 @@
             "miningSpeed": 5.0,
             "attack": 5.0,
             "modifiers": [
-                "TBD"
+                "Holy"
             ]
         },
         "handle": {
             "modifier": 0.95,
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Holy"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Holy"
             ]
         }
     },
@@ -2517,20 +2551,20 @@
             "miningSpeed": 5.0,
             "attack": 2.9,
             "modifiers": [
-                "TBD"
+                "Crude II"
             ]
         },
         "handle": {
             "modifier": 0.6,
             "durability": -60,
             "modifiers": [
-                "TBD"
+                "Crude"
             ]
         },
         "extra": {
             "durability": 40,
             "modifiers": [
-                "TBD"
+                "Crude"
             ]
         }
     },
@@ -2569,20 +2603,20 @@
             "miningSpeed": 4.7,
             "attack": 4.0,
             "modifiers": [
-                "TBD"
+                "Thermal Inversion"
             ]
         },
         "handle": {
             "modifier": 0.8,
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Thermal Inversion"
             ]
         },
         "extra": {
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Thermal Inversion"
             ]
         }
     },
@@ -2595,20 +2629,20 @@
             "miningSpeed": 4.6,
             "attack": 5.7,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 30,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         }
     },
@@ -2647,20 +2681,21 @@
             "miningSpeed": 4.5,
             "attack": 3.0,
             "modifiers": [
-                "TBD"
+                "Aridiculous",
+                "Hellish"
             ]
         },
         "handle": {
             "modifier": 0.85,
             "durability": -150,
             "modifiers": [
-                "TBD"
+                "Hellish"
             ]
         },
         "extra": {
             "durability": 75,
             "modifiers": [
-                "TBD"
+                "Hellish"
             ]
         }
     },
@@ -2673,20 +2708,20 @@
             "miningSpeed": 4.24,
             "attack": 1.8,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         },
         "extra": {
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         }
     },
@@ -2699,20 +2734,20 @@
             "miningSpeed": 4.03,
             "attack": 1.8,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         },
         "handle": {
             "modifier": 1.3,
             "durability": -50,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         },
         "extra": {
             "durability": 200,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         }
     },
@@ -2725,20 +2760,20 @@
             "miningSpeed": 4.0,
             "attack": 6.1,
             "modifiers": [
-                "TBD"
+                "Nature's Blessing"
             ]
         },
         "handle": {
             "modifier": 1.3,
             "durability": -30,
             "modifiers": [
-                "TBD"
+                "Nature's Blessing"
             ]
         },
         "extra": {
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Nature's Blessing"
             ]
         }
     },
@@ -2751,20 +2786,20 @@
             "miningSpeed": 4.0,
             "attack": 5.5,
             "modifiers": [
-                "TBD"
+                "Hive Defender"
             ]
         },
         "handle": {
             "modifier": 0.7,
             "durability": 300,
             "modifiers": [
-                "TBD"
+                "Poisonous"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Poisonous"
             ]
         }
     },
@@ -2777,20 +2812,20 @@
             "miningSpeed": 4.0,
             "attack": 5.5,
             "modifiers": [
-                "TBD"
+                "Hive Defender"
             ]
         },
         "handle": {
             "modifier": 0.7,
             "durability": 300,
             "modifiers": [
-                "TBD"
+                "Poisonous"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Poisonous"
             ]
         }
     },
@@ -2803,20 +2838,20 @@
             "miningSpeed": 4.0,
             "attack": 3.4,
             "modifiers": [
-                "TBD"
+                "Prickly"
             ]
         },
         "handle": {
             "modifier": 0.85,
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Spiky"
             ]
         },
         "extra": {
             "durability": 50,
             "modifiers": [
-                "TBD"
+                "Spiky"
             ]
         }
     },
@@ -2829,20 +2864,20 @@
             "miningSpeed": 4.0,
             "attack": 3.0,
             "modifiers": [
-                "TBD"
+                "Cheapstake"
             ]
         },
         "handle": {
             "modifier": 0.5,
             "durability": -50,
             "modifiers": [
-                "TBD"
+                "Cheap"
             ]
         },
         "extra": {
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Cheap"
             ]
         }
     },
@@ -2907,20 +2942,20 @@
             "miningSpeed": 3.5,
             "attack": 3.6,
             "modifiers": [
-                "TBD"
+                "Stonebound"
             ]
         },
         "handle": {
             "modifier": 1.4,
             "durability": -200,
             "modifiers": [
-                "TBD"
+                "Petramor"
             ]
         },
         "extra": {
             "durability": 450,
             "modifiers": [
-                "TBD"
+                "Petramor"
             ]
         }
     },
@@ -2933,20 +2968,20 @@
             "miningSpeed": 3.5,
             "attack": 9.0,
             "modifiers": [
-                "TBD"
+                "Vanishing II"
             ]
         },
         "handle": {
             "modifier": 0.5,
             "durability": -50,
             "modifiers": [
-                "TBD"
+                "Direct"
             ]
         },
         "extra": {
             "durability": 60,
             "modifiers": [
-                "TBD"
+                "Direct"
             ]
         }
     },
@@ -2959,20 +2994,20 @@
             "miningSpeed": 3.23,
             "attack": 3.23,
             "modifiers": [
-                "TBD"
+                "Alien"
             ]
         },
         "handle": {
             "modifier": 0.85,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Enderference"
             ]
         },
         "extra": {
             "durability": 42,
             "modifiers": [
-                "TBD"
+                "Enderference"
             ]
         }
     },
@@ -2985,20 +3020,20 @@
             "miningSpeed": 3.02,
             "attack": 0.0,
             "modifiers": [
-                "TBD"
+                "Squeaky"
             ]
         },
         "handle": {
             "modifier": 1.2,
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Squeaky"
             ]
         },
         "extra": {
             "durability": 250,
             "modifiers": [
-                "TBD"
+                "Squeaky"
             ]
         }
     },
@@ -3011,20 +3046,20 @@
             "miningSpeed": 3.0,
             "attack": 1.0,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         },
         "handle": {
             "modifier": 2.5,
             "durability": 2000,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         },
         "extra": {
             "durability": 200,
             "modifiers": [
-                "TBD"
+                "Slimey"
             ]
         }
     },
@@ -3037,20 +3072,20 @@
             "miningSpeed": 3.0,
             "attack": 7.0,
             "modifiers": [
-                "TBD"
+                "Freezing"
             ]
         },
         "handle": {
             "modifier": 0.7,
             "durability": 0,
             "modifiers": [
-                "TBD"
+                "Freezing"
             ]
         },
         "extra": {
             "durability": 25,
             "modifiers": [
-                "TBD"
+                "Freezing"
             ]
         }
     },
@@ -3063,20 +3098,20 @@
             "miningSpeed": 3.0,
             "attack": 6.1,
             "modifiers": [
-                "TBD"
+                "Nature's Wrath"
             ]
         },
         "handle": {
             "modifier": 1.3,
             "durability": -30,
             "modifiers": [
-                "TBD"
+                "Nature's Wrath"
             ]
         },
         "extra": {
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Nature's Wrath"
             ]
         }
     },
@@ -3089,20 +3124,20 @@
             "miningSpeed": 3.0,
             "attack": 6.0,
             "modifiers": [
-                "TBD"
+                "Splintering II"
             ]
         },
         "handle": {
             "modifier": 1.3,
             "durability": 130,
             "modifiers": [
-                "TBD"
+                "Fractured II"
             ]
         },
         "extra": {
             "durability": 200,
             "modifiers": [
-                "TBD"
+                "Fractured II"
             ]
         }
     },
@@ -3115,20 +3150,20 @@
             "miningSpeed": 2.5,
             "attack": 5.6,
             "modifiers": [
-                "TBD"
+                "Unnatural"
             ]
         },
         "handle": {
             "modifier": 2.0,
             "durability": -800,
             "modifiers": [
-                "TBD"
+                "Holy"
             ]
         },
         "extra": {
             "durability": 400,
             "modifiers": [
-                "TBD"
+                "Petramor"
             ]
         }
     },
@@ -3141,20 +3176,20 @@
             "miningSpeed": 2.5,
             "attack": 1.5,
             "modifiers": [
-                "TBD"
+                "Shocking"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": -5,
             "modifiers": [
-                "TBD"
+                "Writable"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Crude"
             ]
         }
     },
@@ -3167,20 +3202,20 @@
             "miningSpeed": 2.1,
             "attack": 7.0,
             "modifiers": [
-                "TBD"
+                "Superheat"
             ]
         },
         "handle": {
             "modifier": 0.85,
             "durability": -200,
             "modifiers": [
-                "TBD"
+                "Flammable"
             ]
         },
         "extra": {
             "durability": 150,
             "modifiers": [
-                "TBD"
+                "Flammable"
             ]
         }
     },
@@ -3193,20 +3228,23 @@
             "miningSpeed": 2.0,
             "attack": 2.0,
             "modifiers": [
-                "TBD"
+                "Magically Modifiable",
+                "Magically Brittle"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 25,
             "modifiers": [
-                "TBD"
+                "Magically Modifiable",
+                "Magically Brittle"
             ]
         },
         "extra": {
             "durability": 15,
             "modifiers": [
-                "TBD"
+                "Magically Modifiable",
+                "Magically Brittle"
             ]
         }
     },
@@ -3219,20 +3257,20 @@
             "miningSpeed": 2.0,
             "attack": 2.0,
             "modifiers": [
-                "TBD"
+                "Ecological"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 25,
             "modifiers": [
-                "TBD"
+                "Ecological"
             ]
         },
         "extra": {
             "durability": 15,
             "modifiers": [
-                "TBD"
+                "Ecological"
             ]
         }
     },
@@ -3245,20 +3283,23 @@
             "miningSpeed": 2.0,
             "attack": 2.0,
             "modifiers": [
-                "TBD"
+                "Modable",
+                "Tasty"
             ]
         },
         "handle": {
             "modifier": 0.15,
             "durability": 8,
             "modifiers": [
-                "TBD"
+                "Modable",
+                "Uplifting"
             ]
         },
         "extra": {
             "durability": 8,
             "modifiers": [
-                "TBD"
+                "Modable",
+                "Uplifting"
             ]
         }
     },
@@ -3271,20 +3312,20 @@
             "miningSpeed": 2.0,
             "attack": 2.0,
             "modifiers": [
-                "TBD"
+                "Ecological"
             ]
         },
         "handle": {
             "modifier": 1.0,
             "durability": 35,
             "modifiers": [
-                "TBD"
+                "Ecological"
             ]
         },
         "extra": {
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Ecological"
             ]
         }
     },
@@ -3297,20 +3338,18 @@
             "miningSpeed": 1.0,
             "attack": 1.0,
             "modifiers": [
-                "TBD"
+                "Hellish"
             ]
         },
         "handle": {
             "modifier": 0.5,
             "durability": 1500,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "extra": {
             "durability": 1250,
             "modifiers": [
-                "TBD"
+                "Splinters"
             ]
         }
     },
@@ -3323,20 +3362,20 @@
             "miningSpeed": 0.83,
             "attack": 0.1,
             "modifiers": [
-                "TBD"
+                "Writable"
             ]
         },
         "handle": {
             "modifier": 0.23,
             "durability": 8,
             "modifiers": [
-                "TBD"
+                "Writable"
             ]
         },
         "extra": {
             "durability": 20,
             "modifiers": [
-                "TBD"
+                "Writable"
             ]
         }
     },
@@ -3349,20 +3388,20 @@
             "miningSpeed": 0.51,
             "attack": 0.05,
             "modifiers": [
-                "TBD"
+                "Writable"
             ]
         },
         "handle": {
             "modifier": 0.1,
             "durability": 5,
             "modifiers": [
-                "TBD"
+                "Writable"
             ]
         },
         "extra": {
             "durability": 15,
             "modifiers": [
-                "TBD"
+                "Writable"
             ]
         }
     },
@@ -3375,20 +3414,43 @@
             "miningSpeed": 0.5,
             "attack": 11.1,
             "modifiers": [
-                "TBD"
+                "Whispering"
             ]
         },
         "handle": {
             "modifier": 0.25,
             "durability": 100,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "extra": {
             "durability": 20,
+            "modifiers": []
+        }
+    },
+    {
+        "name": "Molten Meat",
+        "image": "/assets/materials/molten_meat.png",
+        "head": {
+            "durability": 400,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 4.8,
+            "attack": 4.12,
             "modifiers": [
-                "TBD"
+                "Autosmelt",
+                "Superheat"
+            ]
+        },
+        "handle": {
+            "modifier": 1,
+            "durability": 100,
+            "modifiers": [
+                "Superheat"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "Superheat"
             ]
         }
     }
