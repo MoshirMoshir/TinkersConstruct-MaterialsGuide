@@ -145,7 +145,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   };
 
   // Handle material selection for a part
-  const handleMaterialSelection = (selectedOption: { value: Material | null }, partIndex: number, part: ToolPart) => {
+  const handleMaterialSelection = (selectedOption: { value: Material | null }, partIndex: number, _part: ToolPart) => {
     const newMaterials = [...selectedMaterials]; // Clone the array
     newMaterials[partIndex] = selectedOption.value; // Update the material at the specific index
 
@@ -161,13 +161,13 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
     if (!selectedTool) return;
 
     const heads = materials
-      .filter((material, index) => partToCategory[parts[index] as ToolPart] === 'head')
+      .filter((_material, index) => partToCategory[parts[index] as ToolPart] === 'head')
       .map((material) => material?.head);
     const handles = materials
-      .filter((material, index) => partToCategory[parts[index] as ToolPart] === 'handle')
+      .filter((_material, index) => partToCategory[parts[index] as ToolPart] === 'handle')
       .map((material) => material?.handle);
     const extras = materials
-      .filter((material, index) => partToCategory[parts[index] as ToolPart] === 'extra')
+      .filter((_material, index) => partToCategory[parts[index] as ToolPart] === 'extra')
       .map((material) => material?.extra);
 
     const stats = Builder1_12_2(selectedTool, { heads, handles, extras });
