@@ -141,8 +141,18 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   // Handle tool selection
   const handleToolSelection = (toolName: string) => {
     console.log(`Tool selected: ${toolName}`);
-    setSelectedTool(toolName);
-    setToolStats(null); // Reset stats
+    
+    // Clear the selected materials when switching tools
+    setSelectedMaterials({
+      head: null,
+      handle: null,
+      extra: null,
+    });
+
+    // Reset stats
+    setToolStats(null); 
+    setSelectedTool(toolName); // Set the new tool
+    setIsFocused(null); // Reset focused dropdown
   };
 
   // Handle material selection for a part
@@ -254,7 +264,12 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
                   <label>{part}</label>
                   <Select
                     options={materialOptions}
-                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} // Explicitly cast part to ToolPart
+                    value={
+                      selectedMaterials[partToCategory[part as ToolPart]] 
+                        ? { value: selectedMaterials[partToCategory[part as ToolPart]], label: selectedMaterials[partToCategory[part as ToolPart]]?.name }
+                        : null
+                    }
+                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} 
                     placeholder={isFocused === index ? '' : `Select Material for ${part}`}
                     onFocus={() => setIsFocused(index)}
                     onBlur={() => setIsFocused(null)}
