@@ -32,6 +32,7 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
   const [sortField, setSortField] = useState<string>('name'); // State for sorting
   const [sortDirection, setSortDirection] = useState<string>('asc'); // State for sort direction
   const [searchTerm, setSearchTerm] = useState<string>(''); // State for search term
+  const [searchField, setSearchField] = useState<string>('name'); // State for search by name or modifiers
 
   useEffect(() => {
     const fetchMaterials = async () => {
@@ -87,10 +88,22 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
     });
   };
 
-  // Filter materials based on search term
-  const filteredMaterials = materials.filter((material) =>
-    material.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Filter materials based on search term and search field (name or modifiers)
+  const filteredMaterials = materials.filter((material) => {
+    if (searchField === 'name') {
+      return material.name.toLowerCase().includes(searchTerm.toLowerCase());
+    } else if (searchField === 'modifiers') {
+      const allModifiers = [
+        ...material.head.modifiers,
+        ...(material.handle?.modifiers || []),
+        ...(material.extra?.modifiers || []),
+      ];
+      return allModifiers.some(modifier => 
+        modifier.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    return true;
+  });
 
   return (
     <div className="materials-page">
@@ -98,16 +111,28 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
 
       {/* Search and Sort Controls */}
       <div className="controls">
-        <input
-          type="text"
-          placeholder="Search by name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-bar"
-        />
+        <div className="search-controls">
+          <label>Search by:</label>
+          <select
+            value={searchField}
+            onChange={(e) => setSearchField(e.target.value)}
+            className="search-field-dropdown"
+          >
+            <option value="name">Name</option>
+            <option value="modifiers">Modifiers</option>
+          </select>
+
+          <input
+            type="text"
+            placeholder={`Search by ${searchField}...`}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-bar"
+          />
+        </div>
 
         <div className="sort-controls">
-          <label>Sort by: </label>
+          <label>Sort by:</label>
           <select
             value={sortField}
             onChange={(e) => setSortField(e.target.value)}

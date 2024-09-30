@@ -23,7 +23,7 @@
   font-size: 1rem;
   border-radius: 5px;
   border: 1px solid var(--input-border-color);
-  background-color: var(--background2-color); /* Use darker background */
+  background-color: var(--background2-color);
   color: var(--text-color);
   width: 250px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,6 @@
 
 .sort-controls label {
   font-size: 1rem;
-  margin-right: 0.5rem;
 }
 
 .sort-controls select,
@@ -47,14 +46,26 @@
   font-size: 1rem;
   border-radius: 5px;
   border: 1px solid var(--input-border-color);
-  background-color: var(--background2-color); /* Use darker background */
+  background-color: var(--background2-color);
   color: var(--text-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
-/* Ensure selected option is readable */
 .sort-controls select option {
-  background-color: var(--selection-background-color); /* Dark background for selected */
-  color: var(--text-color); /* Keep the text readable */
+  background-color: var(--selection-background-color);
+  color: var(--text-color);
+}
+
+.search-field-dropdown {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--background2-color);
+  color: var(--text-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-left: .5rem;
 }
