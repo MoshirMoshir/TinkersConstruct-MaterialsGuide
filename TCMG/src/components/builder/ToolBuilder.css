@@ -105,6 +105,31 @@ color: var(--text-color);
 width: 100%; /* Ensure dropdown width matches the control width */
 }
 
+/* Tooltip Styles for Material Stats */
+.material-tooltip {
+    padding: 10px;
+    background-color: black; /* Match the dark theme */
+    color: var(--text-color); /* Text color to match the theme */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Slightly smaller font */
+    line-height: 1.2; /* Reduce line height */
+    max-width: 300px; /* Limit width for better readability */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    grid-gap: 5px; /* Reduce space between columns */
+  }
+  
+  /* Ensure that each stat in the tooltip is aligned properly */
+  .material-tooltip p {
+    margin: 0;
+    white-space: wrap; /* Prevent text wrapping */
+  }
+  
+  .material-tooltip .stat-name {
+    font-weight: bold; /* Highlight the stat name */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
 /* Tool Stats Section */
 .tool-stats {
 width: 20%;

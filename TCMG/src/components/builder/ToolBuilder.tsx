@@ -184,6 +184,41 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
     })),
   ];
 
+  // Function to create the tooltip content with material stats
+  const renderTooltipContent = (material: Material | null, partType: 'head' | 'handle' | 'extra') => {
+    if (!material) return 'No material selected';
+  
+    const { head, handle, extra } = material;
+    
+    return (
+      <div className="material-tooltip">
+        {partType === 'head' && head && (
+          <>
+            <p className="stat-name">Durability:</p> <p>{head.durability}</p>
+            <p className="stat-name">Mining Speed:</p> <p>{head.miningSpeed}</p>
+            <p className="stat-name">Attack:</p> <p>{head.attack}</p>
+            <p className="stat-name">Modifiers:</p> <p>{head.modifiers.join(', ') || 'None'}</p>
+          </>
+        )}
+        {partType === 'handle' && handle && (
+          <>
+            <p className="stat-name">Durability:</p> <p>{handle.durability}</p>
+            <p className="stat-name">Modifier:</p> <p>{handle.modifier}</p>
+            <p className="stat-name">Modifiers:</p> <p>{handle.modifiers.join(', ') || 'None'}</p>
+          </>
+        )}
+        {partType === 'extra' && extra && (
+          <>
+            <p className="stat-name">Durability:</p> <p>{extra.durability}</p>
+            <p className="stat-name">Modifiers:</p> <p>{extra.modifiers.join(', ') || 'None'}</p>
+          </>
+        )}
+      </div>
+    );
+  };
+  
+  
+
   const customStyles = {
     control: (styles: any) => ({
       ...styles,
@@ -242,16 +277,27 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
               ?.parts.map((part, index) => (
                 <div key={index} className="material-dropdown">
                   <label>{part}</label>
-                  <Select
-                    options={materialOptions}
-                    value={materialOptions.find(
-                      (option) => option.value?.name === selectedMaterials[index]?.name || null
-                    )} // Ensure selected value is shown
-                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} // Pass the part index
-                    placeholder={`Select Material for ${part}`}
-                    isSearchable
-                    styles={customStyles}
-                  />
+                  <OverlayTrigger
+                    placement="top"
+                    overlay={
+                      <Tooltip id={`tooltip-${index}`}>
+                        {renderTooltipContent(selectedMaterials[index], partToCategory[part as ToolPart])}
+                      </Tooltip>
+                    }
+                  >
+                    <div>
+                      <Select
+                        options={materialOptions}
+                        value={materialOptions.find(
+                          (option) => option.value?.name === selectedMaterials[index]?.name || null
+                        )} // Ensure selected value is shown
+                        onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} // Pass the part index
+                        placeholder={`Select Material for ${part}`}
+                        isSearchable
+                        styles={customStyles}
+                      />
+                    </div>
+                  </OverlayTrigger>
                 </div>
               ))}
           </div>
