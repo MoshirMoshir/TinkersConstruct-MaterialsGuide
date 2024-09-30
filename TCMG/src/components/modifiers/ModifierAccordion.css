@@ -1,0 +1,51 @@
+/* Ensure that the accordion applies the dark theme */
+.accordion {
+    margin: 1rem 0;
+    background-color: var(--background2-color) !important;
+    border: 1px solid var(--card-border-color) !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Style for individual accordion items */
+  .accordion-item {
+    background-color: var(--card-background-color) !important;
+    border-bottom: 1px solid var(--card-border-color) !important;
+  }
+  
+  /* Override Bootstrap's default accordion button styles */
+  .accordion-button {
+    background-color: var(--background2-color) !important; /* Dark background */
+    color: var(--primary-color) !important; /* Primary text color */
+    border: none !important; /* Remove default border */
+    font-size: 1.2rem !important;
+    padding: 1rem !important;
+    cursor: pointer !important;
+    box-shadow: none !important; /* Remove default button shadow */
+    border-radius: 8px !important; /* Rounded corners */
+  }
+  
+  /* Override Bootstrap's accordion button when it's collapsed (not active) */
+  .accordion-button.collapsed {
+    background-color: var(--background2-color) !important;
+    color: var(--primary-color) !important;
+  }
+  
+  /* Hover effect for accordion header */
+  .accordion-button:hover {
+    background-color: var(--background2-color) !important;
+    color: var(--secondary-color) !important;
+  }
+  
+  /* Override the accordion body to apply the dark theme */
+  .accordion-body {
+    padding: 1rem !important;
+    color: var(--text-color) !important;
+    background-color: var(--card-background-color) !important;
+    border-top: 1px solid var(--card-border-color) !important;
+  }
+  
+  /* Transition for smooth expanding/collapsing effect */
+  .accordion-item .accordion-body {
+    transition: max-height 0.3s ease !important;
+  }
+  
