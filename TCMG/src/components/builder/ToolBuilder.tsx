@@ -9,7 +9,8 @@ export interface Material {
   name: string;
   head?: {
     durability: number;
-    speed: number;
+    miningLevel: string;
+    miningSpeed: number;
     attack: number;
     modifiers: string[];
   };
@@ -163,15 +164,25 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
     };
   
 
-  // Dynamically calculate tool stats for the selected materials
-  const calculateToolStats = (materials: { [key: string]: Material | null }) => {
-    const { head, handle, extra } = materials;
-    if (!selectedTool) return;
+    // Modify the calculateToolStats function
+    const calculateToolStats = (materials: { [key: string]: Material | null }) => {
+      const { head, handle, extra } = materials;
+      if (!selectedTool) return;
 
-    const stats = Builder1_12_2(selectedTool, head?.head || null, handle?.handle || null, extra?.extra || null);
-    console.log('Calculated stats:', stats);
-    setToolStats(stats);
-  };
+      // Build the ToolParts object to pass to Builder1_12_2
+      const selectedParts = {
+        heads: head ? [head.head] : [], // Collect head parts
+        handles: handle ? [handle.handle] : [], // Collect handle parts
+        extras: extra ? [extra.extra] : [] // Collect extra parts
+      };
+
+      const stats = Builder1_12_2(selectedTool, selectedParts);
+      console.log('Calculated stats:', stats); // Debugging line to ensure correct calculation
+      setToolStats(stats);
+    };
+
+
+
 
   // Prepare material options for the dropdown (react-select) with "None" at the top
   const materialOptions = [
@@ -256,33 +267,33 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
         </div>
       )}
 
-    <div className="tool-stats">
-      <h3>Tool Stats</h3>
-      <p>Durability: {toolStats?.durability || 'N/A'}</p>
-      <p>Mining Speed: {toolStats?.speed || 'N/A'}</p>
-      <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
-      <p>Modifiers: </p>
-      <ul>
-        {toolStats?.modifiers?.length > 0
-          ? toolStats.modifiers.map((modifier: string, index: number) => (
-              <OverlayTrigger
-                key={index}
-                placement="top"
-                overlay={
-                  <Tooltip id={`tooltip-${index}`}>
-                    {findModifierDescription(modifier)}
-                  </Tooltip>
-                }
-              >
-                <li className="modifier" style={{ cursor: 'pointer' }}>
-                  {modifier}
-                </li>
-              </OverlayTrigger>
-            ))
-          : 'None'}
-      </ul>
-    </div>
-
+      <div className="tool-stats">
+        <h3>Tool Stats</h3>
+        <p>Durability: {toolStats?.durability || 'N/A'}</p>
+        <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p> {/* Fix for Mining Level */}
+        <p>Mining Speed: {toolStats?.speed || 'N/A'}</p> {/* Change miningSpeed to speed */}
+        <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
+        <p>Modifiers: </p>
+        <ul>
+          {toolStats?.modifiers?.length > 0
+            ? toolStats.modifiers.map((modifier: string, index: number) => (
+                <OverlayTrigger
+                  key={index}
+                  placement="top"
+                  overlay={
+                    <Tooltip id={`tooltip-${index}`}>
+                      {findModifierDescription(modifier)}
+                    </Tooltip>
+                  }
+                >
+                  <li className="modifier" style={{ cursor: 'pointer' }}>
+                    {modifier}
+                  </li>
+                </OverlayTrigger>
+              ))
+            : 'None'}
+        </ul>
+      </div>
     </div>
   );
 };
