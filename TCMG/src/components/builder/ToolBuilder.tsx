@@ -36,7 +36,7 @@ interface ToolBuilderProps {
 type ToolPart = 'Large Sword Blade' | 'Pickaxe Head' | 'Shovel Head' | 'Axe Head' | 'Kama Head' | 'Hammer Head' | 'Large Plate' | 'Excavator Head' | 'Broad Axe Head' | 'Scythe Head' | 'Sword Blade' | 'Pan' | 'Sign Plate' | 'Knife Blade' | 'Binding' | 'Tough Binding' | 'Wide Guard' | 'Plate' | 'Hand Guard' | 'Cross Guard' | 'Tool Rod' | 'Tough Tool Rod';
 
 const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
-  const [selectedTool, setSelectedTool] = useState<string | null>(null);
+  const [selectedTool, setSelectedTool] = useState<string | null>('Katana'); // Default selected tool
   const [selectedMaterials, setSelectedMaterials] = useState<{ [key: string]: Material | null }>({
     head: null,
     handle: null,
@@ -145,20 +145,23 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   };
 
   // Handle material selection for a part
-  const handleMaterialSelection = (material: Material, _partIndex: number, partName: ToolPart) => {
-    console.log(`Material selected for part ${partName}:`, material);
-    const category = partToCategory[partName]; // Get the material category (head/handle/extra)
+    const handleMaterialSelection = (selectedOption: { value: Material | null }, _partIndex: number, partName: ToolPart) => {
+      const category = partToCategory[partName]; // Get the material category (head/handle/extra)
     
-    setSelectedMaterials((prev) => ({
-      ...prev,
-      [category]: material,
-    }));
-
-    calculateToolStats({
-      ...selectedMaterials,
-      [category]: material,
-    });
-  };
+      // Set to null if 'None' is selected
+      const material = selectedOption.value;
+    
+      setSelectedMaterials((prev) => ({
+        ...prev,
+        [category]: material,
+      }));
+    
+      calculateToolStats({
+        ...selectedMaterials,
+        [category]: material,
+      });
+    };
+  
 
   // Dynamically calculate tool stats for the selected materials
   const calculateToolStats = (materials: { [key: string]: Material | null }) => {
@@ -170,11 +173,15 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
     setToolStats(stats);
   };
 
-  // Prepare material options for the dropdown (react-select)
-  const materialOptions = materials.map((material) => ({
-    value: material,
-    label: material.name,
-  }));
+  // Prepare material options for the dropdown (react-select) with "None" at the top
+  const materialOptions = [
+    { value: null, label: 'None' }, // Option to reset the selection
+    ...materials.map((material) => ({
+      value: material,
+      label: material.name,
+    })),
+  ];
+
 
   const customStyles = {
     control: (styles: any) => ({
@@ -236,7 +243,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
                   <label>{part}</label>
                   <Select
                     options={materialOptions}
-                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!.value, index, part as ToolPart)}
+                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} // Explicitly cast part to ToolPart
                     placeholder={isFocused === index ? '' : `Select Material for ${part}`}
                     onFocus={() => setIsFocused(index)}
                     onBlur={() => setIsFocused(null)}
@@ -249,34 +256,33 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
         </div>
       )}
 
-      {toolStats && (
-        <div className="tool-stats">
-          <h3>Tool Stats</h3>
-          <p>Durability: {toolStats.durability}</p>
-          <p>Mining Speed: {toolStats.speed}</p>
-          <p>Attack Damage: {toolStats.attack}</p>
-          <p>Modifiers: </p>
-          <ul>
-            {toolStats.modifiers.length > 0
-              ? toolStats.modifiers.map((modifier: string, index: number) => (
-                  <OverlayTrigger
-                    key={index}
-                    placement="top"
-                    overlay={
-                      <Tooltip id={`tooltip-${index}`}>
-                        {findModifierDescription(modifier)}
-                      </Tooltip>
-                    }
-                  >
-                    <li className="modifier" style={{ cursor: 'pointer' }}>
-                      {modifier}
-                    </li>
-                  </OverlayTrigger>
-                ))
-              : 'None'}
-          </ul>
-        </div>
-      )}
+    <div className="tool-stats">
+      <h3>Tool Stats</h3>
+      <p>Durability: {toolStats?.durability || 'N/A'}</p>
+      <p>Mining Speed: {toolStats?.speed || 'N/A'}</p>
+      <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
+      <p>Modifiers: </p>
+      <ul>
+        {toolStats?.modifiers?.length > 0
+          ? toolStats.modifiers.map((modifier: string, index: number) => (
+              <OverlayTrigger
+                key={index}
+                placement="top"
+                overlay={
+                  <Tooltip id={`tooltip-${index}`}>
+                    {findModifierDescription(modifier)}
+                  </Tooltip>
+                }
+              >
+                <li className="modifier" style={{ cursor: 'pointer' }}>
+                  {modifier}
+                </li>
+              </OverlayTrigger>
+            ))
+          : 'None'}
+      </ul>
+    </div>
+
     </div>
   );
 };
