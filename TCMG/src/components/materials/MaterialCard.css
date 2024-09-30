@@ -94,3 +94,30 @@ p {
   opacity: 1; /* Slightly less opaque tooltip overall */
   transition: opacity 0.3s ease !important;
 }
+
+/* Material Card Section: Head */
+.material-section-head h4 {
+  color: #a3d9f5; /* Pastel blue for Head section */
+}
+
+.material-section-head p {
+  color: #a3d9f5; /* Pastel blue for Head text */
+}
+
+/* Material Card Section: Handle */
+.material-section-handle h4 {
+  color: #f5d3a3; /* Pastel orange for Handle section */
+}
+
+.material-section-handle p {
+  color: #f5d3a3; /* Pastel orange for Handle text */
+}
+
+/* Material Card Section: Extra */
+.material-section-extra h4 {
+  color: #a3f5a3; /* Pastel green for Extra section */
+}
+
+.material-section-extra p {
+  color: #a3f5a3; /* Pastel green for Extra text */
+}

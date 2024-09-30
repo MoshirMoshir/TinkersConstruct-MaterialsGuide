@@ -71,7 +71,8 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
           <h2 className="material-name">{name}</h2>
         </div>
         <div className="material-content">
-          <div className="material-section">
+          {/* Head Section */}
+          <div className="material-section material-section-head">
             <h4>Head</h4>
             <p>Durability: {head.durability}</p>
             <p>Mining Level: {head.miningLevel}</p>
@@ -99,8 +100,9 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
             </p>
           </div>
 
+          {/* Handle Section */}
           {handle && (
-            <div className="material-section">
+            <div className="material-section material-section-handle">
               <h4>Handle</h4>
               <p>Modifier: {handle.modifier}</p>
               <p>Durability: {handle.durability}</p>
@@ -127,8 +129,9 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
             </div>
           )}
 
+          {/* Extra Section */}
           {extra && (
-            <div className="material-section">
+            <div className="material-section material-section-extra">
               <h4>Extra</h4>
               <p>Durability: {extra.durability}</p>
               <p>
