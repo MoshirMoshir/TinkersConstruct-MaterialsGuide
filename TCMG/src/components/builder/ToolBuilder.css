@@ -3,30 +3,34 @@
 display: flex;
 justify-content: space-evenly;
 padding: 20px;
-background-color: var(--background2-color); /* Ensure this matches your dark theme */
-color: var(--text-color); /* Text color from your theme */
+background-color: var(--background2-color);
+color: var(--text-color);
 border-radius: 8px;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Tool Selection Section */
 .tool-selection {
-width: 20%; /* Adjust the width of the tool selection area */
-
+width: 20%;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+grid-gap: 10px; /* Add space between grid items */
 }
 
+/* Ensure the title spans the full width */
 .tool-selection h2 {
-color: var(--primary-color); /* Make the title match the theme's primary color */
+grid-column: 1 / -1; /* Span the entire row */
+color: var(--primary-color);
 font-size: 1.5rem;
 margin-bottom: 10px;
+text-align: center; /* Center-align the title */
 }
 
+/* Tool Button Styles */
 .tool-button {
-display: block;
 width: 100%;
-padding: 10px;
-margin-bottom: 10px;
-background-color: var(--background2-color); /* Button background */
+height: 100px; /* Make buttons square */
+background-color: var(--background2-color);
 color: var(--text-color);
 border: 1px solid var(--card-border-color);
 border-radius: 5px;
@@ -34,16 +38,19 @@ text-align: center;
 font-size: 1rem;
 cursor: pointer;
 transition: background-color 0.2s, transform 0.2s;
+display: flex;
+align-items: center;
+justify-content: center; /* Center the button text */
 }
 
 .tool-button:hover {
-background-color: var(--primary-color); /* Change background on hover */
-color: #fff; /* Ensure text is readable on hover */
-transform: scale(1.05); /* Slight zoom on hover */
+background-color: var(--primary-color);
+color: #fff;
+transform: scale(1.05);
 }
 
 .tool-button.selected {
-background-color: var(--primary-color); /* Highlight selected tool */
+background-color: var(--primary-color);
 color: #fff;
 }
 
@@ -64,6 +71,7 @@ flex-wrap: wrap;  /* Allow the select components to wrap onto the next line */
 gap: 10px;        /* Optional: Add some space between items */
 justify-content: space-between; /* Ensure even distribution of items */
 align-items: flex-start;  /* Align items to the top when wrapping */
+margin-left: 10px;
 }
 
 .material-dropdown {
@@ -115,7 +123,7 @@ color: var(--secondary-color);
   
 /* Tool Stats Section */
 .tool-stats {
-width: 20%; /* Adjust width for the stats section */
+width: 20%;
 background-color: var(--background2-color);
 color: var(--text-color);
 padding: 20px;
@@ -148,5 +156,3 @@ margin: 5px 0;
     margin-bottom: 20px;
 }
 }
-
-
