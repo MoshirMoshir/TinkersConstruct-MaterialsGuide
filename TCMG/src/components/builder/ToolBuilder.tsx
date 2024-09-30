@@ -270,9 +270,11 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
       <div className="tool-stats">
         <h3>Tool Stats</h3>
         <p>Durability: {toolStats?.durability || 'N/A'}</p>
-        <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p> {/* Fix for Mining Level */}
-        <p>Mining Speed: {toolStats?.speed || 'N/A'}</p> {/* Change miningSpeed to speed */}
+        <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p>
+        <p>Mining Speed: {toolStats?.miningSpeed || 'N/A'}</p> {/* Correct mining speed */}
         <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
+        <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p> {/* Display attack speed */}
+        <p>DPS: {toolStats?.DPS || 'N/A'}</p> {/* Display DPS */}
         <p>Modifiers: </p>
         <ul>
           {toolStats?.modifiers?.length > 0
