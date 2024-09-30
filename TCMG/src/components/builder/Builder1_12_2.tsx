@@ -1,25 +1,43 @@
 import { Material } from '@components/builder/ToolBuilder.tsx'; // Import Material type from ToolBuilder
 
-const Builder1_12_2 = (toolName: string, materials: (Material | null)[]) => {
-  const calculateDurability = (materials: (Material | null)[]) => {
-    // Example logic: average the durability of the selected materials
-    return materials.reduce((sum, mat) => sum + (mat ? mat.durability : 0), 0) / materials.length;
+const Builder1_12_2 = (toolName: string, head: Material['head'] | null, handle: Material['handle'] | null, extra: Material['extra'] | null) => {
+  const calculateDurability = () => {
+    const headDurability = head?.durability || 0;
+    const handleDurability = handle?.durability || 0;
+    const handleModifier = handle?.modifier || 1;
+    const extraDurability = extra?.durability || 0;
+
+    return (headDurability + extraDurability) * handleModifier + handleDurability;
   };
 
-  const calculateSpeed = (materials: (Material | null)[]) => {
-    // Example logic: average the mining speed
-    return materials.reduce((sum, mat) => sum + (mat ? mat.speed : 0), 0) / materials.length;
+  const calculateSpeed = () => {
+    const headSpeed = head?.speed || 0;
+
+    return headSpeed;
   };
 
-  const calculateAttack = (materials: (Material | null)[]) => {
-    // Example logic: average the attack values
-    return materials.reduce((sum, mat) => sum + (mat ? mat.attack : 0), 0) / materials.length;
+  const calculateAttack = () => {
+    return head?.attack || 0; // Only head affects attack in 1.12.2
+  };
+
+  const calculateModifiers = () => {
+    const allModifiers = [];
+
+    if (head?.modifiers) allModifiers.push(...head.modifiers);
+    if (handle?.modifiers) allModifiers.push(...handle.modifiers);
+    if (extra?.modifiers) allModifiers.push(...extra.modifiers);
+
+    // Filter out duplicate modifiers
+    const uniqueModifiers = Array.from(new Set(allModifiers));
+    
+    return uniqueModifiers;
   };
 
   const stats = {
-    durability: calculateDurability(materials),
-    speed: calculateSpeed(materials),
-    attack: calculateAttack(materials),
+    durability: calculateDurability(),
+    speed: calculateSpeed(),
+    attack: calculateAttack(),
+    modifiers: calculateModifiers(),
   };
 
   return stats;
