@@ -2,7 +2,7 @@
   "name": "tcmg",
   "private": true,
   "version": "0.0.1",
-  "homepage": "tcgm.moshir.dev",
+  "homepage": "tconstruct.moshir.dev",
   "type": "module",
   "scripts": {
     "dev": "vite",
