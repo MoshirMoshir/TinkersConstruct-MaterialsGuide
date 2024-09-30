@@ -95,12 +95,28 @@ p {
   transition: opacity 0.3s ease !important;
 }
 
+.material-section ul {
+  list-style-type: disc;
+  padding-left: 1rem; /* Indent bullets */
+  margin: 0;
+  font-size: .8rem;
+  margin-top: -1rem;
+}
+
+.material-section li {
+  font-size: .8rem;
+}
+
 /* Material Card Section: Head */
 .material-section-head h4 {
   color: #a3d9f5; /* Pastel blue for Head section */
 }
 
 .material-section-head p {
+  color: #a3d9f5; /* Pastel blue for Head text */
+}
+
+.material-section-head li {
   color: #a3d9f5; /* Pastel blue for Head text */
 }
 
@@ -113,11 +129,19 @@ p {
   color: #f5d3a3; /* Pastel orange for Handle text */
 }
 
+.material-section-handle li {
+  color: #f5d3a3; /* Pastel orange for Handle text */
+}
+
 /* Material Card Section: Extra */
 .material-section-extra h4 {
   color: #a3f5a3; /* Pastel green for Extra section */
 }
 
 .material-section-extra p {
+  color: #a3f5a3; /* Pastel green for Extra text */
+}
+
+.material-section-extra li {
   color: #a3f5a3; /* Pastel green for Extra text */
 }

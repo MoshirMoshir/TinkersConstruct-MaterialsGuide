@@ -78,8 +78,8 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
             <p>Mining Level: {head.miningLevel}</p>
             <p>Mining Speed: {head.miningSpeed}</p>
             <p>Attack: {head.attack}</p>
-            <p>
-              Modifiers:{' '}
+            <p>Modifiers:</p>
+            <ul>
               {head.modifiers.length > 0
                 ? head.modifiers.map((modifier, index) => (
                     <OverlayTrigger
@@ -91,13 +91,13 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
                         </Tooltip>
                       }
                     >
-                      <span className="modifier" style={{ marginRight: '0.5rem', cursor: 'pointer' }}>
+                      <li className="modifier" style={{ cursor: 'pointer' }}>
                         {modifier}
-                      </span>
+                      </li>
                     </OverlayTrigger>
                   ))
-                : 'None'}
-            </p>
+                : <li>None</li>}
+            </ul>
           </div>
 
           {/* Handle Section */}
@@ -106,8 +106,8 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
               <h4>Handle</h4>
               <p>Modifier: {handle.modifier}</p>
               <p>Durability: {handle.durability}</p>
-              <p>
-                Modifiers:{' '}
+              <p>Modifiers:</p>
+              <ul>
                 {handle.modifiers.length > 0
                   ? handle.modifiers.map((modifier, index) => (
                       <OverlayTrigger
@@ -119,13 +119,13 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
                           </Tooltip>
                         }
                       >
-                        <span className="modifier" style={{ marginRight: '0.5rem', cursor: 'pointer' }}>
+                        <li className="modifier" style={{ cursor: 'pointer' }}>
                           {modifier}
-                        </span>
+                        </li>
                       </OverlayTrigger>
                     ))
-                  : 'None'}
-              </p>
+                  : <li>None</li>}
+              </ul>
             </div>
           )}
 
@@ -134,8 +134,8 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
             <div className="material-section material-section-extra">
               <h4>Extra</h4>
               <p>Durability: {extra.durability}</p>
-              <p>
-                Modifiers:{' '}
+              <p>Modifiers:</p>
+              <ul>
                 {extra.modifiers.length > 0
                   ? extra.modifiers.map((modifier, index) => (
                       <OverlayTrigger
@@ -147,13 +147,13 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
                           </Tooltip>
                         }
                       >
-                        <span className="modifier" style={{ marginRight: '0.5rem', cursor: 'pointer' }}>
+                        <li className="modifier" style={{ cursor: 'pointer' }}>
                           {modifier}
-                        </span>
+                        </li>
                       </OverlayTrigger>
                     ))
-                  : 'None'}
-              </p>
+                  : <li>None</li>}
+              </ul>
             </div>
           )}
         </div>
