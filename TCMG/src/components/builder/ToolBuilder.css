@@ -1,0 +1,152 @@
+/* Overall Tool Builder Layout */
+.tool-builder {
+display: flex;
+justify-content: space-evenly;
+padding: 20px;
+background-color: var(--background2-color); /* Ensure this matches your dark theme */
+color: var(--text-color); /* Text color from your theme */
+border-radius: 8px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Tool Selection Section */
+.tool-selection {
+width: 20%; /* Adjust the width of the tool selection area */
+
+}
+
+.tool-selection h2 {
+color: var(--primary-color); /* Make the title match the theme's primary color */
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+.tool-button {
+display: block;
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+background-color: var(--background2-color); /* Button background */
+color: var(--text-color);
+border: 1px solid var(--card-border-color);
+border-radius: 5px;
+text-align: center;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.2s, transform 0.2s;
+}
+
+.tool-button:hover {
+background-color: var(--primary-color); /* Change background on hover */
+color: #fff; /* Ensure text is readable on hover */
+transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.tool-button.selected {
+background-color: var(--primary-color); /* Highlight selected tool */
+color: #fff;
+}
+
+/* Tool Configuration Section */
+.tool-configuration {
+width: 60%; /* Adjust width for the material selection and tool view */
+}
+
+.tool-configuration h2 {
+color: var(--primary-color);
+font-size: 1.8rem;
+margin-bottom: 20px;
+}
+
+.material-selection {
+display: flex;
+flex-wrap: wrap;  /* Allow the select components to wrap onto the next line */
+gap: 10px;        /* Optional: Add some space between items */
+justify-content: space-between; /* Ensure even distribution of items */
+align-items: flex-start;  /* Align items to the top when wrapping */
+}
+
+.material-dropdown {
+    flex: 1;               /* Allow the dropdown to grow/shrink with the available space */
+    min-width: 75px;        /* Set the minimum width for the dropdown */
+    max-width: calc(100% / 3);  /* Adjust to ensure it doesn't grow too large */
+    box-sizing: border-box; /* Include padding in width calculations */
+    margin: 0 10px 10px 0;  /* Add margin for better spacing */
+}
+
+  
+.material-dropdown label {
+font-size: 1rem;
+margin-bottom: 5px;
+color: var(--secondary-color);
+}
+
+
+.material-dropdown .react-select__control {
+    background-color: var(--background2-color);
+    border: 1px solid var(--card-border-color);
+    color: var(--text-color);
+    min-width: 200px; /* Minimum width for the select box */
+    width: 100%; /* Ensure it takes up the full width available */
+}
+
+.material-dropdown .react-select__placeholder {
+    color: var(--text-color);
+    min-width: 150px; /* Prevent the placeholder from shrinking */
+}
+
+.material-dropdown .react-select__single-value,
+.material-dropdown .react-select__input-container {
+    min-width: 150px; /* Ensure that the selected value and input container maintain a width */
+    flex-grow: 1; /* Ensure the input grows to fill available space */
+}
+
+.material-dropdown .react-select__menu {
+    width: 100%; /* Ensure dropdown width matches the control width */
+}
+
+/* Optional: Adjust input width for mobile */
+@media (max-width: 600px) {
+  .material-dropdown .react-select__control {
+    min-width: 150px; /* Adjust for smaller screens */
+  }
+}
+
+  
+/* Tool Stats Section */
+.tool-stats {
+width: 20%; /* Adjust width for the stats section */
+background-color: var(--background2-color);
+color: var(--text-color);
+padding: 20px;
+border-radius: 8px;
+border: 1px solid var(--card-border-color);
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tool-stats h3 {
+color: var(--primary-color);
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+.tool-stats p {
+font-size: 1rem;
+margin: 5px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1000px) {
+.tool-builder {
+    flex-direction: column;
+}
+
+.tool-selection,
+.tool-configuration,
+.tool-stats {
+    width: 100%;
+    margin-bottom: 20px;
+}
+}
+
+
