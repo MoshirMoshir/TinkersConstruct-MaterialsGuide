@@ -1,0 +1,11 @@
+[
+    {
+      "name": "Magnetic",
+      "description": "Pulls items towards the player when equipped."
+    },
+    {
+      "name": "Fortune",
+      "description": "Increases block drops when mining."
+    }
+  ]
+  
