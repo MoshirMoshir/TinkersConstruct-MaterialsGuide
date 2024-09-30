@@ -152,15 +152,25 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
     return Array.from(new Set(allModifiers)); // Filter duplicates
   };
 
+  // Helper function to format the number, showing decimals only if needed and rounding very small values
+  const formatNumber = (num: number) => {
+    // Round to 2 decimal places and check if the fractional part is effectively zero
+    const rounded = Math.round(num * 100) / 100;
+    return rounded % 1 === 0 ? rounded.toFixed(0) : rounded.toFixed(2);
+  };
+
+  // In the stats object, make sure it uses the formatNumber function:
   const stats = {
-    durability: calculateDurability(),
-    miningLevel: calculateMiningLevel(),
-    miningSpeed: calculateSpeed(),
-    attack: calculateAttack(),
-    attackSpeed: calculateAttackSpeed(),
-    DPS: calculateDPS(),
+    durability: formatNumber(calculateDurability()),
+    miningLevel: calculateMiningLevel(), // No need for decimal precision here
+    miningSpeed: formatNumber(calculateSpeed()),
+    attack: formatNumber(calculateAttack()),
+    attackSpeed: formatNumber(calculateAttackSpeed()),
+    DPS: formatNumber(calculateDPS()),
     modifiers: calculateModifiers(),
   };
+
+
 
   return stats;
 };
