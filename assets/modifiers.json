@@ -1,0 +1,522 @@
+[
+  {
+    "name": "Alien",
+    "description": "Tool gains 3 new stats (only visible in Tool Station) that increase* slowly from being in your inventory. They stop after about 30 mins."
+  },
+  {
+    "name": "Anti-Corrosion",
+    "description": "About a 5% chance every tick to remove poison effect while holding the tool."
+  },
+  {
+    "name": "Apocalypse",
+    "description": "3 consecutive hits will inflict the target with up to Wither 3, adding 1 level of Wither per hit. Effect lasts 5 seconds."
+  },
+  {
+    "name": "Aquadynamic",
+    "description": "Tool mines normal speed underwater and slightly faster when raining."
+  },
+  {
+    "name": "Aridiculous",
+    "description": "Tool deals about 30% more damage when in hot biomes. Tool mines 25% faster when in hot biomes (Desert, Nether, etc)."
+  },
+  {
+    "name": "Autosmelt",
+    "description": "Harvested blocks get smelted."
+  },
+  {
+    "name": "Baconlicious",
+    "description": "Has a VERY low chance of dropping a piece of bacon when hitting a mob. It\u2019s special Tinkers\u2019 bacon that is uncraftable by default."
+  },
+  {
+    "name": "Blind Bandit",
+    "description": "Has about a 50% chance to spawn a 'Blind Bandit' whenever you attack or are attacked while holding this tool. "
+  },
+  {
+    "name": "Bloody Mary",
+    "description": "Deals increasing damage depending on how much health the target has lost. It\u2019s a huge increase, but I cannot figure out the formula."
+  },
+  {
+    "name": "Botanical",
+    "description": "Head adds 2 modifiers - Handle/Extra adds 1 modifier All 3 adds 3 modifiers"
+  },
+  {
+    "name": "Brown Magic",
+    "description": "Press <keybind> to set spawnpoint. Press <keybind> to teleport to it."
+  },
+  {
+    "name": "CHAD Thunder",
+    "description": "While holding this tool, non-terrain damaging lightning strikes happen all around you. When you attack a mob, they are struck by lightning."
+  },
+  {
+    "name": "Cheap",
+    "description": "Tool gains extra durability from repairing."
+  },
+  {
+    "name": "Cheapskate",
+    "description": "Tool has about 20% less (max) durability when it has the Cheapskate trait."
+  },
+  {
+    "name": "Chunky",
+    "description": "Has a chance for killed mobs to drop a mob chunk when killed."
+  },
+  {
+    "name": "Cold-Blooded",
+    "description": "Tool does 50% more damage to targets at full health."
+  },
+  {
+    "name": "Crude",
+    "description": "+5% damage vs unarmored targets."
+  },
+  {
+    "name": "Crumbling",
+    "description": "Blocks that do not require a tool (Wool, Dirt, Wood) to be mined will be mined faster when using this tool, even if it isn't the correct tool."
+  },
+  {
+    "name": "Dark Traveler",
+    "description": "Nearby mobs randomly take large amounts of damage. It's hard to keep a testing subject alive long enough to get measurements."
+  },
+  {
+    "name": "Dense",
+    "description": "Your tool lasts longer when it has less durability."
+  },
+  {
+    "name": "Devil's Strength",
+    "description": "+2 Attack Damage to non-overworld mobs."
+  },
+  {
+    "name": "Direct",
+    "description": "Teleports mined blocks directly into your inventory."
+  },
+  {
+    "name": "Duritae",
+    "description": "Tool has about a 40% chance to not use durability. For reference, unbreaking 3 only gives a 30% chance to not use durability."
+  },
+  {
+    "name": "Ecological",
+    "description": "Slowly repairs itself for free at a speed dependant on how much durability it has. 6,000 durability is about 5 durability/min."
+  },
+  {
+    "name": "Elemental",
+    "description": "When a gravity affected block is broken, all identical blocks above it are also broken at the cost of just 1 durability."
+  },
+  {
+    "name": "Enderference",
+    "description": "Prevents Endermen from Teleporting. At level 1 this effect lasts 5 seconds."
+  },
+  {
+    "name": "Evil Aura",
+    "description": "When holding the tool, any grass or dirt paths you walk on will turn into dirt."
+  },
+  {
+    "name": "Experience Boost",
+    "description": "Gives 4x more XP when mining and attacking."
+  },
+  {
+    "name": "Flammable",
+    "description": "Blocking attacks blocks any fire damage that would be inflicted to you and getting hit sets the attacker on fire while holding this tool."
+  },
+  {
+    "name": "Fractured",
+    "description": "+1.5 Attack Damage."
+  },
+  {
+    "name": "Freezing",
+    "description": "First hit applies Slowness 1 to the target. Each consecutive hit increases effect up to level 5. Effect only lasts 3 seconds after you stop attacking."
+  },
+  {
+    "name": "Fruit Salad",
+    "description": "Press <keybind> to open a 5-slot gui that can hold ONLY fruits."
+  },
+  {
+    "name": "Global Traveller",
+    "description": "Shift+Right click a block with an inventory to instantly teleport mined blocks and mob drops into it. Linked inventory does not need to be chunk loaded."
+  },
+  {
+    "name": "Glowing",
+    "description": "When standing in a light level of <7, the tool uses 1 durability to place a 'Glowball' at your feet. A \u2018Glowball\u2019 has the same light level as a Torch (15)."
+  },
+  {
+    "name": "Hail Hydra",
+    "description": "When taking damage you get absorption 4 (90 sec). Nearby hostile mobs take explosion damage when you're holding the tool."
+  },
+  {
+    "name": "He who must not Be Named",
+    "description": " +1 attack damage for every mob of the same type within 8 blocks of the target. There doesn't seem to be a limit."
+  },
+  {
+    "name": "Hearts",
+    "description": "When you are at 1/2 heart = tool's normal damage +3.5% When you are at full health = tool\u2019s normal attack damage +70%"
+  },
+  {
+    "name": "Heavy",
+    "description": "While holding a tool with the Heavy trait, you will receive NO knockback."
+  },
+  {
+    "name": "Heavy-Metal",
+    "description": "Increased knockback and applies slowness 3 for 5 seconds to target."
+  },
+  {
+    "name": "Hell-ish",
+    "description": "+4 Damage vs non-nether mobs"
+  },
+  {
+    "name": "Holy",
+    "description": "+5 Attack Damage vs undead enemies."
+  },
+  {
+    "name": "Illuminati",
+    "description": "When holding the tool, all nearby entities (that aren't holding a tool with this trait) have a glowing effect on them."
+  },
+  {
+    "name": "Insatiable",
+    "description": "Consecutive hits use more durability but don't add any extra damage. (bug?)"
+  },
+  {
+    "name": "Jagged",
+    "description": "Tool starts gaining +0.025 attack damage for every point of durability lost, but increase gets less and less the higher the bonus gets."
+  },
+  {
+    "name": "Light Metal",
+    "description": "Increases mining speed and attack speed (Swing cooldown) by 20%"
+  },
+  {
+    "name": "Lightweight",
+    "description": "Increases Mining Speed and Attack Speed (Swing cooldown) by 10%."
+  },
+  {
+    "name": "Magically Brittle",
+    "description": "1/max durability squared is the chance of the tool randomly breaking when used. More durability is better."
+  },
+  {
+    "name": "Magically Modifiable",
+    "description": "Adds 3 extra modifiers to the tool. Does not stack with other parts that have the same trait."
+  },
+  {
+    "name": "Magnetic",
+    "description": "When you attack a mob or break a block, items on the ground are magnetized to you, (further pickup reach?)."
+  },
+  {
+    "name": "Mana",
+    "description": "Can recharge durability from a Mana Tablet in inventory."
+  },
+  {
+    "name": "Mirabile Visu",
+    "description": "Any stone blocks immediately touching you can turn into Gold ore (1 durability) or Diamond ore (5 durability) while holding the tool at a rate of about 1 block/min."
+  },
+  {
+    "name": "Moldable",
+    "description": "Head = +1 Modifier"
+  },
+  {
+    "name": "Momentum",
+    "description": "Mining blocks consecutively increases mining speed. Once you stop mining, the increase resets."
+  },
+  {
+    "name": "Morgan Le Fay",
+    "description": "Each hit has a chance to add 0-5 extra damage 'Gaussian Distributed'. High chance for 0-1 extra damage and low chance for 4-5 extra damage."
+  },
+  {
+    "name": "Music of the Spheres",
+    "description": "Press <keybind> to open a 1-slot gui that can only hold music disks. Once a disk is placed inside, it will play it."
+  },
+  {
+    "name": "Nature's Blessing",
+    "description": "Small chance to drop bread from killing mobs and mining blocks. About a 50% chance to gain 2 hearts from killing a mob."
+  },
+  {
+    "name": "Nature's Power",
+    "description": "After attacking a mob, 20% chance to do any of the following: Give player Speed 1 (5 sec), Strength 1 (5 sec) or set target on fire (3 sec)"
+  },
+  {
+    "name": "Nature's Wrath",
+    "description": "Has about a 20% chance to set the target on fire for 3 seconds. Has about an 80% chance to heal the player for 0.5 or 1 heart."
+  },
+  {
+    "name": "Nick of Time",
+    "description": "Use <Keybind> to set a spawnpoint. When you are about to take a killing hit, 8 Ender Pearls can be consumed from your inventory to teleport you away."
+  },
+  {
+    "name": "Petramor",
+    "description": "Has about a 25% chance when mining to not use durability."
+  },
+  {
+    "name": "Poisonous",
+    "description": "Mobs hit with this tool will take 2 extra hearts of poison damage over 3 seconds."
+  },
+  {
+    "name": "Portly Gentleman",
+    "description": "Shift+Right click an entity to capture it 'inside' your tool at the cost of 20 durability and \u2018release key\u2019 (default 0) to release it."
+  },
+  {
+    "name": "Precipitate",
+    "description": "The less health you have, the faster the Mining Speed."
+  },
+  {
+    "name": "Prosperous",
+    "description": "Has about a 1/300 chance of dropping a prosperity shard when mining a block."
+  },
+  {
+    "name": "Psicological",
+    "description": "Uses PSI instead of Durability"
+  },
+  {
+    "name": "Rude Awakening",
+    "description": "All damage ignores armor (mobs only)."
+  },
+  {
+    "name": "Sassy",
+    "description": "All hits on players and bosses are critical hits."
+  },
+  {
+    "name": "Sharp",
+    "description": "Mobs hit with this tool will take 7 ticks of 'bleeding' damage similar to poison for 4 seconds and lose 2.25 hearts (0.31 hearts per damage tick)."
+  },
+  {
+    "name": "Shocking",
+    "description": "Running, breaking blocks and hitting things charges your tool. Once charged, the next mob you hit or block you break discharges it."
+  },
+  {
+    "name": "Slashing",
+    "description": "Critical hits gain +20% extra damage."
+  },
+  {
+    "name": "Slimey",
+    "description": "When killing a mob or breaking a block, there is a small chance to spawn a baby (green) slime at the mob\u2019s feet, or in place of the broken block."
+  },
+  {
+    "name": "Spades",
+    "description": "When you are at full health = tool's normal damage When you are at 1/2 heart = tool\u2019s normal damage x 2.2"
+  },
+  {
+    "name": "Spiky",
+    "description": "When mobs attack you while you are holding a tool with the Spiky trait the attacker takes damage equal to the attack damage of the tool itself."
+  },
+  {
+    "name": "Splintering",
+    "description": "Level 1: Adds +0.15 damage every hit for 7 consecutive hits where it maxes out at +0.9 damage. Level 2: Adds +0.3 damage every hit for 7 consecutive hits where it maxes out at +1.8 damage."
+  },
+  {
+    "name": "Splinters",
+    "description": "When mining blocks or attacking enemies, there is a 0.667% chance you will take 0.1 damage. This is less than half a heart of damage so it functionally doesn't do anything. It makes the damage sound and 'feels' like you're taking damage. It's more of an annoying side effect for the benefit of giving a tool a huge durability increase from using a Soularium Extra."
+  },
+  {
+    "name": "Squeaky",
+    "description": "Works the exact same as silk touch but tool now does 0 damage. It does LESS damage than punching, which is 0.5."
+  },
+  {
+    "name": "Stalwart",
+    "description": "Hitting an entity can make you feel Emboldened. Has about a 5% to 10% chance to give you Resistance III."
+  },
+  {
+    "name": "Starfishy",
+    "description": "Use <Keybind> to set a spawnpoint. When you are about to take a killing hit, 32 Enori crystals can be consumed from your inventory to teleport you away."
+  },
+  {
+    "name": "Stiff",
+    "description": "Blocking with a battlesign deals 0.3 hearts of damage to the attacker, while also knocking them back."
+  },
+  {
+    "name": "Stonebound",
+    "description": "The lower your tools durability, the faster it mines. Despite the description, the tool doesn't actually reduce attack damage. (bug?)"
+  },
+  {
+    "name": "Stop Being Selfish",
+    "description": "The closer another player is to the attacker, the more damage the tool does. doesn't work on mobs, unable to test in Singleplayer."
+  },
+  {
+    "name": "Superheat",
+    "description": "Deals +35% bonus damage to enemies on fire."
+  },
+  {
+    "name": "Synergy",
+    "description": "Will repair itself if you have Steeleaves in your Hotbar. The more steeleaves you have in your hotbar, the faster it repairs."
+  },
+  {
+    "name": "Tasty",
+    "description": "Tool will use 5 durability to restore 0.5 hunger points with no saturation until your health is full."
+  },
+  {
+    "name": "Terrafirma",
+    "description": "Heals the player when holding it. Level 1 = 1/2 heart every 2 sec, Level 2 = 1/2 heart every 1 sec, Level 3 = 1/2 heart every 0.5 sec."
+  },
+  {
+    "name": "Thaumic",
+    "description": "1 part with this trait = 1 extra modifier. 3 parts with this trait = 2 extra modifiers."
+  },
+  {
+    "name": "Thermal Inversion",
+    "description": "Applies slowness for 2 seconds to mobs hit in all normal/hot biomes.  Doesn't seem to do anything in cold biomes despite description. (bug?)"
+  },
+  {
+    "name": "Twilit",
+    "description": " +2 Mining Speed in Twilight Forest.  +2 Attack Damage (2 hearts) outside Twilight Forest."
+  },
+  {
+    "name": "Unnatural",
+    "description": "Increases Mining speed by 1 for every level it is above the required mining level."
+  },
+  {
+    "name": "Uplifting",
+    "description": "Has about a 50% chance to give you Regen 3 for 5 seconds when breaking a block or attacking."
+  },
+  {
+    "name": "Vanishing",
+    "description": "Chance to teleport enemies away."
+  },
+  {
+    "name": "Vindictive",
+    "description": "Has a 20% chance to heal the player by either 1 or 1/2 heart for every hit. Bonus damage vs players, unable to test in singleplayer."
+  },
+  {
+    "name": "Well-Established",
+    "description": "Blocks mined and mobs killed using this tool give slightly more xp."
+  },
+  {
+    "name": "Whispering",
+    "description": "Will occasionally say in chat random 'demonic' messages. It doesn't do anything else."
+  },
+  {
+    "name": "Withering",
+    "description": "Mobs hit with this tool will take 2 extra hearts of wither damage over 3 seconds."
+  },
+  {
+    "name": "Writable",
+    "description": "Tool gains +1 modifier. Using a head part and an Extra or Handle part with Writable it will give Writable 2."
+  },
+  {
+    "name": "Prickly",
+    "description": "After a target is hit, the tool will deal a random amount of cactus type damage (ignores armor). The higher the damage applied, the less likely."
+  },
+  {
+    "name": "Arcane",
+    "description": "Has a very small chance to repair the tool by ~5 durability on use during the night."
+  },
+  {
+    "name": "BERSERK",
+    "description": "When activated, multiplies mining speed and damage by 4, but has a 20% chance every 8 ticks to damage the max durability of the tool, and on the other 80% chance, it just damages the tool. When activating, it immediately removes 10 from the max durability of the tool. Right-click to activate."
+  },
+  {
+    "name": "Blind",
+    "description": "Has a small chance on use to give you blindness for 20 seconds."
+  },
+  {
+    "name": "Blizzard",
+    "description": "Freezes the target in a block of ice, giving it slowness 3(?) for ~12 seconds. Target also receives 7 ticks of freezing damage (does 1 heart). Gives additional knockback."
+  },
+  {
+    "name": "Bright",
+    "description": "During the day, every hit, the tool will do between 100% (no increase) and 150% (+50% more) damage. During the night, every hit, the tool will do between 100% (no reduction) and 70% (30% less) damage."
+  },
+  {
+    "name": "Cascade",
+    "description": "Has a small chance to break up to 25 nearby blocks when mining."
+  },
+  {
+    "name": "Catcher",
+    "description": "Has a small chance to capture a mob inside your tool similar it the way the Portly Gentleman trait works, except you can't control when it happens."
+  },
+  {
+    "name": "Congenial",
+    "description": "Tool remembers the first mob killed after making the tool. Every hit from then on, the tool will do 1x to 10x more damage per hit (varies between hits). Tool will now only do 0.1x to 0.5x (10% to 50%) damage to any other mob."
+  },
+  {
+    "name": "Cursed",
+    "description": "Has an increasing chance, per update (updates might be ticks, not sure), to damage the player between 0 - 1/2 of the player's current health. If the player is currently holding the cursed tool or weapon, the curse chance increases 10x faster than when not holding it. Holding it means having it selected in the hotbar."
+  },
+  {
+    "name": "Curvature",
+    "description": "Has about a 5% chance on use to teleport you ~5 blocks away. Also causes any mobs killed to have a small chance of dropping an Ender Pearl."
+  },
+  {
+    "name": "Dark",
+    "description": "I would assume it makes you do more damage at night, but it doesn't seem to do anything."
+  },
+  {
+    "name": "Decay",
+    "description": "Every second, your tool will lose any 1 of the following; -1 max durability, -0.01 mining speed or -0.01 attack damage."
+  },
+  {
+    "name": "Dissolving",
+    "description": "About 80% of the time mobs won't drop xp, but the 20% of the time when they do drop xp, they drop 2x more. Overall, it's a net loss of xp."
+  },
+  {
+    "name": "Fragile",
+    "description": "Has a chance when mining to use 1-4 durability per use."
+  },
+  {
+    "name": "Garishly",
+    "description": "Mobs killed have a chance to drop Blaze Powder and Blaze Rods."
+  },
+  {
+    "name": "Glimmer",
+    "description": "Has about a 10% chance when breaking a block or attacking a mob to give you night vision for 25-45 seconds."
+  },
+  {
+    "name": "Heroic",
+    "description": "I'm pretty sure it's supposed to give you Strength when you're about to die, but instead it crashes my game. Probably a bug, but I can't properly test until it's fixed."
+  },
+  {
+    "name": "Hive Defender",
+    "description": "Gives +8 damage vs Death Worms and +4 damage vs non-arthropods."
+  },
+  {
+    "name": "Hollow",
+    "description": "Has a small chance to cause mobs hit to be frozen in place and unable to attack. Effect is permanent to the mob affected until it dies."
+  },
+  {
+    "name": "I'm a Superstar",
+    "description": "Gives an effect dependant on your attunement. The effect is similar to what the attunement gives, so if your attunement gives faster mining speed, the tool will have an additional mining speed bonus."
+  },
+  {
+    "name": "Inferno",
+    "description": "Sets target on fire for ~15 seconds and deals +2.5 hearts (un-armored) of damage on the initial hit. Gives additional knockback."
+  },
+  {
+    "name": "Leveled",
+    "description": "When mining vanilla stone, you can receive Stone, Cobblestone, Gravel or Sand."
+  },
+  {
+    "name": "Melting",
+    "description": "Has a chance when mining to not drop the blocks mined. Once it's 'eaten' enough blocks it will spawn lava at the next block broken."
+  },
+  {
+    "name": "Naturebound",
+    "description": "Tools durability constantly goes down by 1 every few seconds even when not in use. It says it's supposed to repair itself on certain blocks (and I assume those would be nature blocks like wood/leaves/grass) but it doesn't seem to have any effect on repairing the tool. It still uses the durability normally."
+  },
+  {
+    "name": "Ported",
+    "description": "I was running around a cave like a chicken with its head cut off for 20 mins right-clicking EVERYTHING and nothing happened."
+  },
+  {
+    "name": "Pulverising",
+    "description": "Just straight up deletes about ~60% of what you mine."
+  },
+  {
+    "name": "Resonance",
+    "description": "Causes nearby enemies to 'lunge' towards you."
+  },
+  {
+    "name": "Reviving",
+    "description": "This is another one of those, Why can't mod devs just explain their shit moments. I have no idea of where to even start testing with this trait. They revive like zombies is the worst trait description of any trait here so far."
+  },
+  {
+    "name": "Slaughtering",
+    "description": "It's basically Looting 3 that stacks with Looting 3. It seems to work on most (if not all) drops and mobs still drop xp."
+  },
+  {
+    "name": "Softy",
+    "description": "I'd assume it's supposed to heal you when mining dirt, but I mined 500 blocks and didn't heal at all...."
+  },
+  {
+    "name": "Super Heavy",
+    "description": "Tool starts to mine 'slightly' slower the more you use it. Effect decays and resets over time."
+  },
+  {
+    "name": "Unstable",
+    "description": "Has ~5% chance when breaking a block or attacking a mob to cause an explosion slightly larger than that of a Creeper. Also spawns fire around the explosion."
+  },
+  {
+    "name": "Whirl",
+    "description": "No matter what I do, I can't get this thing to work. The code says it should to something on right-click, but it's not doing anything."
+  }
+]

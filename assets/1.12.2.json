@@ -3453,5 +3453,177 @@
                 "Superheat"
             ]
         }
+    },
+    {
+        "name": "Iron Alloy",
+        "image": "/assets/materials/iron_alloy",
+        "head": {
+            "durability": 50,
+            "miningLevel": "Iron",
+            "miningSpeed": 1.5,
+            "attack": 0.75,
+            "modifiers": [
+                "Cheapskate",
+                "Cheap"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": 10,
+            "modifiers": [
+                "Cheapskate",
+                "Cheap"
+            ]
+        },
+        "extra": {
+            "durability": 10,
+            "modifiers": [
+                "Cheapskate",
+                "Cheap"
+            ]
+        }
+    },
+{
+        "name": "Weezer",
+        "image": "/assets/materials/weezer.png",
+        "head": {
+            "durability": 1500,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 6,
+            "attack": 7.5,
+            "modifiers": [
+                "In The Garage",
+                "Undone Surf Wax America"
+              
+            ]
+        },
+        "handle": {
+            "modifier": 1.5,
+            "durability": 100,
+            "modifiers": [
+                "In The Garage",
+                "Undone Surf Wax America"
+            ]
+        },
+        "extra": {
+            "durability": 500,
+            "modifiers": [
+                "In The Garage",
+                "Undone Surf Wax America"
+            ]
+        }
+    },
+{
+        "name": "Vespa Carapace",
+        "image": "/assets/materials/vespa_carapace.png",
+        "head": {
+            "durability": 250,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 7.2,
+            "attack": 2.25,
+            "modifiers": [
+                "Broodmother",
+                "Poisonous"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": 100,
+            "modifiers": [
+                "Broodmother",
+                "Poisonous"
+            ]
+        },
+        "extra": {
+            "durability": 100,
+            "modifiers": [
+                "Broodmother",
+                "Poisonous"
+            ]
+        }
+    },
+{
+        "name": "Scythe Claw",
+        "image": "/assets/materials/scythe_claw.png",
+        "head": {
+            "durability": 100,
+            "miningLevel": "Iron",
+            "miningSpeed": 9.6,
+            "attack": 4.5,
+            "modifiers": [
+                "Famine",
+                "Cold-Blooded"
+            ]
+        },
+        "handle": {
+            "modifier": 0.5,
+            "durability": 0,
+            "modifiers": [
+                "Famine",
+                "Cold-Blooded"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "Famine",
+                "Cold-Blooded"
+            ]
+        }
+    },
+{
+        "name": "Ectoplasm",
+        "image": "/assets/materials/ectoplasm.png",
+        "head": {
+            "durability": 1000,
+            "miningLevel": "Stone",
+            "miningSpeed": 14.4,
+            "attack": 0,
+            "modifiers": [
+                "Unholy Touch"
+            ]
+        },
+        "handle": {
+            "modifier": 1.4,
+            "durability": 0,
+            "modifiers": [
+                "Unholy Touch"
+            ]
+        },
+        "extra": {
+            "durability": 220,
+            "modifiers": [
+                "Unholy Touch"
+            ]
+        }
+    },
+{
+        "name": "Ancient Metal",
+        "image": "/assets/materials/ancient_metal.png",
+        "head": {
+            "durability": 220,
+            "miningLevel": "Diamond",
+            "miningSpeed": 6,
+            "attack": 3,
+            "modifiers": [
+                "Lightning Rod",
+                "Crude"
+            ]
+        },
+        "handle": {
+            "modifier": 0.9,
+            "durability": 10,
+            "modifiers": [
+                "Lightning Rod",
+                "Crude"
+            ]
+        },
+        "extra": {
+            "durability": 25,
+            "modifiers": [
+                "Lightning Rod",
+                "Crude"
+            ]
+        }
     }
 ]
