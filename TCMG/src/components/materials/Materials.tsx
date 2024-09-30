@@ -36,7 +36,7 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
   useEffect(() => {
     const fetchMaterials = async () => {
       try {
-        const response = await fetch(`/assets/materials/${version}.json`);
+        const response = await fetch(`/assets/${version}.json`);
         if (response.ok) {
           const data = await response.json();
           setMaterials(data);

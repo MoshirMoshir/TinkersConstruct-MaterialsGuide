@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import './MaterialCard.css';
 
 interface MaterialProps {
@@ -22,7 +24,45 @@ interface MaterialProps {
   };
 }
 
+interface Modifier {
+  name: string;
+  description: string;
+}
+
 const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extra }) => {
+  const [modifiers, setModifiers] = useState<Modifier[]>([]);
+
+  // Fetch modifiers data from modifiers.json
+  useEffect(() => {
+    const fetchModifiers = async () => {
+      try {
+        const response = await fetch('/assets/modifiers.json');
+        if (response.ok) {
+          const data = await response.json();
+          setModifiers(data);
+        } else {
+          console.error('Error fetching modifiers');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchModifiers();
+  }, []);
+
+  // Helper function to get base name of the modifier (ignores II, III, etc.)
+  const getBaseModifierName = (modifier: string) => {
+    return modifier.replace(/\s[IVX]+$/, ''); // Remove roman numerals like II, III, IV
+  };
+
+  // Helper function to find the description for a modifier
+  const findModifierDescription = (modifierName: string) => {
+    const baseName = getBaseModifierName(modifierName);
+    const modifier = modifiers.find((mod) => mod.name === baseName);
+    return modifier ? modifier.description : 'No description available';
+  };
+
   return (
     <div className="material-card">
       <div className="scale-wrapper">
@@ -37,21 +77,80 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
             <p>Mining Level: {head.miningLevel}</p>
             <p>Mining Speed: {head.miningSpeed}</p>
             <p>Attack: {head.attack}</p>
-            <p>Modifiers: {head.modifiers.length > 0 ? head.modifiers.join(', ') : 'None'}</p>
+            <p>
+              Modifiers:{' '}
+              {head.modifiers.length > 0
+                ? head.modifiers.map((modifier, index) => (
+                    <OverlayTrigger
+                      key={index}
+                      placement="top"
+                      overlay={
+                        <Tooltip id={`tooltip-${index}`}>
+                          {findModifierDescription(modifier)}
+                        </Tooltip>
+                      }
+                    >
+                      <span className="modifier" style={{ marginRight: '0.5rem', cursor: 'pointer' }}>
+                        {modifier}
+                      </span>
+                    </OverlayTrigger>
+                  ))
+                : 'None'}
+            </p>
           </div>
+
           {handle && (
             <div className="material-section">
               <h4>Handle</h4>
               <p>Modifier: {handle.modifier}</p>
               <p>Durability: {handle.durability}</p>
-              <p>Modifiers: {handle.modifiers.length > 0 ? handle.modifiers.join(', ') : 'None'}</p>
+              <p>
+                Modifiers:{' '}
+                {handle.modifiers.length > 0
+                  ? handle.modifiers.map((modifier, index) => (
+                      <OverlayTrigger
+                        key={index}
+                        placement="top"
+                        overlay={
+                          <Tooltip id={`tooltip-${index}`}>
+                            {findModifierDescription(modifier)}
+                          </Tooltip>
+                        }
+                      >
+                        <span className="modifier" style={{ marginRight: '0.5rem', cursor: 'pointer' }}>
+                          {modifier}
+                        </span>
+                      </OverlayTrigger>
+                    ))
+                  : 'None'}
+              </p>
             </div>
           )}
+
           {extra && (
             <div className="material-section">
               <h4>Extra</h4>
               <p>Durability: {extra.durability}</p>
-              <p>Modifiers: {extra.modifiers.length > 0 ? extra.modifiers.join(', ') : 'None'}</p>
+              <p>
+                Modifiers:{' '}
+                {extra.modifiers.length > 0
+                  ? extra.modifiers.map((modifier, index) => (
+                      <OverlayTrigger
+                        key={index}
+                        placement="top"
+                        overlay={
+                          <Tooltip id={`tooltip-${index}`}>
+                            {findModifierDescription(modifier)}
+                          </Tooltip>
+                        }
+                      >
+                        <span className="modifier" style={{ marginRight: '0.5rem', cursor: 'pointer' }}>
+                          {modifier}
+                        </span>
+                      </OverlayTrigger>
+                    ))
+                  : 'None'}
+              </p>
             </div>
           )}
         </div>
