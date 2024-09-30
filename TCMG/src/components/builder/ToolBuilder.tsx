@@ -156,40 +156,52 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   };
 
   // Handle material selection for a part
-    const handleMaterialSelection = (selectedOption: { value: Material | null }, _partIndex: number, partName: ToolPart) => {
-      const category = partToCategory[partName]; // Get the material category (head/handle/extra)
+  const handleMaterialSelection = (selectedOption: { value: Material | null }, _partIndex: number, partName: ToolPart) => {
+    // Set to null if 'None' is selected
+    const material = selectedOption.value;
     
-      // Set to null if 'None' is selected
-      const material = selectedOption.value;
-    
-      setSelectedMaterials((prev) => ({
-        ...prev,
-        [category]: material,
-      }));
-    
-      calculateToolStats({
-        ...selectedMaterials,
-        [category]: material,
-      });
-    };
+    // Use partName instead of category to track materials for individual parts
+    setSelectedMaterials((prev) => ({
+      ...prev,
+      [partName]: material, // Store the material by the part name directly
+    }));
   
-
-    // Modify the calculateToolStats function
-    const calculateToolStats = (materials: { [key: string]: Material | null }) => {
-      const { head, handle, extra } = materials;
-      if (!selectedTool) return;
-
-      // Build the ToolParts object to pass to Builder1_12_2
-      const selectedParts = {
-        heads: head ? [head.head] : [], // Collect head parts
-        handles: handle ? [handle.handle] : [], // Collect handle parts
-        extras: extra ? [extra.extra] : [] // Collect extra parts
-      };
-
-      const stats = Builder1_12_2(selectedTool, selectedParts);
-      console.log('Calculated stats:', stats); // Debugging line to ensure correct calculation
-      setToolStats(stats);
-    };
+    // Recalculate stats with updated materials
+    calculateToolStats({
+      ...selectedMaterials,
+      [partName]: material, // Pass the updated material selection by part name
+    });
+  };
+  
+  // Modify the calculateToolStats function
+  const calculateToolStats = (materials: { [key: string]: Material | null }) => {
+    if (!selectedTool) {
+      console.error('No tool selected');
+      return;
+    }
+  
+    const heads = Object.entries(materials)
+      .filter(([partName]) => partToCategory[partName as ToolPart] === 'head')
+      .map(([, material]) => material?.head)
+      .filter(Boolean);
+  
+    const handles = Object.entries(materials)
+      .filter(([partName]) => partToCategory[partName as ToolPart] === 'handle')
+      .map(([, material]) => material?.handle)
+      .filter(Boolean);
+  
+    const extras = Object.entries(materials)
+      .filter(([partName]) => partToCategory[partName as ToolPart] === 'extra')
+      .map(([, material]) => material?.extra)
+      .filter(Boolean);
+  
+    // Ensure selectedTool is non-null before passing
+    const stats = Builder1_12_2(selectedTool as string, { heads, handles, extras });
+    console.log('Calculated stats:', stats);
+    setToolStats(stats);
+  };
+  
+  
 
 
 
@@ -264,12 +276,10 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
                   <label>{part}</label>
                   <Select
                     options={materialOptions}
-                    value={
-                      selectedMaterials[partToCategory[part as ToolPart]] 
-                        ? { value: selectedMaterials[partToCategory[part as ToolPart]], label: selectedMaterials[partToCategory[part as ToolPart]]?.name }
-                        : null
-                    }
-                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} 
+                    value={materialOptions.find(
+                      (option) => option.value?.name === selectedMaterials[part]?.name || null
+                    )} // Ensure selected value is shown
+                    onChange={(selectedOption) => handleMaterialSelection(selectedOption!, index, part as ToolPart)} // Explicitly cast part to ToolPart
                     placeholder={isFocused === index ? '' : `Select Material for ${part}`}
                     onFocus={() => setIsFocused(index)}
                     onBlur={() => setIsFocused(null)}
