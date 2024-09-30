@@ -1,12 +1,21 @@
 /* Controls container */
 .controls {
   display: flex;
-  flex-wrap: wrap;  /* Allow wrapping when necessary */
+  flex-wrap: wrap;  /* Allow wrapping */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
   gap: 1rem;  /* Optional: Add space between wrapped elements */
   width: 100%;  /* Ensure it takes full width */
+}
+
+/* Search Controls */
+.search-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between elements */
+  flex-wrap: wrap;  /* Allow wrapping if space is insufficient */
+  flex-grow: 1;  /* Allow it to grow to fill available space */
 }
 
 /* Search Bar */
@@ -17,24 +26,23 @@
   border: 1px solid var(--input-border-color);
   background-color: var(--background2-color);
   color: var(--text-color);
-  width: 100%;  /* Adjust to 100% width for smaller screens */
-  max-width: 300px;  /* Adjust the max width to prevent early wrapping */
+  max-width: 300px;  /* Limit the max width */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;  /* Allow the search bar to grow and fill available space */
+  flex-grow: 2;  /* Allow the search bar to grow and fill more space */
 }
 
 /* Sort controls */
 .sort-controls {
   display: flex;
-  flex-wrap: wrap;  /* Allow wrapping if content exceeds container width */
   align-items: center;
   gap: 1rem;
-  justify-content: flex-start;  /* Align to the left on smaller screens */
+  flex-wrap: wrap;  /* Allow wrapping when necessary */
+  justify-content: flex-start;
 }
 
 .sort-controls label {
   font-size: 1rem;
-  white-space: nowrap;  /* Prevent wrapping of the label */
+  white-space: nowrap;  /* Prevent label from wrapping */
 }
 
 .sort-controls select,
@@ -47,8 +55,8 @@
   color: var(--text-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  min-width: 150px;  /* Set minimum width to prevent early wrapping */
-  flex-shrink: 1;  /* Allow shrinking, but within limits */
+  min-width: 150px;  /* Set minimum width to prevent wrapping too early */
+  flex-shrink: 0;  /* Prevent shrinking below the minimum size */
 }
 
 .sort-controls select option {
@@ -68,19 +76,32 @@
   cursor: pointer;
   margin-right: 1rem;
   margin-left: 0.5rem;
-  min-width: 150px;  /* Set a minimum width to prevent too small wrapping */
-  flex-shrink: 1;  /* Allow it to shrink, but not too much */
-  max-width: 200px;  /* Ensure a reasonable max width */
+  min-width: 150px;  /* Set minimum width */
+  flex-shrink: 0;  /* Prevent shrinking below minimum size */
+  max-width: 200px;  /* Ensure max width */
 }
 
 /* For mobile/smaller screens */
 @media (max-width: 768px) {
   .controls {
-    flex-direction: column;  /* Stack controls vertically */
-    align-items: stretch;  /* Make controls take full width */
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .search-controls, .sort-controls {
+  .search-controls,
+  .sort-controls {
     width: 100%;
   }
+
+  .search-bar {
+    max-width: none;
+    width: 100%;  /* Full width for mobile */
+  }
+}
+
+/* Materials Grid */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Adjust columns to fit */
+  gap: 1rem;
 }
