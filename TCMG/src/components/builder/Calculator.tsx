@@ -94,7 +94,7 @@ const hasModifier = (modifiers: string[], target: string) => {
   return modifiers.some((modifier) => modifier.includes(target));
 };
 
-const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
+const Calculator = (_version: string, toolName: string, parts: ToolParts) => {
   const { heads, handles, extras } = parts;
 
   const calculateDurability = () => {
@@ -103,32 +103,32 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
     const handleModifier = handles.reduce((mod, handle) => mod * (handle?.modifier || 1), 1);
     const handleDurabilityAvg = (handles.reduce((total, handle) => total + (handle?.durability || 0), 0) / handles.length) || 0;
 
-    console.log("headDurabilityAvg: " + headDurabilityAvg);
-    console.log("extraDurabilityAvg: " + extraDurabilityAvg);
-    console.log("handleModifier: " + handleModifier);
-    console.log("handleDurabilityAvg: " + handleDurabilityAvg);
+    // console.log("headDurabilityAvg: " + headDurabilityAvg);
+    // console.log("extraDurabilityAvg: " + extraDurabilityAvg);
+    // console.log("handleModifier: " + handleModifier);
+    // console.log("handleDurabilityAvg: " + handleDurabilityAvg);
     let durability = (headDurabilityAvg + extraDurabilityAvg) * handleModifier + handleDurabilityAvg;
     durability *= durabilityModMap[toolName] || 1;
 
     if (hasModifier(calculateModifiers(), 'Cheapskate II')) durability *= 0.6;
     else if (hasModifier(calculateModifiers(), 'Cheapskate')) durability *= 0.8;
 
-    console.log("durability: " + durability);
-    return durability;
+    // console.log("durability: " + durability);
+    return Math.floor(durability);
   };
 
   const calculateMiningLevel = () => {
     const miningLevels = heads.map((head) => miningLevelMap[head?.miningLevel || ''] || 0);
     const highestMiningLevel = Math.max(...miningLevels);
 
-    console.log("highestMiningLevel: " + Object.keys(miningLevelMap).find((key) => miningLevelMap[key] === highestMiningLevel));
+    // console.log("highestMiningLevel: " + Object.keys(miningLevelMap).find((key) => miningLevelMap[key] === highestMiningLevel));
     return Object.keys(miningLevelMap).find((key) => miningLevelMap[key] === highestMiningLevel);
   };
 
   const calculateMiningSpeed = () => {
     const headSpeedAvg = heads.reduce((total, head) => total + (head?.miningSpeed || 0), 0) / heads.length;
 
-    console.log("headSpeedAvg: " + headSpeedAvg * (miningSpeedMap[toolName] || 1));
+    // console.log("headSpeedAvg: " + headSpeedAvg * (miningSpeedMap[toolName] || 1));
     return headSpeedAvg * (miningSpeedMap[toolName] || 1);
   };
 
@@ -141,7 +141,7 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
     if (hasModifier(calculateModifiers(), 'Fractured II')) attackMultiplier *= 1.8;
     else if (hasModifier(calculateModifiers(), 'Fractured')) attackMultiplier *= 1.5;
 
-    console.log("attack: " + ((headAttackAvg * attackMultiplier) + attackBonus + 1));
+    // console.log("attack: " + ((headAttackAvg * attackMultiplier) + attackBonus + 1));
     return (headAttackAvg * attackMultiplier) + attackBonus + 1;
   };
 
@@ -152,13 +152,13 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
       attackSpeed *= 1.1;
     }
 
-    console.log("attackSpeed: " + attackSpeed);
+    // console.log("attackSpeed: " + attackSpeed);
     return attackSpeed;
   };
 
   const calculateDPS = () => {
 
-    console.log("DPS: " + calculateAttack() * calculateAttackSpeed());
+    // console.log("DPS: " + calculateAttack() * calculateAttackSpeed());
     return calculateAttack() * calculateAttackSpeed();
   };
 
@@ -203,7 +203,7 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
   // returns Shuriken stats if toolName is Shuriken
   if (toolName === 'Shuriken') {
     const stats = {
-      ammo: calculateAmmo().toFixed(0),
+      ammo: calculateAmmo(),
       attack: formatNumber(calculateAttack()),
       modifiers: calculateModifiers(),
     };
@@ -212,7 +212,7 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
 
   // returns stats for all other tools
   const stats = {
-    durability: calculateDurability().toFixed(0),
+    durability: calculateDurability(),
     miningLevel: calculateMiningLevel(),
     miningSpeed: formatNumber(calculateMiningSpeed()),
     attack: formatNumber(calculateAttack()),
@@ -224,4 +224,4 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
   return stats;
 };
 
-export default Builder1_12_2;
+export default Calculator;

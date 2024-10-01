@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import Builder1_12_2 from '@components/builder/Builder1_12_2'; // Import the updated calculation logic
+import Calculator from '@components/builder/Calculator';
 import './ToolBuilder.css';
 
 export interface Material {
@@ -134,7 +134,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
 
   // Handle tool selection
   const handleToolSelection = (toolName: string) => {
-    console.log(`Tool selected: ${toolName}`);
+    // console.log(`Tool selected: ${toolName}`);
     
     // Clear the selected materials when switching tools
     setSelectedMaterials(new Array(tools.find(tool => tool.name === toolName)?.parts.length).fill(null));
@@ -172,8 +172,8 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
       })
       .map((material) => material?.extra);
 
-    const stats = Builder1_12_2(selectedTool, { heads, handles, extras });
-    console.log('Calculated stats:', stats);
+    const stats = Calculator(version, selectedTool, { heads, handles, extras });
+    // console.log('Calculated stats:', stats);
     setToolStats(stats);
   };
 
