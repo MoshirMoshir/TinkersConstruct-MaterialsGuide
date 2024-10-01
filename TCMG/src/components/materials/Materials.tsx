@@ -4,6 +4,7 @@ import './Materials.css';
 
 interface Material {
   name: string;
+  mod: string;
   image: string;
   head: {
     durability: number;
@@ -73,6 +74,10 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
           fieldA = a.handle?.modifier ?? 0; // Handle optional modifier
           fieldB = b.handle?.modifier ?? 0; // Handle optional modifier
           break;
+        case 'mod':
+          fieldA = a.mod.toLowerCase();
+          fieldB = b.mod.toLowerCase();
+          break;
         case 'name':
         default:
           fieldA = a.name.toLowerCase();
@@ -101,6 +106,8 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
       return allModifiers.some(modifier => 
         modifier.toLowerCase().includes(searchTerm.toLowerCase())
       );
+    } else if (searchField === 'mod') {
+      return material.mod.toLowerCase().includes(searchTerm.toLowerCase());
     }
     return true;
   });
@@ -120,6 +127,7 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
           >
             <option value="name">Name</option>
             <option value="modifiers">Modifiers</option>
+            <option value="mod">Mod</option>
           </select>
 
           <input
@@ -138,6 +146,7 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
             onChange={(e) => setSortField(e.target.value)}
           >
             <option value="name">Name</option>
+            <option value="mod">Mod</option>
             <option value="durability">Durability</option>
             <option value="miningSpeed">Mining Speed</option>
             <option value="attack">Attack</option>
@@ -155,10 +164,11 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
           <MaterialCard
             key={index}
             name={material.name}
+            mod={material.mod}
             image={material.image}
             head={material.head}
-            handle={material.handle}  // Pass only if handle exists
-            extra={material.extra}    // Pass only if extra exists
+            handle={material.handle}
+            extra={material.extra}
           />
         ))}
       </div>

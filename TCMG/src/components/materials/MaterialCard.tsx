@@ -5,6 +5,7 @@ import './MaterialCard.css';
 
 interface MaterialProps {
   name: string;
+  mod: string;
   image: string;
   head: {
     durability: number;
@@ -29,7 +30,7 @@ interface Modifier {
   description: string;
 }
 
-const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extra }) => {
+const MaterialCard: React.FC<MaterialProps> = ({ name, mod, image, head, handle, extra }) => {
   const [modifiers, setModifiers] = useState<Modifier[]>([]);
 
   // Fetch modifiers data from modifiers.json
@@ -68,8 +69,9 @@ const MaterialCard: React.FC<MaterialProps> = ({ name, image, head, handle, extr
       <div className="scale-wrapper">
         <div className="material-header">
           <img src={image} alt={name} className="material-image" />
-          <h2 className="material-name">{name}</h2>
+            <h2 className="material-name">{name}</h2>
         </div>
+        <h3 className="material-mod">{mod}</h3>
         <div className="material-content">
           {/* Head Section */}
           <div className="material-section material-section-head">
