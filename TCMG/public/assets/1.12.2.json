@@ -3483,7 +3483,7 @@
             ]
         }
     },
-{
+    {
         "name": "Weezer",
         "image": "/assets/materials/weezer.png",
         "head": {
@@ -3513,7 +3513,7 @@
             ]
         }
     },
-{
+    {
         "name": "Vespa Carapace",
         "image": "/assets/materials/vespa_carapace.png",
         "head": {
@@ -3542,7 +3542,7 @@
             ]
         }
     },
-{
+    {
         "name": "Scythe Claw",
         "image": "/assets/materials/scythe_claw.png",
         "head": {
@@ -3571,7 +3571,7 @@
             ]
         }
     },
-{
+    {
         "name": "Ectoplasm",
         "image": "/assets/materials/ectoplasm.png",
         "head": {
@@ -3597,7 +3597,7 @@
             ]
         }
     },
-{
+    {
         "name": "Ancient Metal",
         "image": "/assets/materials/ancient_metal.png",
         "head": {
@@ -3623,6 +3623,32 @@
             "modifiers": [
                 "Lightning Rod",
                 "Crude"
+            ]
+        }
+    },
+    {
+        "name": "test material",
+        "image": "/assets/materials/test.png",
+        "head": {
+            "durability": 90,
+            "miningLevel": "Iron",
+            "miningSpeed": 3,
+            "attack": 3,
+            "modifiers": [
+                "Cheapskate"
+            ]
+        },
+        "handle": {
+            "modifier": 1,
+            "durability": 25,
+            "modifiers": [
+                "Ecological"
+            ]
+        },
+        "extra": {
+            "durability": 15,
+            "modifiers": [
+                "Cheap"
             ]
         }
     }
