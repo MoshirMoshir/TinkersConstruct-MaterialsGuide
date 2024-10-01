@@ -84,7 +84,7 @@
 /* Materials Grid */
 .materials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Ensure a minimum size for the cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Ensure a minimum size for the cards */
   gap: 1rem;  /* Gap between grid items */
   padding-left: 0rem;  /* Apply padding only on the left */
   padding-right: 2rem;  /* Apply padding only on the right */
@@ -101,5 +101,21 @@
   box-sizing: border-box;  /* Include padding and margins in the width */
 }
 
+@media (max-width: 2000px) {
+  .materials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Adjust the grid for smaller screens */
+  }
+}
 
+@media (max-width: 1200px) {
+  .materials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Adjust the grid for smaller screens */
+  }
+}
+
+@media (max-width: 800px) {
+  .materials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  /* Adjust the grid for smaller screens */
+  }
+}
 

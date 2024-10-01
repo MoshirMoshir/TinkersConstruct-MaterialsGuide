@@ -10,7 +10,7 @@
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Ensure the content does not overflow */
+  overflow: hidden;
   position: relative;
 }
 
@@ -58,22 +58,22 @@ p {
 
 /* Add a wrapper to dynamically scale the entire content inside the card */
 .scale-wrapper {
-  transform: scale(1); /* Start at a slightly smaller scale by default */
-  transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
   align-self: center;
 }
 
 /* Custom styling for the tooltip */
 .tooltip-inner {
-  background-color: rgba(0, 0, 0, 1) !important; /* Adjust the opacity here */
-  color: #fff !important; /* Ensure text color is white */
-  border-radius: 4px !important; /* Optional: Add some rounding for a smoother look */
-  padding: 0.5rem !important; /* Optional: Adjust padding if needed */
+  background-color: rgba(0, 0, 0, 1) !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  padding: 0.5rem !important;
 }
 
-/* Optional: Add some transition for a smoother hover effect */
+/* Transition for a smoother hover effect */
 .tooltip {
-  opacity: 1; /* Slightly less opaque tooltip overall */
+  opacity: 1;
   transition: opacity 0.3s ease !important;
 }
 
@@ -128,29 +128,45 @@ p {
   color: #a3f5a3; /* Pastel green for Extra text */
 }
 
+/* Media queries to adjust for mobile */
 @media (max-width: 2000px) {
   .scale-wrapper {
-    transform: scale(0.75); /* Scale down when the card gets smaller */
+    transform: scale(.9);
+  }
+}
+
+@media (max-width: 1200px) {
+  .scale-wrapper {
+    transform: scale(.75);
   }
   .material-name {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .scale-wrapper {
+    transform: scale(.5);
+  }
+  .material-card {
+    max-height: 270px;
+  }
+  .material-name {
+    margin-top: -200px;
+  }
+  .material-image {
+    margin-top: -200px;
+  }
+  .material-content {
+    margin-top: -50px;
   }
 }
 
 @media (max-width: 400px) {
   .scale-wrapper {
-    transform: scale(0.65); /* Further scale down for smaller screens */
+    transform: scale(0.5);
   }
   .material-name {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 300px) {
-  .scale-wrapper {
-    transform: scale(0.50); /* Even more scaling for very small screens */
-  }
-  .material-name {
-    font-size: .8rem;
+    font-size: 1.3rem;
   }
 }
