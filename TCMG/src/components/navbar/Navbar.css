@@ -8,20 +8,60 @@
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 0 1rem; /* Optional: Add horizontal padding */
+  flex-wrap: wrap;
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 75px;
+  height: 75px;
+  image-rendering: pixelated;
+}
+
+.navbar-title {
+  display: flex;
+  margin-left: 10px;
+}
+
+.navbar-title .letter {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.navbar-title .t {
+  color: #F8B195; /* Pastel pink */
+}
+.navbar-title .c {
+  color: #F67280; /* Pastel coral */
+}
+.navbar-title .m {
+  color: #C06C84; /* Pastel mauve */
+}
+.navbar-title .g {
+  color: #6C5B7B; /* Pastel purple */
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin: 0 auto; /* Center the nav links */
+  padding: 0;
+  align-items: center;
+  flex: 1;
+  justify-content: center; /* Center the links horizontally */
+  font-size: 1.5rem;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-links a {
@@ -30,9 +70,30 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background 0.2s;
+  display: flex;
+  align-items: center; /* Center text vertically */
 }
 
 .navbar-links a:hover {
+  background-color: var(--hover-background-color);
+  color: var(--hover-text-color);
+}
+
+.navbar-github {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navbar-github a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.navbar-github a:hover {
   background-color: var(--hover-background-color);
   color: var(--hover-text-color);
 }
