@@ -203,8 +203,8 @@ const Builder1_12_2 = (toolName: string, parts: ToolParts) => {
   // returns Shuriken stats if toolName is Shuriken
   if (toolName === 'Shuriken') {
     const stats = {
-      ammo: calculateAmmo(),
-      attack: calculateAttack(),
+      ammo: calculateAmmo().toFixed(0),
+      attack: formatNumber(calculateAttack()),
       modifiers: calculateModifiers(),
     };
     return stats;
