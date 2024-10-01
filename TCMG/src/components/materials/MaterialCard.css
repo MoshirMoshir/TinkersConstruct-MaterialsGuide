@@ -162,11 +162,11 @@ p {
   .material-name {
     margin-top: -200px;
   }
+  .material-mod {
+    margin-top: -70px;
+  }
   .material-image {
     margin-top: -200px;
-  }
-  .material-content {
-    margin-top: -50px;
   }
 }
 
