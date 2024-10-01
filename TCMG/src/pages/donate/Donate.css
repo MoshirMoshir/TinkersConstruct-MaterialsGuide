@@ -1,0 +1,57 @@
+/* src/pages/donate/Donate.css */
+
+.page-container {
+  margin: 32px;
+}
+
+.donate-page {
+  padding: 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  border-radius: 8px; /* Optional: Add rounded corners to the main content */
+}
+  
+.donate-page h1 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.donation-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Adjusted gap to match .tabs */
+  margin-bottom: 1rem; /* Added margin to match .tabs */
+  flex-wrap: wrap;
+}
+
+.donation-card {
+  padding: 2rem;
+  background-color: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.donation-card h2 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.donation-card p {
+  margin-bottom: 20px;
+}
+
+.patreon-button img {
+  width: 100px;
+}
+
+@media (max-width: 600px) {
+  .donation-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
