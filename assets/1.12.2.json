@@ -1,6 +1,7 @@
 [
     {
         "name": "Supremium",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/supremium.png",
         "head": {
             "durability": 5520,
@@ -28,6 +29,7 @@
     },
     {
         "name": "Infinity",
+        "mod": "Avaritia",
         "image": "/assets/materials/infinity.png",
         "head": {
             "durability": 7000,
@@ -54,6 +56,7 @@
     },
     {
         "name": "Superium",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/superium.png",
         "head": {
             "durability": 2760,
@@ -80,6 +83,7 @@
     },
     {
         "name": "Aethium",
+        "mod": "Environmental Tech",
         "image": "/assets/materials/aethium.png",
         "head": {
             "durability": 2200,
@@ -106,6 +110,7 @@
     },
     {
         "name": "Dreadium",
+        "mod": "AbyssalCraft",
         "image": "/assets/materials/dreadium.png",
         "head": {
             "durability": 1150,
@@ -132,6 +137,7 @@
     },
     {
         "name": "Evil Infused Iron",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/evil_infused_iron.png",
         "head": {
             "durability": 666,
@@ -154,6 +160,7 @@
     },
     {
         "name": "Ionite",
+        "mod": "Environmental Tech",
         "image": "/assets/materials/ionite.png",
         "head": {
             "durability": 1900,
@@ -180,6 +187,7 @@
     },
     {
         "name": "Chaotic",
+        "mod": "Draconic Evolution",
         "image": "/assets/materials/chaotic.png",
         "head": {
             "durability": 10000,
@@ -206,6 +214,7 @@
     },
     {
         "name": "Cubic Boron Nitride",
+        "mod": "NuclearCraft",
         "image": "/assets/materials/cubic_boron_nitride.png",
         "head": {
             "durability": 1542,
@@ -233,6 +242,7 @@
     },
     {
         "name": "Refined Coralium",
+        "mod": "AbyssalCraft",
         "image": "/assets/materials/refined_coralium.png",
         "head": {
             "durability": 900,
@@ -259,6 +269,7 @@
     },
     {
         "name": "Cobalt",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/cobalt.png",
         "head": {
             "durability": 780,
@@ -285,6 +296,7 @@
     },
     {
         "name": "Electrum",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/electrum.png",
         "head": {
             "durability": 50,
@@ -311,6 +323,7 @@
     },
     {
         "name": "Pladium",
+        "mod": "Environmental Tech",
         "image": "/assets/materials/pladium.png",
         "head": {
             "durability": 1600,
@@ -337,6 +350,7 @@
     },
     {
         "name": "Intermedium",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/intermedium.png",
         "head": {
             "durability": 1380,
@@ -363,6 +377,7 @@
     },
     {
         "name": "Hard Carbon Alloy",
+        "mod": "NuclearCraft",
         "image": "/assets/materials/hard_carbon_alloy.png",
         "head": {
             "durability": 996,
@@ -390,6 +405,7 @@
     },
     {
         "name": "Magnesium",
+        "mod": "NuclearCraft",
         "image": "/assets/materials/magnesium.png",
         "head": {
             "durability": 157,
@@ -417,6 +433,7 @@
     },
     {
         "name": "Kryonite",
+        "mod": "Environmental Tech",
         "image": "/assets/materials/kryonite.png",
         "head": {
             "durability": 1300,
@@ -443,6 +460,7 @@
     },
     {
         "name": "Tough Alloy",
+        "mod": "NuclearCraft",
         "image": "/assets/materials/tough_alloy.png",
         "head": {
             "durability": 743,
@@ -470,6 +488,7 @@
     },
     {
         "name": "Abyssalnite",
+        "mod": "AbyssalCraft",
         "image": "/assets/materials/abyssalnite.png",
         "head": {
             "durability": 630,
@@ -496,6 +515,7 @@
     },
     {
         "name": "Awakened",
+        "mod": "Draconic Evolution",
         "image": "/assets/materials/awakened.png",
         "head": {
             "durability": 5000,
@@ -522,6 +542,7 @@
     },
     {
         "name": "Mirion",
+        "mod": "PlusTiC",
         "image": "/assets/materials/mirion.png",
         "head": {
             "durability": 1919,
@@ -548,6 +569,7 @@
     },
     {
         "name": "Terrasteel",
+        "mod": "Botania",
         "image": "/assets/materials/terrasteel.png",
         "head": {
             "durability": 1562,
@@ -574,6 +596,7 @@
     },
     {
         "name": "Erodium",
+        "mod": "Environmental Tech",
         "image": "/assets/materials/erodium.png",
         "head": {
             "durability": 1000,
@@ -600,6 +623,7 @@
     },
     {
         "name": "Refined Glowstone",
+        "mod": "Mekanism",
         "image": "/assets/materials/refined_glowstone.png",
         "head": {
             "durability": 450,
@@ -626,6 +650,7 @@
     },
     {
         "name": "Thorium",
+        "mod": "Tech Reborn",
         "image": "/assets/materials/thorium.png",
         "head": {
             "durability": 180,
@@ -654,6 +679,7 @@
     },
     {
         "name": "Naga Scale",
+        "mod": "The Twilight Forest",
         "image": "/assets/materials/naga_scale.png",
         "head": {
             "durability": 460,
@@ -668,6 +694,7 @@
     },
     {
         "name": "Restonia",
+        "mod": "Actually Additions",
         "image": "/assets/materials/restonia.png",
         "head": {
             "durability": 640,
@@ -694,6 +721,7 @@
     },
     {
         "name": "End Steel",
+        "mod": "Ender IO",
         "image": "/assets/materials/end_steel.png",
         "head": {
             "durability": 400,
@@ -721,6 +749,7 @@
     },
     {
         "name": "Prudentium",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/prudentium.png",
         "head": {
             "durability": 690,
@@ -747,6 +776,7 @@
     },
     {
         "name": "Wyvern",
+        "mod": "Draconic Evolution",
         "image": "/assets/materials/wyvern.png",
         "head": {
             "durability": 2000,
@@ -773,6 +803,7 @@
     },
     {
         "name": "Diamatine",
+        "mod": "Actually Additions",
         "image": "/assets/materials/diamatine.png",
         "head": {
             "durability": 1700,
@@ -800,6 +831,7 @@
     },
     {
         "name": "Emeradic",
+        "mod": "Actually Additions",
         "image": "/assets/materials/emeradic.png",
         "head": {
             "durability": 1400,
@@ -826,6 +858,7 @@
     },
     {
         "name": "Platinum",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/platinum.png",
         "head": {
             "durability": 720,
@@ -854,6 +887,7 @@
     },
     {
         "name": "Boron",
+        "mod": "NuclearCraft",
         "image": "/assets/materials/boron.png",
         "head": {
             "durability": 437,
@@ -880,6 +914,7 @@
     },
     {
         "name": "Litherite",
+        "mod": "Environmental Tech",
         "image": "/assets/materials/litherite.png",
         "head": {
             "durability": 700,
@@ -906,6 +941,7 @@
     },
     {
         "name": "Osgloglas",
+        "mod": "PlusTiC",
         "image": "/assets/materials/osgloglas.png",
         "head": {
             "durability": 2800,
@@ -938,6 +974,7 @@
     },
     {
         "name": "Reinforced Pink Slime",
+        "mod": "Industrial Foregoing",
         "image": "/assets/materials/reinforced_pink_slime.png",
         "head": {
             "durability": 2800,
@@ -967,6 +1004,7 @@
     },
     {
         "name": "Enderium",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/enderium.png",
         "head": {
             "durability": 800,
@@ -995,6 +1033,7 @@
     },
     {
         "name": "Palis",
+        "mod": "Actually Additions",
         "image": "/assets/materials/palis.png",
         "head": {
             "durability": 800,
@@ -1021,6 +1060,7 @@
     },
     {
         "name": "Signalum",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/signalum.png",
         "head": {
             "durability": 690,
@@ -1047,6 +1087,7 @@
     },
     {
         "name": "Uranium",
+        "mod": "Immersive Engineering",
         "image": "/assets/materials/uranium.png",
         "head": {
             "durability": 193,
@@ -1075,6 +1116,7 @@
     },
     {
         "name": "Fiery",
+        "mod": "The Twilight Forest",
         "image": "/assets/materials/fiery.png",
         "head": {
             "durability": 720,
@@ -1106,6 +1148,7 @@
     },
     {
         "name": "Obsidian",
+        "mod": "Minecraft",
         "image": "/assets/materials/obsidian.png",
         "head": {
             "durability": 139,
@@ -1132,6 +1175,7 @@
     },
     {
         "name": "Manyullyn",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/manyullyn.png",
         "head": {
             "durability": 820,
@@ -1158,6 +1202,7 @@
     },
     {
         "name": "Inferium",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/inferium.png",
         "head": {
             "durability": 345,
@@ -1184,6 +1229,7 @@
     },
     {
         "name": "Refined Obsidian",
+        "mod": "Mekanism",
         "image": "/assets/materials/refined_obsidian.png",
         "head": {
             "durability": 2500,
@@ -1213,6 +1259,7 @@
     },
     {
         "name": "Ice Dragonsteel",
+        "mod": "Ice and Fire",
         "image": "/assets/materials/ice_dragonsteel.png",
         "head": {
             "durability": 1500,
@@ -1239,6 +1286,7 @@
     },
     {
         "name": "Fire Dragonsteel",
+        "mod": "Ice and Fire",
         "image": "/assets/materials/fire_dragonsteel.png",
         "head": {
             "durability": 1500,
@@ -1265,6 +1313,7 @@
     },
     {
         "name": "Emerald",
+        "mod": "Minecraft",
         "image": "/assets/materials/emerald.png",
         "head": {
             "durability": 1222,
@@ -1291,6 +1340,7 @@
     },
     {
         "name": "Knightmetal",
+        "mod": "The Twilight Forest",
         "image": "/assets/materials/knightmetal.png",
         "head": {
             "durability": 900,
@@ -1320,6 +1370,7 @@
     },
     {
         "name": "Lumium",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/lumium.png",
         "head": {
             "durability": 830,
@@ -1349,6 +1400,7 @@
     },
     {
         "name": "Fluix Crystal",
+        "mod": "Applied Energistics 2",
         "image": "/assets/materials/fluix_crystal.png",
         "head": {
             "durability": 700,
@@ -1375,58 +1427,61 @@
     },
     {
         "name": "Psigem",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/psigem.png",
         "head": {
-            "durability": 620,
+            "durability": 800,
             "miningLevel": "Obsidian",
-            "miningSpeed": 7.0,
-            "attack": 5.0,
+            "miningSpeed": 9.9,
+            "attack": 5.34,
             "modifiers": [
-                "TBD"
+                "Psi Eater"
             ]
         },
         "handle": {
-            "modifier": 1.3,
-            "durability": -10,
+            "modifier": 1.54,
+            "durability": 100,
             "modifiers": [
-                "TBD"
+                "Psi Eater"
             ]
         },
         "extra": {
-            "durability": 30,
+            "durability": 100,
             "modifiers": [
-                "TBD"
+                "Psi Eater"
             ]
         }
     },
     {
         "name": "Psimetal",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/psimetal.png",
         "head": {
-            "durability": 620,
+            "durability": 450,
             "miningLevel": "Obsidian",
-            "miningSpeed": 7.0,
-            "attack": 5.0,
+            "miningSpeed": 10.85,
+            "attack": 6.01,
             "modifiers": [
-                "TBD"
+                "Psi Repair"
             ]
         },
         "handle": {
-            "modifier": 1.3,
-            "durability": -10,
+            "modifier": 1.12,
+            "durability": 140,
             "modifiers": [
-                "TBD"
+                "Psi Repair"
             ]
         },
         "extra": {
-            "durability": 30,
+            "durability": 80,
             "modifiers": [
-                "TBD"
+                "Psi Repair"
             ]
         }
     },
     {
         "name": "Enori",
+        "mod": "Actually Additions",
         "image": "/assets/materials/enori.png",
         "head": {
             "durability": 600,
@@ -1451,6 +1506,7 @@
     },
     {
         "name": "Bloodwood",
+        "mod": "Natura",
         "image": "/assets/materials/bloodwood.png",
         "head": {
             "durability": 550,
@@ -1477,6 +1533,7 @@
     },
     {
         "name": "Dark Steel",
+        "mod": "Ender IO",
         "image": "/assets/materials/dark_steel.png",
         "head": {
             "durability": 550,
@@ -1503,6 +1560,7 @@
     },
     {
         "name": "Elementium",
+        "mod": "Botania",
         "image": "/assets/materials/elementium.png",
         "head": {
             "durability": 540,
@@ -1529,6 +1587,7 @@
     },
     {
         "name": "Manasteel",
+        "mod": "Botania",
         "image": "/assets/materials/manasteel.png",
         "head": {
             "durability": 540,
@@ -1555,6 +1614,7 @@
     },
     {
         "name": "Steel",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/steel.png",
         "head": {
             "durability": 540,
@@ -1581,6 +1641,7 @@
     },
     {
         "name": "Void",
+        "mod": "Actually Additions",
         "image": "/assets/materials/void.png",
         "head": {
             "durability": 480,
@@ -1608,6 +1669,7 @@
     },
     {
         "name": "Thaumium",
+        "mod": "Thaumcraft",
         "image": "/assets/materials/thaumium.png",
         "head": {
             "durability": 400,
@@ -1633,7 +1695,8 @@
         }
     },
     {
-        "name": "Enchanted Ingot",
+        "name": "Enchanted Metal",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/enchanted_ingot.png",
         "head": {
             "durability": 350,
@@ -1660,6 +1723,7 @@
     },
     {
         "name": "Steeleaf",
+        "mod": "The Twilight Forest",
         "image": "/assets/materials/steeleaf.png",
         "head": {
             "durability": 180,
@@ -1689,6 +1753,7 @@
     },
     {
         "name": "Osmiridium",
+        "mod": "PlusTiC",
         "image": "/assets/materials/osmiridium.png",
         "head": {
             "durability": 1300,
@@ -1715,6 +1780,7 @@
     },
     {
         "name": "Alumite",
+        "mod": "PlusTiC",
         "image": "/assets/materials/alumite.png",
         "head": {
             "durability": 700,
@@ -1741,6 +1807,7 @@
     },
     {
         "name": "Bronze",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/bronze.png",
         "head": {
             "durability": 430,
@@ -1767,6 +1834,7 @@
     },
     {
         "name": "Conductive Iron",
+        "mod": "Ender IO",
         "image": "/assets/materials/conductive_iron.png",
         "head": {
             "durability": 106,
@@ -1793,6 +1861,7 @@
     },
     {
         "name": "Base Essence",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/base_essence.png",
         "head": {
             "durability": 244,
@@ -1819,6 +1888,7 @@
     },
     {
         "name": "Electrical Steel",
+        "mod": "Ender IO",
         "image": "/assets/materials/electrical_steel.png",
         "head": {
             "durability": 306,
@@ -1845,6 +1915,7 @@
     },
     {
         "name": "Certus Quartz",
+        "mod": "Applied Energistics 2",
         "image": "/assets/materials/certus_quartz.png",
         "head": {
             "durability": 250,
@@ -1871,6 +1942,7 @@
     },
     {
         "name": "Soulium",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/soulium.png",
         "head": {
             "durability": 310,
@@ -1893,6 +1965,7 @@
     },
     {
         "name": "Pig Iron",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/pig_iron.png",
         "head": {
             "durability": 380,
@@ -1920,6 +1993,7 @@
     },
     {
         "name": "Plastic",
+        "mod": "Industrial Foregoing",
         "image": "/assets/materials/plastic.png",
         "head": {
             "durability": 1500,
@@ -1946,6 +2020,7 @@
     },
     {
         "name": "Amethyst",
+        "mod": "Biomes O' Plenty",
         "image": "/assets/materials/amethyst.png",
         "head": {
             "durability": 1100,
@@ -1972,6 +2047,7 @@
     },
     {
         "name": "Pulsating Iron",
+        "mod": "Ender IO",
         "image": "/assets/materials/pulsating_iron.png",
         "head": {
             "durability": 920,
@@ -1998,6 +2074,7 @@
     },
     {
         "name": "Topaz",
+        "mod": "Biomes O' Plenty",
         "image": "/assets/materials/topaz.png",
         "head": {
             "durability": 690,
@@ -2024,6 +2101,7 @@
     },
     {
         "name": "Invar",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/invar.png",
         "head": {
             "durability": 600,
@@ -2050,32 +2128,28 @@
     },
     {
         "name": "Titanium",
+        "mod": "Tech Reborn",
         "image": "/assets/materials/titanium.png",
         "head": {
-            "durability": 560,
-            "miningLevel": "Obsidian",
-            "miningSpeed": 6.0,
-            "attack": 6.0,
-            "modifiers": [
-                "TBD"
-            ]
+            "durability": 590,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 9.16,
+            "attack": 7.81,
+            "modifiers": []
         },
         "handle": {
-            "modifier": 1.4,
-            "durability": 0,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifier": 1.52,
+            "durability": 180,
+            "modifiers": []
         },
         "extra": {
-            "durability": 40,
-            "modifiers": [
-                "TBD"
-            ]
+            "durability": 95,
+            "modifiers": []
         }
     },
     {
         "name": "Firewood",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/firewood.png",
         "head": {
             "durability": 550,
@@ -2102,6 +2176,7 @@
     },
     {
         "name": "Iridium",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/iridium.png",
         "head": {
             "durability": 520,
@@ -2128,6 +2203,7 @@
     },
     {
         "name": "Osmium",
+        "mod": "Mekanism",
         "image": "/assets/materials/osmium.png",
         "head": {
             "durability": 500,
@@ -2148,6 +2224,7 @@
     },
     {
         "name": "Nickel",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/nickel.png",
         "head": {
             "durability": 460,
@@ -2170,6 +2247,7 @@
     },
     {
         "name": "Fusewood",
+        "mod": "Natura",
         "image": "/assets/materials/fusewood.png",
         "head": {
             "durability": 430,
@@ -2196,6 +2274,7 @@
     },
     {
         "name": "Black Quartz",
+        "mod": "Actually Additions",
         "image": "/assets/materials/black_quartz.png",
         "head": {
             "durability": 380,
@@ -2225,6 +2304,7 @@
     },
     {
         "name": "Iron",
+        "mod": "Minecraft",
         "image": "/assets/materials/iron.png",
         "head": {
             "durability": 204,
@@ -2251,6 +2331,7 @@
     },
     {
         "name": "Starmetal",
+        "mod": "Astral Sorcery",
         "image": "/assets/materials/starmetal.png",
         "head": {
             "durability": 204,
@@ -2277,6 +2358,7 @@
     },
     {
         "name": "Knightslime",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/knightslime.png",
         "head": {
             "durability": 850,
@@ -2303,6 +2385,7 @@
     },
     {
         "name": "Mica",
+        "mod": "Environmental Tech",
         "image": "/assets/materials/mica.png",
         "head": {
             "durability": 680,
@@ -2329,6 +2412,7 @@
     },
     {
         "name": "Prismarine",
+        "mod": "Minecraft",
         "image": "/assets/materials/prismarine.png",
         "head": {
             "durability": 430,
@@ -2356,6 +2440,7 @@
     },
     {
         "name": "Copper",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/copper.png",
         "head": {
             "durability": 210,
@@ -2382,6 +2467,7 @@
     },
     {
         "name": "Lead",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/lead.png",
         "head": {
             "durability": 434,
@@ -2411,6 +2497,7 @@
     },
     {
         "name": "Livingwood",
+        "mod": "Botania",
         "image": "/assets/materials/livingwood.png",
         "head": {
             "durability": 50,
@@ -2440,6 +2527,7 @@
     },
     {
         "name": "Bone",
+        "mod": "Minecraft",
         "image": "/assets/materials/bone.png",
         "head": {
             "durability": 200,
@@ -2466,32 +2554,30 @@
     },
     {
         "name": "Sapphire",
+        "mod": "Tech Reborn",
         "image": "/assets/materials/sapphire.png",
         "head": {
-            "durability": 700,
-            "miningLevel": "Cobalt",
-            "miningSpeed": 5.0,
-            "attack": 6.4,
+            "durability": 600,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 12.14,
+            "attack": 5.13,
             "modifiers": [
-                "TBD"
+                "Launch"
             ]
         },
         "handle": {
-            "modifier": 1.0,
+            "modifier": 0.74,
             "durability": 100,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifiers": []
         },
         "extra": {
-            "durability": 120,
-            "modifiers": [
-                "TBD"
-            ]
+            "durability": 80,
+            "modifiers": []
         }
     },
     {
         "name": "Darkwood",
+        "mod": "Natura",
         "image": "/assets/materials/darkwood.png",
         "head": {
             "durability": 350,
@@ -2518,6 +2604,7 @@
     },
     {
         "name": "Silver",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/silver.png",
         "head": {
             "durability": 250,
@@ -2544,6 +2631,7 @@
     },
     {
         "name": "Flint",
+        "mod": "Minecraft",
         "image": "/assets/materials/flint.png",
         "head": {
             "durability": 150,
@@ -2570,6 +2658,7 @@
     },
     {
         "name": "Ghostwood",
+        "mod": "Natura",
         "image": "/assets/materials/ghostwood.png",
         "head": {
             "durability": 300,
@@ -2596,6 +2685,7 @@
     },
     {
         "name": "Constantan",
+        "mod": "Thermal Foundation",
         "image": "/assets/materials/constantan.png",
         "head": {
             "durability": 25,
@@ -2622,6 +2712,7 @@
     },
     {
         "name": "Amber",
+        "mod": "Biomes O' Plenty",
         "image": "/assets/materials/amber.png",
         "head": {
             "durability": 730,
@@ -2648,32 +2739,28 @@
     },
     {
         "name": "Ruby",
+        "mod": "Tech Reborn",
         "image": "/assets/materials/ruby.png",
         "head": {
-            "durability": 660,
-            "miningLevel": "Cobalt",
-            "miningSpeed": 4.6,
-            "attack": 6.4,
-            "modifiers": [
-                "TBD"
-            ]
+            "durability": 600,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 12.14,
+            "attack": 5.13,
+            "modifiers": []
         },
         "handle": {
-            "modifier": 1.2,
-            "durability": 0,
-            "modifiers": [
-                "TBD"
-            ]
+            "modifier": 0.74,
+            "durability": 100,
+            "modifiers": []
         },
         "extra": {
-            "durability": 20,
-            "modifiers": [
-                "TBD"
-            ]
+            "durability": 80,
+            "modifiers": []
         }
     },
     {
         "name": "Netherrack",
+        "mod": "Minecraft",
         "image": "/assets/materials/netherrack.png",
         "head": {
             "durability": 270,
@@ -2701,6 +2788,7 @@
     },
     {
         "name": "Slime",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/slimecrystal_green.png",
         "head": {
             "durability": 1000,
@@ -2727,6 +2815,7 @@
     },
     {
         "name": "Blue Slime",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/slimecrystal_blue.png",
         "head": {
             "durability": 780,
@@ -2753,6 +2842,7 @@
     },
     {
         "name": "Peridot",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/peridot.png",
         "head": {
             "durability": 640,
@@ -2779,6 +2869,7 @@
     },
     {
         "name": "Desert Myrmex Chitin",
+        "mod": "Ice and Fire",
         "image": "/assets/materials/desert_myrmex_chitin.png",
         "head": {
             "durability": 400,
@@ -2805,6 +2896,7 @@
     },
     {
         "name": "Jungle Myrmex Chitin",
+        "mod": "Ice and Fire",
         "image": "/assets/materials/jungle_myrmex_chitin.png",
         "head": {
             "durability": 400,
@@ -2831,6 +2923,7 @@
     },
     {
         "name": "Cactus",
+        "mod": "Minecraft",
         "image": "/assets/materials/cactus.png",
         "head": {
             "durability": 210,
@@ -2857,6 +2950,7 @@
     },
     {
         "name": "Stone",
+        "mod": "Minecraft",
         "image": "/assets/materials/stone.png",
         "head": {
             "durability": 120,
@@ -2883,6 +2977,7 @@
     },
     {
         "name": "Dilithium",
+        "mod": "Matter Overdrive",
         "image": "/assets/materials/dilithium.png",
         "head": {
             "durability": 160,
@@ -2909,6 +3004,7 @@
     },
     {
         "name": "Tritanium",
+        "mod": "Matter Overdrive",
         "image": "/assets/materials/tritanium.png",
         "head": {
             "durability": 160,
@@ -2935,6 +3031,7 @@
     },
     {
         "name": "Ardite",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/ardite.png",
         "head": {
             "durability": 990,
@@ -2961,6 +3058,7 @@
     },
     {
         "name": "Vibrant Alloy",
+        "mod": "Ender IO",
         "image": "/assets/materials/vibrant_alloy.png",
         "head": {
             "durability": 220,
@@ -2987,6 +3085,7 @@
     },
     {
         "name": "End Stone",
+        "mod": "Minecraft",
         "image": "/assets/materials/end_stone.png",
         "head": {
             "durability": 420,
@@ -3013,6 +3112,7 @@
     },
     {
         "name": "Sponge",
+        "mod": "Minecraft",
         "image": "/assets/materials/sponge.png",
         "head": {
             "durability": 1050,
@@ -3039,6 +3139,7 @@
     },
     {
         "name": "Pink Slime",
+        "mod": "Industrial Foregoing",
         "image": "/assets/materials/pink_slime.png",
         "head": {
             "durability": 2000,
@@ -3065,6 +3166,7 @@
     },
     {
         "name": "Tanzanite",
+        "mod": "Biomes O' Plenty",
         "image": "/assets/materials/tanzanite.png",
         "head": {
             "durability": 650,
@@ -3091,6 +3193,7 @@
     },
     {
         "name": "Malachite",
+        "mod": "Biomes O' Plenty",
         "image": "/assets/materials/malachite.png",
         "head": {
             "durability": 640,
@@ -3117,6 +3220,7 @@
     },
     {
         "name": "Dragon Bone",
+        "mod": "Ice and Fire",
         "image": "/assets/materials/dragonbone.png",
         "head": {
             "durability": 300,
@@ -3143,6 +3247,7 @@
     },
     {
         "name": "Energetic Alloy",
+        "mod": "Ender IO",
         "image": "/assets/materials/energetic_alloy.png",
         "head": {
             "durability": 690,
@@ -3169,6 +3274,7 @@
     },
     {
         "name": "Redstone Alloy",
+        "mod": "Ender IO",
         "image": "/assets/materials/redstone_alloy.png",
         "head": {
             "durability": 120,
@@ -3195,6 +3301,7 @@
     },
     {
         "name": "Magma Slime",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/slimecrystal_magma.png",
         "head": {
             "durability": 600,
@@ -3221,6 +3328,7 @@
     },
     {
         "name": "Magical Wood",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/magical_wood.png",
         "head": {
             "durability": 35,
@@ -3250,6 +3358,7 @@
     },
     {
         "name": "Wood",
+        "mod": "Minecraft",
         "image": "/assets/materials/wood.png",
         "head": {
             "durability": 35,
@@ -3276,6 +3385,7 @@
     },
     {
         "name": "Chocolate",
+        "mod": "NuclearCraft",
         "image": "/assets/materials/chocolate.png",
         "head": {
             "durability": 25,
@@ -3305,6 +3415,7 @@
     },
     {
         "name": "Treated Wood",
+        "mod": "Immersive Engineering",
         "image": "/assets/materials/treated_wood.png",
         "head": {
             "durability": 25,
@@ -3331,6 +3442,7 @@
     },
     {
         "name": "Soularium",
+        "mod": "Ender IO",
         "image": "/assets/materials/soularium.png",
         "head": {
             "durability": 1555,
@@ -3355,6 +3467,7 @@
     },
     {
         "name": "Prosperity Shard",
+        "mod": "Mystical Agriculture",
         "image": "/assets/materials/prosperity_shard.png",
         "head": {
             "durability": 36,
@@ -3381,6 +3494,7 @@
     },
     {
         "name": "Paper",
+        "mod": "Minecraft",
         "image": "/assets/materials/paper.png",
         "head": {
             "durability": 12,
@@ -3407,6 +3521,7 @@
     },
     {
         "name": "Demonic Metal",
+        "mod": "Tinkers' Construct",
         "image": "/assets/materials/demonic_metal.png",
         "head": {
             "durability": 80,
@@ -3429,6 +3544,7 @@
     },
     {
         "name": "Molten Meat",
+        "mod": "Fish's Undead Rising",
         "image": "/assets/materials/molten_meat.png",
         "head": {
             "durability": 400,
@@ -3456,6 +3572,7 @@
     },
     {
         "name": "Iron Alloy",
+        "mod": "Ender IO",
         "image": "/assets/materials/iron_alloy",
         "head": {
             "durability": 50,
@@ -3485,6 +3602,7 @@
     },
     {
         "name": "Weezer",
+        "mod": "Ice and Fire",
         "image": "/assets/materials/weezer.png",
         "head": {
             "durability": 1500,
@@ -3515,6 +3633,7 @@
     },
     {
         "name": "Vespa Carapace",
+        "mod": "Fish's Undead Rising",
         "image": "/assets/materials/vespa_carapace.png",
         "head": {
             "durability": 250,
@@ -3530,20 +3649,19 @@
             "modifier": 0.5,
             "durability": 100,
             "modifiers": [
-                "Broodmother",
                 "Poisonous"
             ]
         },
         "extra": {
             "durability": 100,
             "modifiers": [
-                "Broodmother",
                 "Poisonous"
             ]
         }
     },
     {
         "name": "Scythe Claw",
+        "mod": "Fish's Undead Rising",
         "image": "/assets/materials/scythe_claw.png",
         "head": {
             "durability": 100,
@@ -3559,20 +3677,19 @@
             "modifier": 0.5,
             "durability": 0,
             "modifiers": [
-                "Famine",
                 "Cold-Blooded"
             ]
         },
         "extra": {
             "durability": 50,
             "modifiers": [
-                "Famine",
                 "Cold-Blooded"
             ]
         }
     },
     {
         "name": "Ectoplasm",
+        "mod": "Fish's Undead Rising",
         "image": "/assets/materials/ectoplasm.png",
         "head": {
             "durability": 1000,
@@ -3599,6 +3716,7 @@
     },
     {
         "name": "Ancient Metal",
+        "mod": "Fossils and Archeology Revival",
         "image": "/assets/materials/ancient_metal.png",
         "head": {
             "durability": 220,
@@ -3627,28 +3745,407 @@
         }
     },
     {
-        "name": "test material",
-        "image": "/assets/materials/test.png",
+        "name": "Tar",
+        "mod": "Fossils and Archeology Revival",
+        "image": "/assets/materials/tar.png",
         "head": {
-            "durability": 90,
-            "miningLevel": "Iron",
-            "miningSpeed": 3,
-            "attack": 3,
+            "durability": 800,
+            "miningLevel": "Stone",
+            "miningSpeed": 3.6,
+            "attack": 2.25,
             "modifiers": [
-                "Cheapskate"
+                "Slimey"
             ]
         },
         "handle": {
-            "modifier": 1,
-            "durability": 25,
+            "modifier": 0.6,
+            "durability": 50,
             "modifiers": [
-                "Ecological"
+                "Slimey"
             ]
         },
         "extra": {
-            "durability": 15,
+            "durability": 400,
             "modifiers": [
-                "Cheap"
+                "Slimey"
+            ]
+        }
+    }, 
+{
+        "name": "Gaia Spirit",
+        "mod": "Botania",
+        "image": "/assets/materials/gaia_spirit.png",
+        "head": {
+            "durability": 1600,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 17.14,
+            "attack": 14.72,
+            "modifiers": [
+                "Alien",
+                "Payback"
+            ]
+        },
+        "handle": {
+            "modifier": 1.63,
+            "durability": 260,
+            "modifiers": [
+                "Alien",
+                "Payback"
+            ]
+        },
+        "extra": {
+            "durability": 180,
+            "modifiers": [
+                "Alien",
+                "Payback"
+            ]
+        }
+    }, 
+{
+        "name": "Tungsten",
+        "mod": "Tech Reborn",
+        "image": "/assets/materials/tungsten.png",
+        "head": {
+            "durability": 680,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 10.1,
+            "attack": 8.64,
+            "modifiers": []
+        },
+        "handle": {
+            "modifier": 1.73,
+            "durability": 220,
+            "modifiers": []
+        },
+        "extra": {
+            "durability": 115,
+            "modifiers": []
+        }
+    },
+{
+        "name": "Rubber",
+        "mod": "Tech Reborn",
+        "image": "/assets/materials/rubber.png",
+        "head": {
+            "durability": 14,
+            "miningLevel": "Iron",
+            "miningSpeed": 1.14,
+            "attack": 0.09,
+            "modifiers": [
+                "Slingshot"
+            ]
+        },
+        "handle": {
+            "modifier": 0.87,
+            "durability": 10,
+            "modifiers": [
+                "Slingshot"
+            ]
+        },
+        "extra": {
+            "durability": 3,
+            "modifiers": [
+                "Slingshot"
+            ]
+        }
+    },
+    {
+        "name": "Yellowrium",
+        "mod": "Tinkers' Construct",
+        "image": "/assets/materials/yellowrium.png",
+        "head": {
+            "durability": 660,
+            "miningLevel": "Diamond",
+            "miningSpeed": 9.02,
+            "attack": 3.81,
+            "modifiers": [
+                "Radioactive II"
+            ]
+        },
+        "handle": {
+            "modifier": 0.76,
+            "durability": 0,
+            "modifiers": [
+                "Radioactive II"
+            ]
+        },
+        "extra": {
+            "durability": 0,
+            "modifiers": [
+                "Radioactive II"
+            ]
+        }
+    },
+    {
+        "name": "Quartz Enriched Iron",
+        "mod": "Tinkers' Construct",
+        "image": "/assets/materials/quartz_enriched_iron.png",
+        "head": {
+            "durability": 500,
+            "miningLevel": "Obsidian",
+            "miningSpeed": 9.18,
+            "attack": 5.12,
+            "modifiers": []
+        },
+        "handle": {
+            "modifier": 1.22,
+            "durability": 140,
+            "modifiers": []
+        },
+        "extra": {
+            "durability": 70,
+            "modifiers": []
+        }
+    },
+    {
+        "name": "Ivory Psimetal",
+        "mod": "Tinkers' Construct",
+        "image": "/assets/materials/ivory_psimetal.png",
+        "head": {
+            "durability": 980,
+            "miningLevel": "Cobalt",
+            "miningSpeed":16.87,
+            "attack": 8.3,
+            "modifiers": [
+                "Holy"
+            ]
+        },
+        "handle": {
+            "modifier": 1.53,
+            "durability": 300,
+            "modifiers": [
+                "Psi Repair"
+            ]
+        },
+        "extra": {
+            "durability": 170,
+            "modifiers": [
+                "Psi Repair"
+            ]
+        }
+    },
+    {
+        "name": "Ebony Psimetal",
+        "mod": "Tinkers' Construct",
+        "image": "/assets/materials/ebony_psimetal.png",
+        "head": {
+            "durability": 1210,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 14.11,
+            "attack": 10.55,
+            "modifiers": [
+                "Darkness"
+            ]
+        },
+        "handle": {
+            "modifier": 1.98,
+            "durability": 400,
+            "modifiers": [
+                "Psi Eater"
+            ]
+        },
+        "extra": {
+            "durability": 290,
+            "modifiers": [
+                "Psi Eater"
+            ]
+        }
+    },
+    {
+        "name": "Red Matter",
+        "mod": "Tinkers' Construct",
+        "image": "/assets/materials/red_matter.png",
+        "head": {
+            "durability": 1900,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 20.09,
+            "attack": 11.3,
+            "modifiers": [
+                "Wheeee!"
+            ]
+        },
+        "handle": {
+            "modifier": 3.86,
+            "durability": 500,
+            "modifiers": []
+        },
+        "extra": {
+            "durability": 500,
+            "modifiers": []
+        }
+    },
+    {
+        "name": "Fluxed Electrum",
+        "mod": "Tinkers' Construct",
+        "image": "/assets/materials/fluxed_electrum.png",
+        "head": {
+            "durability": 1100,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 16.22,
+            "attack": 10.55,
+            "modifiers": [
+                "Energy Eater"
+            ]
+        },
+        "handle": {
+            "modifier": 2.43,
+            "durability": 240,
+            "modifiers": [
+                "Energy Repair"
+            ]
+        },
+        "extra": {
+            "durability": 230,
+            "modifiers": [
+                "Energy Repair"
+            ]
+        }
+    },
+    {
+        "name": "Jade (MCEternal)",
+        "mod": "Erebus",
+        "image": "/assets/materials/jade.png",
+        "head": {
+            "durability": 8000,
+            "miningLevel": "Vibranium",
+            "miningSpeed": 24,
+            "attack": 60,
+            "modifiers": [
+                "Jaded",
+                "Crumbling",
+                "Botanical II"
+            ]
+        },
+        "handle": {
+            "modifier": 3,
+            "durability": 200,
+            "modifiers": [
+                "Jaded",
+                "Naturebound",
+                "Crude II"
+            ]
+        },
+        "extra": {
+            "durability": 300,
+            "modifiers": [
+                "Jaded",
+                "Naturebound",
+                "Crude II",
+                "Analysing"
+            ]
+        }
+    },
+    {
+        "name": "Cheese",
+        "mod": "Rats",
+        "image": "/assets/materials/cheese.png",
+        "head": {
+            "durability": 300,
+            "miningLevel": "Iron",
+            "miningSpeed": 4.8,
+            "attack": 1.5,
+            "modifiers": [
+                "Ratty",
+                "Tasty"
+            ]
+        },
+        "handle": {
+            "modifier": 1.5,
+            "durability": 40,
+            "modifiers": [
+                "Ratty",
+                "Tasty"
+            ]
+        },
+        "extra": {
+            "durability": 150,
+            "modifiers": [
+                "Ratty",
+                "Tasty"
+            ]
+        }
+    },
+    {
+        "name": "Plague Metal",
+        "mod": "Rats",
+        "image": "/assets/materials/plague_metal.png",
+        "head": {
+            "durability": 780,
+            "miningLevel": "Iron",
+            "miningSpeed": 1.2,
+            "attack": 4.5,
+            "modifiers": [
+                "Diseased",
+                "Death Cloud"
+            ]
+        },
+        "handle": {
+            "modifier": 1.1,
+            "durability": 0,
+            "modifiers": [
+                "Diseased",
+                "Death Cloud"
+            ]
+        },
+        "extra": {
+            "durability": 180,
+            "modifiers": [
+                "Diseased",
+                "Death Cloud"
+            ]
+        }
+    },
+    {
+        "name": "Tiberium",
+        "mod": "TAIGA",
+        "image": "/assets/materials/tiberium.png",
+        "head": {
+            "durability": 80,
+            "miningLevel": "Diamond",
+            "miningSpeed": 3.96,
+            "attack": 3,
+            "modifiers": [
+                "Unstable"
+            ]
+        },
+        "handle": {
+            "modifier": 0.7,
+            "durability": 0,
+            "modifiers": [
+                "Unstable"
+            ]
+        },
+        "extra": {
+            "durability": 50,
+            "modifiers": [
+                "Unstable"
+            ]
+        }
+    },
+    {
+        "name": "Aurorium",
+        "mod": "TAIGA",
+        "image": "/assets/materials/aurorium.png",
+        "head": {
+            "durability": 750,
+            "miningLevel": "Cobalt",
+            "miningSpeed": 4.32,
+            "attack": 2.84,
+            "modifiers": [
+                "Arcane"
+            ]
+        },
+        "handle": {
+            "modifier": 0.77,
+            "durability": 25,
+            "modifiers": [
+                "Arcane"
+            ]
+        },
+        "extra": {
+            "durability": 130,
+            "modifiers": [
+                "Arcane"
             ]
         }
     }
