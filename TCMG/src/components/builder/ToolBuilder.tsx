@@ -167,7 +167,9 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
       .filter((_material, index) => partToCategory[parts[index] as ToolPart] === 'handle')
       .map((material) => material?.handle);
     const extras = materials
-      .filter((_material, index) => partToCategory[parts[index] as ToolPart] === 'extra')
+      .filter((_material, index) => {
+        return (partToCategory[parts[index] as ToolPart] === 'extra' || parts[index] === 'Knife Blade');
+      })
       .map((material) => material?.extra);
 
     const stats = Builder1_12_2(selectedTool, { heads, handles, extras });
@@ -306,32 +308,61 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
 
       <div className="tool-stats">
         <h3>Tool Stats</h3>
-        <p>Durability: {toolStats?.durability || 'N/A'}</p>
-        <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p>
-        <p>Mining Speed: {toolStats?.miningSpeed || 'N/A'}</p>
-        <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
-        <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p>
-        <p>DPS: {toolStats?.DPS || 'N/A'}</p>
-        <p>Modifiers: </p>
-        <ul>
-          {toolStats?.modifiers?.length > 0
-            ? toolStats.modifiers.map((modifier: string, index: number) => (
-                <OverlayTrigger
-                  key={index}
-                  placement="top"
-                  overlay={
-                    <Tooltip id={`tooltip-${index}`}>
-                      {findModifierDescription(modifier)}
-                    </Tooltip>
-                  }
-                >
-                  <li className="modifier" style={{ cursor: 'pointer' }}>
-                    {modifier}
-                  </li>
-                </OverlayTrigger>
-              ))
-            : 'None'}
-        </ul>
+        {selectedTool === 'Shuriken' ? (
+          <>
+            <p>Ammo: {toolStats?.ammo || 'N/A'}</p> {/* Display Ammo for Shuriken */}
+            <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
+            <p>Modifiers: </p>
+            <ul>
+              {toolStats?.modifiers?.length > 0
+                ? toolStats.modifiers.map((modifier: string, index: number) => (
+                    <OverlayTrigger
+                      key={index}
+                      placement="top"
+                      overlay={
+                        <Tooltip id={`tooltip-${index}`}>
+                          {findModifierDescription(modifier)}
+                        </Tooltip>
+                      }
+                    >
+                      <li className="modifier" style={{ cursor: 'pointer' }}>
+                        {modifier}
+                      </li>
+                    </OverlayTrigger>
+                  ))
+                : 'None'}
+            </ul>
+          </>
+        ) : (
+          <>
+            <p>Durability: {toolStats?.durability || 'N/A'}</p>
+            <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p>
+            <p>Mining Speed: {toolStats?.miningSpeed || 'N/A'}</p>
+            <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
+            <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p>
+            <p>DPS: {toolStats?.DPS || 'N/A'}</p>
+            <p>Modifiers: </p>
+            <ul>
+              {toolStats?.modifiers?.length > 0
+                ? toolStats.modifiers.map((modifier: string, index: number) => (
+                    <OverlayTrigger
+                      key={index}
+                      placement="top"
+                      overlay={
+                        <Tooltip id={`tooltip-${index}`}>
+                          {findModifierDescription(modifier)}
+                        </Tooltip>
+                      }
+                    >
+                      <li className="modifier" style={{ cursor: 'pointer' }}>
+                        {modifier}
+                      </li>
+                    </OverlayTrigger>
+                  ))
+                : 'None'}
+            </ul>
+          </>
+        )}
       </div>
     </div>
   );
