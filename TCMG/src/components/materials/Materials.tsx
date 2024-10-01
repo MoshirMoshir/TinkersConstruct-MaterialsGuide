@@ -107,7 +107,7 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
 
   return (
     <div className="materials-page">
-      <h1>Materials for Version {version}</h1>
+      <h1>{version} Materials</h1>
 
       {/* Search and Sort Controls */}
       <div className="controls">
