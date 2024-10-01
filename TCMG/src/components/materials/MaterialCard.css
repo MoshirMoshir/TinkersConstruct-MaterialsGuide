@@ -60,25 +60,7 @@ p {
 .scale-wrapper {
   transform: scale(1); /* Start at a slightly smaller scale by default */
   transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
-}
-
-/* Adjust the scale dynamically based on the size of the card */
-@media (max-width: 500px) {
-  .scale-wrapper {
-    transform: scale(0.75); /* Scale down when the card gets smaller */
-  }
-}
-
-@media (max-width: 400px) {
-  .scale-wrapper {
-    transform: scale(0.65); /* Further scale down for smaller screens */
-  }
-}
-
-@media (max-width: 300px) {
-  .scale-wrapper {
-    transform: scale(0.55); /* Even more scaling for very small screens */
-  }
+  align-self: center;
 }
 
 /* Custom styling for the tooltip */
@@ -144,4 +126,31 @@ p {
 
 .material-section-extra li {
   color: #a3f5a3; /* Pastel green for Extra text */
+}
+
+@media (max-width: 2000px) {
+  .scale-wrapper {
+    transform: scale(0.75); /* Scale down when the card gets smaller */
+  }
+  .material-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .scale-wrapper {
+    transform: scale(0.65); /* Further scale down for smaller screens */
+  }
+  .material-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .scale-wrapper {
+    transform: scale(0.50); /* Even more scaling for very small screens */
+  }
+  .material-name {
+    font-size: .8rem;
+  }
 }

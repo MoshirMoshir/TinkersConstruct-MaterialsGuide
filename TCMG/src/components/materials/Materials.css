@@ -76,33 +76,15 @@
   cursor: pointer;
   margin-right: 1rem;
   margin-left: 0.5rem;
-  min-width: 150px;  /* Set minimum width */
+  min-width: 100px;  /* Set minimum width */
   flex-shrink: 0;  /* Prevent shrinking below minimum size */
   max-width: 200px;  /* Ensure max width */
-}
-
-/* For mobile/smaller screens */
-@media (max-width: 768px) {
-  .controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .search-controls,
-  .sort-controls {
-    width: 100%;
-  }
-
-  .search-bar {
-    max-width: none;
-    width: 100%;  /* Full width for mobile */
-  }
 }
 
 /* Materials Grid */
 .materials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Ensure a minimum size for the cards */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* Ensure a minimum size for the cards */
   gap: 1rem;  /* Gap between grid items */
   padding-left: 0rem;  /* Apply padding only on the left */
   padding-right: 2rem;  /* Apply padding only on the right */
