@@ -265,7 +265,13 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
             className={`tool-button ${selectedTool === tool.name ? 'selected' : ''}`}
             onClick={() => handleToolSelection(tool.name)}
           >
-            {tool.name}
+            <img
+              src={`/assets/tools/${tool.name}.png`}
+              alt={tool.name}
+              width="50"
+              height="50"
+            />
+            <span>{tool.name}</span>
           </button>
         ))}
       </div>
@@ -306,64 +312,65 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
         </div>
       )}
 
-      <div className="tool-stats">
-        <h3>Tool Stats</h3>
-        {selectedTool === 'Shuriken' ? (
-          <>
-            <p>Ammo: {toolStats?.ammo || 'N/A'}</p> {/* Display Ammo for Shuriken */}
-            <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
-            <p>Modifiers: </p>
-            <ul>
-              {toolStats?.modifiers?.length > 0
-                ? toolStats.modifiers.map((modifier: string, index: number) => (
-                    <OverlayTrigger
-                      key={index}
-                      placement="top"
-                      overlay={
-                        <Tooltip id={`tooltip-${index}`}>
-                          {findModifierDescription(modifier)}
-                        </Tooltip>
-                      }
-                    >
-                      <li className="modifier" style={{ cursor: 'pointer' }}>
-                        {modifier}
-                      </li>
-                    </OverlayTrigger>
-                  ))
-                : 'None'}
-            </ul>
-          </>
-        ) : (
-          <>
-            <p>Durability: {toolStats?.durability || 'N/A'}</p>
-            <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p>
-            <p>Mining Speed: {toolStats?.miningSpeed || 'N/A'}</p>
-            <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
-            <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p>
-            <p>DPS: {toolStats?.DPS || 'N/A'}</p>
-            <p>Modifiers: </p>
-            <ul>
-              {toolStats?.modifiers?.length > 0
-                ? toolStats.modifiers.map((modifier: string, index: number) => (
-                    <OverlayTrigger
-                      key={index}
-                      placement="top"
-                      overlay={
-                        <Tooltip id={`tooltip-${index}`}>
-                          {findModifierDescription(modifier)}
-                        </Tooltip>
-                      }
-                    >
-                      <li className="modifier" style={{ cursor: 'pointer' }}>
-                        {modifier}
-                      </li>
-                    </OverlayTrigger>
-                  ))
-                : 'None'}
-            </ul>
-          </>
-        )}
-      </div>
+    <div className="tool-stats">
+      <h3>Tool Stats</h3>
+      {selectedTool === 'Shuriken' ? (
+        <>
+          <p>Ammo: {toolStats?.ammo || 'N/A'}</p> {/* Display Ammo for Shuriken */}
+          <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
+          <p>Modifiers: </p>
+          <ul>
+            {toolStats?.modifiers?.length > 0
+              ? toolStats.modifiers.map((modifier: string, index: number) => (
+                  <OverlayTrigger
+                    key={index}
+                    placement="top"
+                    overlay={
+                      <Tooltip id={`tooltip-${index}`}>
+                        {findModifierDescription(modifier)}
+                      </Tooltip>
+                    }
+                  >
+                    <li className="modifier" style={{ cursor: 'pointer' }}>
+                      {modifier}
+                    </li>
+                  </OverlayTrigger>
+                ))
+              : 'None'}
+          </ul>
+        </>
+      ) : (
+        <>
+          <p>Durability: {toolStats?.durability || 'N/A'}</p>
+          <p>Mining Level: {toolStats?.miningLevel || 'N/A'}</p>
+          <p>Mining Speed: {toolStats?.miningSpeed || 'N/A'}</p>
+          <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
+          <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p>
+          <p>DPS: {toolStats?.DPS || 'N/A'}</p>
+          <p>Modifiers: </p>
+          <ul>
+            {toolStats?.modifiers?.length > 0
+              ? toolStats.modifiers.map((modifier: string, index: number) => (
+                  <OverlayTrigger
+                    key={index}
+                    placement="top"
+                    overlay={
+                      <Tooltip id={`tooltip-${index}`}>
+                        {findModifierDescription(modifier)}
+                      </Tooltip>
+                    }
+                  >
+                    <li className="modifier" style={{ cursor: 'pointer' }}>
+                      {modifier}
+                    </li>
+                  </OverlayTrigger>
+                ))
+              : 'None'}
+          </ul>
+        </>
+      )}
+    </div>
+
     </div>
   );
 };
