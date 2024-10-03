@@ -32,24 +32,35 @@ interface Modifier {
   description: string;
 }
 
-interface ToolBuilderProps {
-  version: string;
-  selectedTool: string | null;
-  setSelectedTool: React.Dispatch<React.SetStateAction<string | null>>;
-  selectedMaterials: Array<Material | null>;
-  setSelectedMaterials: React.Dispatch<React.SetStateAction<Array<Material | null>>>;
-  builtTools: BuiltTool[];
-  setBuiltTools: React.Dispatch<React.SetStateAction<BuiltTool[]>>;
-  settings: SettingsType; // Add this line
-}
-
 export interface BuiltTool {
   toolName: string;
   materials: Array<Material | null>;
   stats: any;
 }
 
-type ToolPart = 'Large Sword Blade' | 'Pickaxe Head' | 'Shovel Head' | 'Axe Head' | 'Kama Head' | 'Hammer Head' | 'Large Plate' | 'Excavator Head' | 'Broad Axe Head' | 'Scythe Head' | 'Sword Blade' | 'Pan' | 'Sign Plate' | 'Knife Blade' | 'Binding' | 'Tough Binding' | 'Wide Guard' | 'Plate' | 'Hand Guard' | 'Cross Guard' | 'Tool Rod' | 'Tough Tool Rod';
+type ToolPart =
+  | 'Large Sword Blade'
+  | 'Pickaxe Head'
+  | 'Shovel Head'
+  | 'Axe Head'
+  | 'Kama Head'
+  | 'Hammer Head'
+  | 'Large Plate'
+  | 'Excavator Head'
+  | 'Broad Axe Head'
+  | 'Scythe Head'
+  | 'Sword Blade'
+  | 'Pan'
+  | 'Sign Plate'
+  | 'Knife Blade'
+  | 'Binding'
+  | 'Tough Binding'
+  | 'Wide Guard'
+  | 'Plate'
+  | 'Hand Guard'
+  | 'Cross Guard'
+  | 'Tool Rod'
+  | 'Tough Tool Rod';
 
 // Map tool parts to material categories
 const partToCategory: Record<ToolPart, 'head' | 'extra' | 'handle'> = {
@@ -64,22 +75,46 @@ const partToCategory: Record<ToolPart, 'head' | 'extra' | 'handle'> = {
   'Broad Axe Head': 'head',
   'Scythe Head': 'head',
   'Sword Blade': 'head',
-  'Pan': 'head',
+  Pan: 'head',
   'Sign Plate': 'head',
   'Knife Blade': 'head',
-  'Binding': 'extra',
+  Binding: 'extra',
   'Tough Binding': 'extra',
   'Wide Guard': 'extra',
-  'Plate': 'extra',
+  Plate: 'extra',
   'Hand Guard': 'extra',
   'Cross Guard': 'extra',
   'Tool Rod': 'handle',
   'Tough Tool Rod': 'handle',
 };
 
-const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
+interface Tool {
+  name: string;
+  parts: ToolPart[];
+}
 
-  const tools = [
+interface ToolBuilderProps {
+  version: string;
+  selectedTool: string | null;
+  setSelectedTool: React.Dispatch<React.SetStateAction<string | null>>;
+  selectedMaterials: Array<Material | null>;
+  setSelectedMaterials: React.Dispatch<React.SetStateAction<Array<Material | null>>>;
+  builtTools: BuiltTool[];
+  setBuiltTools: React.Dispatch<React.SetStateAction<BuiltTool[]>>;
+  settings: SettingsType;
+}
+
+const ToolBuilder: React.FC<ToolBuilderProps> = ({
+  version,
+  selectedTool,
+  setSelectedTool,
+  selectedMaterials,
+  setSelectedMaterials,
+  builtTools,
+  setBuiltTools,
+  settings,
+}) => {
+  const tools: Tool[] = [
     { name: 'Katana', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Sword Blade', 'Large Sword Blade'] },
     { name: 'Pickaxe', parts: ['Tool Rod', 'Binding', 'Pickaxe Head'] },
     { name: 'Shovel', parts: ['Tool Rod', 'Binding', 'Shovel Head'] },
@@ -99,15 +134,27 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
     { name: 'Shuriken', parts: ['Knife Blade', 'Knife Blade', 'Knife Blade', 'Knife Blade'] },
   ];
 
-  const [selectedTool, setSelectedTool] = useState<string | null>('Katana'); // Default selected tool
-  // Initialize selectedMaterials based on the default selected tool's parts
-  const defaultTool = tools.find((tool) => tool.name === selectedTool);
-  const initialMaterials = defaultTool ? Array(defaultTool.parts.length).fill(null) : [];
-  const [selectedMaterials, setSelectedMaterials] = useState<Array<Material | null>>(initialMaterials);
   const [toolStats, setToolStats] = useState<any>(null);
-  const [materials, setMaterials] = useState<Material[]>([]); // Materials state
-  const [modifiers, setModifiers] = useState<Modifier[]>([]); // State to store the modifier descriptions
-  const [builtTools, setBuiltTools] = useState<BuiltTool[]>([]);
+  const [materials, setMaterials] = useState<Material[]>([]);
+  const [modifiers, setModifiers] = useState<Modifier[]>([]);
+
+  // Initialize selectedTool if not already set
+  useEffect(() => {
+    if (!selectedTool) {
+      setSelectedTool(tools[0].name);
+    }
+  }, [selectedTool, setSelectedTool, tools]);
+
+  // Initialize selectedMaterials when selectedTool changes
+  useEffect(() => {
+    if (selectedTool) {
+      const toolParts = tools.find((tool) => tool.name === selectedTool)?.parts || [];
+      if (selectedMaterials.length !== toolParts.length) {
+        setSelectedMaterials(Array(toolParts.length).fill(null));
+        setToolStats(null); // Reset tool stats when selected tool changes
+      }
+    }
+  }, [selectedTool, setSelectedMaterials]);
 
   // Fetch materials for the specific version
   useEffect(() => {
@@ -181,50 +228,31 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
 
   // Handle tool selection
   const handleToolSelection = (toolName: string) => {
-    setSelectedTool(toolName); // Set the new tool
-  
-    // Get the parts of the selected tool
-    const toolParts = tools.find((tool) => tool.name === toolName)?.parts || [];
-  
-    // Reset selected materials based on the new tool's parts
-    setSelectedMaterials(Array(toolParts.length).fill(null));
-  
-    // Reset stats
-    setToolStats(null);
+    if (selectedTool !== toolName) {
+      setSelectedTool(toolName);
+    }
   };
-  
 
   // Handle material selection for a part
-  const handleMaterialSelection = (selectedOption: { value: Material | null }, partIndex: number, _part: ToolPart) => {
-    const newMaterials = [...selectedMaterials]; // Clone the array
-    newMaterials[partIndex] = selectedOption.value; // Update the material at the specific index
-
-    // Update the state with the newly selected material
+  const handleMaterialSelection = (
+    selectedOption: { value: Material | null },
+    partIndex: number,
+    _part: ToolPart
+  ) => {
+    const newMaterials = [...selectedMaterials];
+    newMaterials[partIndex] = selectedOption.value;
     setSelectedMaterials(newMaterials);
-
-    // Recalculate stats with updated materials
-    calculateToolStats(newMaterials, tools.find(tool => tool.name === selectedTool)?.parts || []);
   };
 
-  // Check if all materials are selected
-  const allMaterialsSelected = selectedMaterials.length > 0 && selectedMaterials.every((material) => material !== null);
+  // Recalculate stats whenever selectedMaterials change
+  useEffect(() => {
+    if (selectedMaterials.length > 0 && selectedTool) {
+      const parts = tools.find((tool) => tool.name === selectedTool)?.parts || [];
+      calculateToolStats(selectedMaterials, parts);
+    }
+  }, [selectedMaterials, selectedTool]);
 
-  // Function to handle building the tool
-  const handleBuildTool = () => {
-    if (!selectedTool || !toolStats) return;
-
-    // Create a new built tool object
-    const newBuiltTool: BuiltTool = {
-      toolName: selectedTool,
-      materials: selectedMaterials,
-      stats: toolStats,
-    };
-
-    // Add the new built tool to the list
-    setBuiltTools([...builtTools, newBuiltTool]);
-  };
-
-  // Modify the calculateToolStats function
+  // Function to calculate tool stats
   const calculateToolStats = (materials: Array<Material | null>, parts: string[]) => {
     if (!selectedTool) return;
 
@@ -236,18 +264,34 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
       .map((material) => material?.handle);
     const extras = materials
       .filter((_material, index) => {
-        return (partToCategory[parts[index] as ToolPart] === 'extra' || parts[index] === 'Knife Blade');
+        return partToCategory[parts[index] as ToolPart] === 'extra' || parts[index] === 'Knife Blade';
       })
       .map((material) => material?.extra);
 
     const stats = Calculator(version, selectedTool, { heads, handles, extras });
-    // console.log('Calculated stats:', stats);
     setToolStats(stats);
   };
 
-  // Prepare material options for the dropdown (react-select) with "None" at the top
+  // Check if all materials are selected
+  const allMaterialsSelected =
+    selectedMaterials.length > 0 && selectedMaterials.every((material) => material !== null);
+
+  // Function to handle building the tool
+  const handleBuildTool = () => {
+    if (!selectedTool || !toolStats) return;
+
+    const newBuiltTool: BuiltTool = {
+      toolName: selectedTool,
+      materials: selectedMaterials,
+      stats: toolStats,
+    };
+
+    setBuiltTools([...builtTools, newBuiltTool]);
+  };
+
+  // Prepare material options for the dropdown
   const materialOptions = [
-    { value: null, label: 'None' }, // Option to reset the selection
+    { value: null, label: 'None' },
     ...materials.map((material) => ({
       value: material,
       label: material.name,
@@ -257,9 +301,9 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
   // Function to create the tooltip content with material stats
   const renderTooltipContent = (material: Material | null, partType: 'head' | 'handle' | 'extra') => {
     if (!material) return 'No material selected';
-  
+
     const { head, handle, extra } = material;
-    
+
     return (
       <div className="material-tooltip">
         {partType === 'head' && head && (
@@ -267,27 +311,28 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
             <p className="stat-name">Durability:</p> <p>{head.durability}</p>
             <p className="stat-name">Mining Speed:</p> <p>{head.miningSpeed}</p>
             <p className="stat-name">Attack:</p> <p>{head.attack}</p>
-            <p className="stat-name">Modifiers:</p> <p>{head.modifiers.join(', ') || 'None'}</p>
+            <p className="stat-name">Modifiers:</p>{' '}
+            <p>{head.modifiers && head.modifiers.length > 0 ? head.modifiers.join(', ') : 'None'}</p>
           </>
         )}
         {partType === 'handle' && handle && (
           <>
             <p className="stat-name">Durability:</p> <p>{handle.durability}</p>
             <p className="stat-name">Modifier:</p> <p>{handle.modifier}</p>
-            <p className="stat-name">Modifiers:</p> <p>{handle.modifiers.join(', ') || 'None'}</p>
+            <p className="stat-name">Modifiers:</p>{' '}
+            <p>{handle.modifiers && handle.modifiers.length > 0 ? handle.modifiers.join(', ') : 'None'}</p>
           </>
         )}
         {partType === 'extra' && extra && (
           <>
             <p className="stat-name">Durability:</p> <p>{extra.durability}</p>
-            <p className="stat-name">Modifiers:</p> <p>{extra.modifiers.join(', ') || 'None'}</p>
+            <p className="stat-name">Modifiers:</p>{' '}
+            <p>{extra.modifiers && extra.modifiers.length > 0 ? extra.modifiers.join(', ') : 'None'}</p>
           </>
         )}
       </div>
     );
   };
-  
-  
 
   const customStyles = {
     control: (styles: any) => ({
@@ -336,17 +381,12 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
               className={`tool-button ${selectedTool === tool.name ? 'selected' : ''}`}
               onClick={() => handleToolSelection(tool.name)}
             >
-              <img
-                src={`/assets/tools/${tool.name}.png`}
-                alt={tool.name}
-                width="75"
-                height="75"
-              />
+              <img src={`/assets/tools/${tool.name}.png`} alt={tool.name} width="75" height="75" />
               <span>{tool.name}</span>
             </button>
           ))}
         </div>
-  
+
         {/* Tool Configuration and Stats */}
         {selectedTool && (
           <>
@@ -378,11 +418,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
                                 option.value?.name === selectedMaterials[index]?.name || null
                             )}
                             onChange={(selectedOption) =>
-                              handleMaterialSelection(
-                                selectedOption!,
-                                index,
-                                part as ToolPart
-                              )
+                              handleMaterialSelection(selectedOption!, index, part as ToolPart)
                             }
                             placeholder={`Select Material for ${part}`}
                             isSearchable
@@ -394,7 +430,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
                   ))}
               </div>
             </div>
-  
+
             {/* Tool Stats Section */}
             <div className="tool-stats">
               <h3>Tool Stats</h3>
@@ -403,25 +439,27 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
                   <p>Ammo: {toolStats?.ammo || 'N/A'}</p>
                   <p>Attack Damage: {toolStats?.attack || 'N/A'}</p>
                   <p>Modifiers:</p>
-                  <ul>
-                    {toolStats?.modifiers?.length > 0
-                      ? toolStats.modifiers.map((modifier: string, index: number) => (
-                          <OverlayTrigger
-                            key={index}
-                            placement="top"
-                            overlay={
-                              <Tooltip id={`tooltip-${index}`}>
-                                {findModifierDescription(modifier)}
-                              </Tooltip>
-                            }
-                          >
-                            <li className="modifier" style={{ cursor: 'pointer' }}>
-                              {modifier}
-                            </li>
-                          </OverlayTrigger>
-                        ))
-                      : 'None'}
-                  </ul>
+                  {toolStats?.modifiers?.length > 0 ? (
+                    <ul>
+                      {toolStats.modifiers.map((modifier: string, index: number) => (
+                        <OverlayTrigger
+                          key={index}
+                          placement="top"
+                          overlay={
+                            <Tooltip id={`tooltip-${index}`}>
+                              {findModifierDescription(modifier)}
+                            </Tooltip>
+                          }
+                        >
+                          <li className="modifier" style={{ cursor: 'pointer' }}>
+                            {modifier}
+                          </li>
+                        </OverlayTrigger>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>None</p>
+                  )}
                 </>
               ) : (
                 <>
@@ -432,32 +470,34 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
                   <p>Attack Speed: {toolStats?.attackSpeed || 'N/A'}</p>
                   <p>DPS: {toolStats?.DPS || 'N/A'}</p>
                   <p>Modifiers:</p>
-                  <ul>
-                    {toolStats?.modifiers?.length > 0
-                      ? toolStats.modifiers.map((modifier: string, index: number) => (
-                          <OverlayTrigger
-                            key={index}
-                            placement="top"
-                            overlay={
-                              <Tooltip id={`tooltip-${index}`}>
-                                {findModifierDescription(modifier)}
-                              </Tooltip>
-                            }
-                          >
-                            <li className="modifier" style={{ cursor: 'pointer' }}>
-                              {modifier}
-                            </li>
-                          </OverlayTrigger>
-                        ))
-                      : 'None'}
-                  </ul>
+                  {toolStats?.modifiers?.length > 0 ? (
+                    <ul>
+                      {toolStats.modifiers.map((modifier: string, index: number) => (
+                        <OverlayTrigger
+                          key={index}
+                          placement="top"
+                          overlay={
+                            <Tooltip id={`tooltip-${index}`}>
+                              {findModifierDescription(modifier)}
+                            </Tooltip>
+                          }
+                        >
+                          <li className="modifier" style={{ cursor: 'pointer' }}>
+                            {modifier}
+                          </li>
+                        </OverlayTrigger>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>None</p>
+                  )}
                 </>
               )}
             </div>
           </>
         )}
       </div>
-  
+
       {/* Build Tool Button */}
       <div className="build-tool-section">
         <button
@@ -468,7 +508,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
           Build Tool
         </button>
       </div>
-  
+
       {/* Built Tools Section */}
       {builtTools.length > 0 && (
         <div className="built-tools">
@@ -493,8 +533,6 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
       )}
     </div>
   );
-  
-
 };
 
 export default ToolBuilder;
