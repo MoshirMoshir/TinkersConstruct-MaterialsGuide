@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MaterialCard from '@components/materials/MaterialCard';
+import { Settings as SettingsType } from '@components/settings/Settings';
 import './Materials.css';
 
 interface Material {
@@ -26,9 +27,10 @@ interface Material {
 
 interface MaterialsProps {
   version: string;
+  settings: SettingsType;
 }
 
-const Materials: React.FC<MaterialsProps> = ({ version }) => {
+const Materials: React.FC<MaterialsProps> = ({ version, settings }) => {
   const [materials, setMaterials] = useState<Material[]>([]);
   const [sortField, setSortField] = useState<string>('name'); // State for sorting
   const [sortDirection, setSortDirection] = useState<string>('asc'); // State for sort direction
@@ -38,20 +40,46 @@ const Materials: React.FC<MaterialsProps> = ({ version }) => {
   useEffect(() => {
     const fetchMaterials = async () => {
       try {
-        const response = await fetch(`/assets/${version}.json`);
-        if (response.ok) {
-          const data = await response.json();
-          setMaterials(data);
+        const baseResponse = await fetch(`/assets/${version}.json`);
+        let baseMaterials = [];
+        if (baseResponse.ok) {
+          baseMaterials = await baseResponse.json();
         } else {
-          console.error(`Error loading materials for version ${version}`);
+          console.error('Error fetching base materials');
+        }
+  
+        if (settings.modpack && settings.modpack !== 'None') {
+          const modpackResponse = await fetch(`/assets/modpacks/${settings.modpack}.json`);
+          if (modpackResponse.ok) {
+            const modpackMaterials = await modpackResponse.json();
+            // Merge baseMaterials and modpackMaterials
+            const mergedMaterials = mergeMaterials(baseMaterials, modpackMaterials);
+            setMaterials(mergedMaterials);
+          } else {
+            console.error('Error fetching modpack materials');
+            setMaterials(baseMaterials);
+          }
+        } else {
+          setMaterials(baseMaterials);
         }
       } catch (error) {
-        console.error(`Error fetching materials: ${error}`);
+        console.error('Error fetching materials:', error);
       }
     };
-
     fetchMaterials();
-  }, [version]);
+  }, [version, settings.modpack]);
+
+  // Function to merge materials
+const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[]) => {
+  const materialMap = new Map<string, Material>();
+  baseMaterials.forEach((material) => {
+    materialMap.set(material.name, material);
+  });
+  modpackMaterials.forEach((material) => {
+    materialMap.set(material.name, material); // Overwrite or add new material
+  });
+  return Array.from(materialMap.values());
+};
 
   // Sorting function based on the selected field and direction
   const sortMaterials = (materials: Material[]) => {

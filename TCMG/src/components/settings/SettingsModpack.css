@@ -1,0 +1,82 @@
+/* SettingsModpack.css */
+
+/* Container for the modpack settings section */
+.settings-modpack {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center; /* Center the box horizontally */
+}
+
+/* Box styling for the modpack options */
+.modpack-box {
+  width: 100%;
+  max-width: 500px; /* Maximum width */
+  padding: 20px;
+  background-color: var(--background2-color);
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Header for the modpack settings */
+.settings-modpack h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+/* Container for the modpack options */
+.modpack-options {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual modpack option */
+.modpack-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Radio input styling */
+.modpack-option input[type='radio'] {
+  margin-right: 10px;
+  accent-color: var(--primary-color);
+}
+
+/* Label text styling */
+.modpack-option label {
+  font-size: 1rem;
+  word-wrap: break-word; /* Ensure long text wraps */
+}
+
+/* Hover effect */
+.modpack-option:hover {
+  background-color: var(--background-color);
+  color: white; /* Assuming you have a variable for text color on primary background */
+}
+
+/* Selected option styling */
+.modpack-option input[type='radio']:checked + label {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .modpack-box {
+    padding: 15px;
+  }
+
+  .settings-modpack h3 {
+    font-size: 1.3rem;
+  }
+
+  .modpack-option label {
+    font-size: 0.9rem;
+  }
+}

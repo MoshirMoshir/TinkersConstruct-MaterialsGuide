@@ -4,6 +4,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import Calculator from '@components/builder/Calculator';
 import ModalCard from '@components/builder/ModalCard';
+import { Settings as SettingsType } from '@components/settings/Settings';
 import './ToolBuilder.css';
 
 export interface Material {
@@ -100,6 +101,7 @@ interface ToolBuilderProps {
   setSelectedMaterials: React.Dispatch<React.SetStateAction<Array<Material | null>>>;
   builtTools: BuiltTool[];
   setBuiltTools: React.Dispatch<React.SetStateAction<BuiltTool[]>>;
+  settings: SettingsType;
 }
 
 const ToolBuilder: React.FC<ToolBuilderProps> = ({
@@ -110,93 +112,103 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
   setSelectedMaterials,
   builtTools,
   setBuiltTools,
+  settings,
 }) => {
-  const [tools, setTools] = useState<Tool[]>([]);
+  const tools: Tool[] = [
+    { name: 'Katana', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Sword Blade', 'Large Sword Blade'] },
+    { name: 'Pickaxe', parts: ['Tool Rod', 'Binding', 'Pickaxe Head'] },
+    { name: 'Shovel', parts: ['Tool Rod', 'Binding', 'Shovel Head'] },
+    { name: 'Hatchet', parts: ['Tool Rod', 'Binding', 'Axe Head'] },
+    { name: 'Mattock', parts: ['Tool Rod', 'Axe Head', 'Shovel Head'] },
+    { name: 'Kama', parts: ['Tool Rod', 'Binding', 'Kama Head'] },
+    { name: 'Hammer', parts: ['Tough Tool Rod', 'Large Plate', 'Hammer Head', 'Large Plate'] },
+    { name: 'Excavator', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Plate', 'Excavator Head'] },
+    { name: 'Lumberaxe', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Plate', 'Broad Axe Head'] },
+    { name: 'Scythe', parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Tough Binding', 'Scythe Head'] },
+    { name: 'Broadsword', parts: ['Tool Rod', 'Wide Guard', 'Sword Blade'] },
+    { name: 'Longsword', parts: ['Tool Rod', 'Hand Guard', 'Sword Blade'] },
+    { name: 'Rapier', parts: ['Tool Rod', 'Cross Guard', 'Sword Blade'] },
+    { name: 'Frypan', parts: ['Tool Rod', 'Pan'] },
+    { name: 'Battlesign', parts: ['Tool Rod', 'Sign Plate'] },
+    { name: 'Cleaver', parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Large Plate', 'Large Sword Blade'] },
+    { name: 'Shuriken', parts: ['Knife Blade', 'Knife Blade', 'Knife Blade', 'Knife Blade'] },
+  ];
+
   const [toolStats, setToolStats] = useState<any>(null);
-  const [materials, setMaterials] = useState<Material[]>([]); // Materials state
-  const [modifiers, setModifiers] = useState<Modifier[]>([]); // State to store the modifier descriptions
+  const [materials, setMaterials] = useState<Material[]>([]);
+  const [modifiers, setModifiers] = useState<Modifier[]>([]);
 
-  // Define the list of tools (you can also fetch this from a JSON file if needed)
+  // Initialize selectedTool if not already set
   useEffect(() => {
-    const fetchTools = async () => {
-      try {
-        // Replace this with actual fetch if tools are stored in a JSON file
-        const data: Tool[] = [
-          {
-            name: 'Katana',
-            parts: ['Tough Tool Rod', 'Tough Binding', 'Large Sword Blade', 'Large Sword Blade'],
-          },
-          { name: 'Pickaxe', parts: ['Tool Rod', 'Binding', 'Pickaxe Head'] },
-          { name: 'Shovel', parts: ['Tool Rod', 'Binding', 'Shovel Head'] },
-          { name: 'Hatchet', parts: ['Tool Rod', 'Binding', 'Axe Head'] },
-          { name: 'Mattock', parts: ['Tool Rod', 'Axe Head', 'Shovel Head'] },
-          { name: 'Kama', parts: ['Tool Rod', 'Binding', 'Kama Head'] },
-          { name: 'Hammer', parts: ['Tough Tool Rod', 'Large Plate', 'Hammer Head', 'Large Plate'] },
-          {
-            name: 'Excavator',
-            parts: ['Tough Tool Rod', 'Tough Binding', 'Large Plate', 'Excavator Head'],
-          },
-          {
-            name: 'Lumberaxe',
-            parts: ['Tough Tool Rod', 'Tough Binding', 'Large Plate', 'Broad Axe Head'],
-          },
-          {
-            name: 'Scythe',
-            parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Tough Binding', 'Scythe Head'],
-          },
-          { name: 'Broadsword', parts: ['Tool Rod', 'Wide Guard', 'Sword Blade'] },
-          { name: 'Longsword', parts: ['Tool Rod', 'Hand Guard', 'Sword Blade'] },
-          { name: 'Rapier', parts: ['Tool Rod', 'Cross Guard', 'Sword Blade'] },
-          { name: 'Frypan', parts: ['Tool Rod', 'Pan'] },
-          { name: 'Battlesign', parts: ['Tool Rod', 'Sign Plate'] },
-          {
-            name: 'Cleaver',
-            parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Large Plate', 'Large Sword Blade'],
-          },
-          { name: 'Shuriken', parts: ['Knife Blade', 'Knife Blade', 'Knife Blade', 'Knife Blade'] },
-        ];
-        setTools(data);
-
-        // Initialize selectedTool if not already set
-        if (!selectedTool) {
-          setSelectedTool(data[0].name);
-        }
-      } catch (error) {
-        console.error('Error fetching tools:', error);
-      }
-    };
-
-    fetchTools();
-  }, [selectedTool, setSelectedTool]);
+    if (!selectedTool) {
+      setSelectedTool(tools[0].name);
+    }
+  }, [selectedTool, setSelectedTool, tools]);
 
   // Initialize selectedMaterials when selectedTool changes
   useEffect(() => {
-    if (selectedTool && tools.length > 0) {
+    if (selectedTool) {
       const toolParts = tools.find((tool) => tool.name === selectedTool)?.parts || [];
       if (selectedMaterials.length !== toolParts.length) {
         setSelectedMaterials(Array(toolParts.length).fill(null));
+        setToolStats(null); // Reset tool stats when selected tool changes
       }
-      setToolStats(null); // Reset tool stats when selected tool changes
     }
-  }, [selectedTool, tools, selectedMaterials.length, setSelectedMaterials]);
+  }, [selectedTool, setSelectedMaterials]);
+
+  // Add this useEffect to reset selectedMaterials when settings.modpack changes
+  useEffect(() => {
+    if (selectedTool) {
+      const toolParts = tools.find((tool) => tool.name === selectedTool)?.parts || [];
+      setSelectedMaterials(Array(toolParts.length).fill(null));
+      setToolStats(null); // Reset tool stats
+    }
+  }, [settings.modpack]);
 
   // Fetch materials for the specific version
   useEffect(() => {
     const fetchMaterials = async () => {
       try {
-        const response = await fetch(`/assets/${version}.json`);
-        if (response.ok) {
-          const data = await response.json();
-          setMaterials(data); // Store fetched materials
+        const baseResponse = await fetch(`/assets/${version}.json`);
+        let baseMaterials = [];
+        if (baseResponse.ok) {
+          baseMaterials = await baseResponse.json();
         } else {
-          console.error('Error fetching materials');
+          console.error('Error fetching base materials');
+        }
+
+        if (settings.modpack && settings.modpack !== 'None') {
+          const modpackResponse = await fetch(`/assets/modpacks/${settings.modpack}.json`);
+          if (modpackResponse.ok) {
+            const modpackMaterials = await modpackResponse.json();
+            // Merge baseMaterials and modpackMaterials
+            const mergedMaterials = mergeMaterials(baseMaterials, modpackMaterials);
+            setMaterials(mergedMaterials);
+          } else {
+            console.error('Error fetching modpack materials');
+            setMaterials(baseMaterials);
+          }
+        } else {
+          setMaterials(baseMaterials);
         }
       } catch (error) {
         console.error('Error fetching materials:', error);
       }
     };
     fetchMaterials();
-  }, [version]);
+  }, [version, settings.modpack]);
+
+  // Function to merge base materials with modpack materials
+  const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[]) => {
+    const materialMap = new Map<string, Material>();
+    baseMaterials.forEach((material) => {
+      materialMap.set(material.name, material);
+    });
+    modpackMaterials.forEach((material) => {
+      materialMap.set(material.name, material); // Overwrite or add new material
+    });
+    return Array.from(materialMap.values());
+  };
 
   // Fetch modifiers data from modifiers.json
   useEffect(() => {
@@ -225,7 +237,10 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
 
   // Handle tool selection
   const handleToolSelection = (toolName: string) => {
-    setSelectedTool(toolName); // Set the new tool
+    if (selectedTool !== toolName) {
+      setSelectedTool(toolName);
+    }
+
   };
 
   // Handle material selection for a part
@@ -234,6 +249,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     partIndex: number,
     _part: ToolPart
   ) => {
+
     const newMaterials = [...selectedMaterials]; // Clone the array
     newMaterials[partIndex] = selectedOption.value; // Update the material at the specific index
 
@@ -243,11 +259,11 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
 
   // Recalculate stats whenever selectedMaterials change
   useEffect(() => {
-    if (selectedMaterials.length > 0 && tools.length > 0 && selectedTool) {
+    if (selectedMaterials.length > 0 && selectedTool) {
       const parts = tools.find((tool) => tool.name === selectedTool)?.parts || [];
       calculateToolStats(selectedMaterials, parts);
     }
-  }, [selectedMaterials, tools, selectedTool]);
+  }, [selectedMaterials, selectedTool]);
 
   // Function to calculate tool stats
   const calculateToolStats = (materials: Array<Material | null>, parts: string[]) => {
@@ -290,7 +306,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
 
   // Prepare material options for the dropdown (react-select) with "None" at the top
   const materialOptions = [
-    { value: null, label: 'None' }, // Option to reset the selection
+    { value: null, label: 'None' },
     ...materials.map((material) => ({
       value: material,
       label: material.name,
@@ -380,12 +396,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
               className={`tool-button ${selectedTool === tool.name ? 'selected' : ''}`}
               onClick={() => handleToolSelection(tool.name)}
             >
-              <img
-                src={`/assets/tools/${tool.name}.png`}
-                alt={tool.name}
-                width="75"
-                height="75"
-              />
+              <img src={`/assets/tools/${tool.name}.png`} alt={tool.name} width="75" height="75" />
               <span>{tool.name}</span>
             </button>
           ))}
@@ -422,11 +433,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
                                 option.value?.name === selectedMaterials[index]?.name || null
                             )}
                             onChange={(selectedOption) =>
-                              handleMaterialSelection(
-                                selectedOption!,
-                                index,
-                                part as ToolPart
-                              )
+                              handleMaterialSelection(selectedOption!, index, part as ToolPart)
                             }
                             placeholder={`Select Material for ${part}`}
                             isSearchable
