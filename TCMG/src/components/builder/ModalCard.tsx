@@ -9,7 +9,7 @@ interface ModalCardProps {
   onRemove: () => void;
 }
 
-const ModalCard: React.FC<ModalCardProps> = ({ toolName, materials, stats, onRemove }) => {
+const ModalCard: React.FC<ModalCardProps> = ({ toolName, stats, onRemove }) => {
   return (
     <div className="modal-card">
       <button className="close-button" onClick={onRemove}>
