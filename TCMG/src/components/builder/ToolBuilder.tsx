@@ -156,6 +156,15 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     }
   }, [selectedTool, setSelectedMaterials]);
 
+  // Add this useEffect to reset selectedMaterials when settings.modpack changes
+  useEffect(() => {
+    if (selectedTool) {
+      const toolParts = tools.find((tool) => tool.name === selectedTool)?.parts || [];
+      setSelectedMaterials(Array(toolParts.length).fill(null));
+      setToolStats(null); // Reset tool stats
+    }
+  }, [settings.modpack]);
+
   // Fetch materials for the specific version
   useEffect(() => {
     const fetchMaterials = async () => {
