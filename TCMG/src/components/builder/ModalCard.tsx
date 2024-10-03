@@ -1,8 +1,11 @@
 import React from 'react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import { Material } from '@components/builder/ToolBuilder.tsx';
 import './ModalCard.css';
+
+interface Material {
+  // Will import from ToolBuilder later when using image generation
+}
 
 interface Modifier {
   name: string;
@@ -14,7 +17,7 @@ interface ModalCardProps {
   materials: Array<Material | null>;
   stats: any;
   onRemove: () => void;
-  modifiersData: Modifier[]; // Add this line
+  modifiersData: Modifier[];
 }
 
 const ModalCard: React.FC<ModalCardProps> = ({ toolName, stats, onRemove, modifiersData }) => {
@@ -36,35 +39,65 @@ const ModalCard: React.FC<ModalCardProps> = ({ toolName, stats, onRemove, modifi
         className="tool-image"
       />
       <div className="tool-stats-card">
-        {/* Display the stats similar to how they are displayed in ToolBuilder */}
-        <p>Durability: {stats?.durability || 'N/A'}</p>
-        <p>Mining Level: {stats?.miningLevel || 'N/A'}</p>
-        <p>Mining Speed: {stats?.miningSpeed || 'N/A'}</p>
-        <p>Attack Damage: {stats?.attack || 'N/A'}</p>
-        <p>Attack Speed: {stats?.attackSpeed || 'N/A'}</p>
-        <p>DPS: {stats?.DPS || 'N/A'}</p>
-        <p>Modifiers:</p>
-          {stats?.modifiers?.length > 0 ? (
-            <ul>
-              {stats.modifiers.map((modifier: string, index: number) => (
-                <OverlayTrigger
-                  key={index}
-                  placement="top"
-                  overlay={
-                    <Tooltip id={`tooltip-${index}`}>
-                      {findModifierDescription(modifier)}
-                    </Tooltip>
-                  }
-                >
-                  <li className="modifier" style={{ cursor: 'pointer' }}>
-                    {modifier}
-                  </li>
-                </OverlayTrigger>
-              ))}
-            </ul>
-          ) : (
-            <p>None</p>
-          )}
+        {toolName === 'Shuriken' ? (
+          <>
+            <p>Ammo: {stats?.ammo || 'N/A'}</p>
+            <p>Attack Damage: {stats?.attack || 'N/A'}</p>
+            <p>Modifiers:</p>
+            {stats?.modifiers?.length > 0 ? (
+              <ul>
+                {stats.modifiers.map((modifier: string, index: number) => (
+                  <OverlayTrigger
+                    key={index}
+                    placement="top"
+                    overlay={
+                      <Tooltip id={`tooltip-${index}`}>
+                        {findModifierDescription(modifier)}
+                      </Tooltip>
+                    }
+                  >
+                    <li className="modifier" style={{ cursor: 'pointer' }}>
+                      {modifier}
+                    </li>
+                  </OverlayTrigger>
+                ))}
+              </ul>
+            ) : (
+              <p>None</p>
+            )}
+          </>
+        ) : (
+          <>
+            <p>Durability: {stats?.durability || 'N/A'}</p>
+            <p>Mining Level: {stats?.miningLevel || 'N/A'}</p>
+            <p>Mining Speed: {stats?.miningSpeed || 'N/A'}</p>
+            <p>Attack Damage: {stats?.attack || 'N/A'}</p>
+            <p>Attack Speed: {stats?.attackSpeed || 'N/A'}</p>
+            <p>DPS: {stats?.DPS || 'N/A'}</p>
+            <p>Modifiers:</p>
+            {stats?.modifiers?.length > 0 ? (
+              <ul>
+                {stats.modifiers.map((modifier: string, index: number) => (
+                  <OverlayTrigger
+                    key={index}
+                    placement="top"
+                    overlay={
+                      <Tooltip id={`tooltip-${index}`}>
+                        {findModifierDescription(modifier)}
+                      </Tooltip>
+                    }
+                  >
+                    <li className="modifier" style={{ cursor: 'pointer' }}>
+                      {modifier}
+                    </li>
+                  </OverlayTrigger>
+                ))}
+              </ul>
+            ) : (
+              <p>None</p>
+            )}
+          </>
+        )}
       </div>
     </div>
   );
