@@ -4,6 +4,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 import Calculator from '@components/builder/Calculator';
 import ModalCard from '@components/builder/ModalCard';
+import { Settings as SettingsType } from '@components/settings/Settings';
 import './ToolBuilder.css';
 
 export interface Material {
@@ -33,9 +34,16 @@ interface Modifier {
 
 interface ToolBuilderProps {
   version: string;
+  selectedTool: string | null;
+  setSelectedTool: React.Dispatch<React.SetStateAction<string | null>>;
+  selectedMaterials: Array<Material | null>;
+  setSelectedMaterials: React.Dispatch<React.SetStateAction<Array<Material | null>>>;
+  builtTools: BuiltTool[];
+  setBuiltTools: React.Dispatch<React.SetStateAction<BuiltTool[]>>;
+  settings: SettingsType; // Add this line
 }
 
-interface BuiltTool {
+export interface BuiltTool {
   toolName: string;
   materials: Array<Material | null>;
   stats: any;
@@ -69,7 +77,7 @@ const partToCategory: Record<ToolPart, 'head' | 'extra' | 'handle'> = {
   'Tough Tool Rod': 'handle',
 };
 
-const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
+const ToolBuilder: React.FC<ToolBuilderProps> = ({ version, settings }) => {
 
   const tools = [
     { name: 'Katana', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Sword Blade', 'Large Sword Blade'] },
@@ -105,19 +113,46 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
   useEffect(() => {
     const fetchMaterials = async () => {
       try {
-        const response = await fetch(`/assets/${version}.json`);
-        if (response.ok) {
-          const data = await response.json();
-          setMaterials(data); // Store fetched materials
+        const baseResponse = await fetch(`/assets/${version}.json`);
+        let baseMaterials = [];
+        if (baseResponse.ok) {
+          baseMaterials = await baseResponse.json();
         } else {
-          console.error('Error fetching materials');
+          console.error('Error fetching base materials');
+        }
+
+        if (settings.modpack && settings.modpack !== 'None') {
+          const modpackResponse = await fetch(`/assets/modpacks/${settings.modpack}.json`);
+          if (modpackResponse.ok) {
+            const modpackMaterials = await modpackResponse.json();
+            // Merge baseMaterials and modpackMaterials
+            const mergedMaterials = mergeMaterials(baseMaterials, modpackMaterials);
+            setMaterials(mergedMaterials);
+          } else {
+            console.error('Error fetching modpack materials');
+            setMaterials(baseMaterials);
+          }
+        } else {
+          setMaterials(baseMaterials);
         }
       } catch (error) {
         console.error('Error fetching materials:', error);
       }
     };
     fetchMaterials();
-  }, [version]);
+  }, [version, settings.modpack]);
+
+  // Function to merge base materials with modpack materials
+  const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[]) => {
+    const materialMap = new Map<string, Material>();
+    baseMaterials.forEach((material) => {
+      materialMap.set(material.name, material);
+    });
+    modpackMaterials.forEach((material) => {
+      materialMap.set(material.name, material); // Overwrite or add new material
+    });
+    return Array.from(materialMap.values());
+  };
 
   // Fetch modifiers data from modifiers.json
   useEffect(() => {

@@ -1,0 +1,18 @@
+/* Settings.css */
+
+/* Container for the entire settings page */
+.settings {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Header for the Settings page */
+  .settings h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  /* You can add additional styles for other settings sections here */
+  

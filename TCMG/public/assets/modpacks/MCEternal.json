@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Supremium",
+        "mod": "Mystical Agriculture",
+        "image": "/assets/materials/supremium.png",
+        "head": {
+            "durability": 999, 
+            "miningLevel": "Cobalt",
+            "miningSpeed": 99, 
+            "attack": 99, 
+            "modifiers": [
+                "Fractured", 
+                "Cheap" 
+            ]
+        },
+        "handle": {
+            "modifier": 99, 
+            "durability": 99, 
+            "modifiers": [
+                "Prosperous"
+            ]
+        },
+        "extra": {
+            "durability": 99, 
+            "modifiers": [
+                "Prosperous"
+            ]
+        }
+    }
+]
