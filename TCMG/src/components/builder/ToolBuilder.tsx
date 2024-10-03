@@ -240,6 +240,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     if (selectedTool !== toolName) {
       setSelectedTool(toolName);
     }
+
   };
 
   // Handle material selection for a part
@@ -248,8 +249,11 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     partIndex: number,
     _part: ToolPart
   ) => {
-    const newMaterials = [...selectedMaterials];
-    newMaterials[partIndex] = selectedOption.value;
+
+    const newMaterials = [...selectedMaterials]; // Clone the array
+    newMaterials[partIndex] = selectedOption.value; // Update the material at the specific index
+
+    // Update the state with the newly selected material
     setSelectedMaterials(newMaterials);
   };
 
@@ -289,16 +293,18 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
   const handleBuildTool = () => {
     if (!selectedTool || !toolStats) return;
 
+    // Create a new built tool object
     const newBuiltTool: BuiltTool = {
       toolName: selectedTool,
       materials: selectedMaterials,
       stats: toolStats,
     };
 
+    // Add the new built tool to the list
     setBuiltTools([...builtTools, newBuiltTool]);
   };
 
-  // Prepare material options for the dropdown
+  // Prepare material options for the dropdown (react-select) with "None" at the top
   const materialOptions = [
     { value: null, label: 'None' },
     ...materials.map((material) => ({

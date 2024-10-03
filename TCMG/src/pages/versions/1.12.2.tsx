@@ -9,12 +9,20 @@ import { Settings as SettingsType } from '@components/settings/Settings';
 import { Gear } from 'react-bootstrap-icons';
 import './1.12.2.css';
 
+// Import types from ToolBuilder or define them here
+import { Material, BuiltTool } from '@components/builder/ToolBuilder';
+
 const Version1_12_2: React.FC = () => {
   const [activeTab, setActiveTab] = useState('materials');
   const [selectedTool, setSelectedTool] = useState<string | null>('Katana');
   const [selectedMaterials, setSelectedMaterials] = useState<Array<Material | null>>([]);
   const [builtTools, setBuiltTools] = useState<BuiltTool[]>([]);
   const [settings, setSettings] = useState<SettingsType>({ modpack: 'None' });
+
+  // Add state variables for selectedTool, selectedMaterials, and builtTools
+  const [selectedTool, setSelectedTool] = useState<string | null>(null);
+  const [selectedMaterials, setSelectedMaterials] = useState<Array<Material | null>>([]);
+  const [builtTools, setBuiltTools] = useState<BuiltTool[]>([]);
 
   return (
     <div className="version-page">
