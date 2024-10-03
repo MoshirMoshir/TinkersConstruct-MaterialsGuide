@@ -9,6 +9,7 @@ import './ToolBuilder.css';
 
 export interface Material {
   name: string;
+  mod: string;
   head?: {
     durability: number;
     miningLevel: string;
@@ -309,7 +310,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     { value: null, label: 'None' },
     ...materials.map((material) => ({
       value: material,
-      label: material.name,
+      label: `${material.name} - ${material.mod}`,
     })),
   ];
 
