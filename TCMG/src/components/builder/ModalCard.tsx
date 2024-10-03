@@ -17,7 +17,7 @@ interface ModalCardProps {
   modifiersData: Modifier[]; // Add this line
 }
 
-const ModalCard: React.FC<ModalCardProps> = ({ toolName, materials, stats, onRemove, modifiersData }) => {
+const ModalCard: React.FC<ModalCardProps> = ({ toolName, stats, onRemove, modifiersData }) => {
   // Function to find the description for a modifier
   const findModifierDescription = (modifierName: string) => {
     const modifier = modifiersData.find((mod) => mod.name === modifierName);
