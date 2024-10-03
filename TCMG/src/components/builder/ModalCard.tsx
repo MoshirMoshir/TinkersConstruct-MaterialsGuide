@@ -1,15 +1,29 @@
 import React from 'react';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import { Material } from '@components/builder/ToolBuilder.tsx';
 import './ModalCard.css';
+
+interface Modifier {
+  name: string;
+  description: string;
+}
 
 interface ModalCardProps {
   toolName: string;
   materials: Array<Material | null>;
   stats: any;
   onRemove: () => void;
+  modifiersData: Modifier[]; // Add this line
 }
 
-const ModalCard: React.FC<ModalCardProps> = ({ toolName, stats, onRemove }) => {
+const ModalCard: React.FC<ModalCardProps> = ({ toolName, materials, stats, onRemove, modifiersData }) => {
+  // Function to find the description for a modifier
+  const findModifierDescription = (modifierName: string) => {
+    const modifier = modifiersData.find((mod) => mod.name === modifierName);
+    return modifier ? modifier.description : 'No description available';
+  };
+
   return (
     <div className="modal-card">
       <button className="close-button" onClick={onRemove}>
@@ -33,13 +47,24 @@ const ModalCard: React.FC<ModalCardProps> = ({ toolName, stats, onRemove }) => {
           {stats?.modifiers?.length > 0 ? (
             <ul>
               {stats.modifiers.map((modifier: string, index: number) => (
-                <li key={index}>{modifier}</li>
+                <OverlayTrigger
+                  key={index}
+                  placement="top"
+                  overlay={
+                    <Tooltip id={`tooltip-${index}`}>
+                      {findModifierDescription(modifier)}
+                    </Tooltip>
+                  }
+                >
+                  <li className="modifier" style={{ cursor: 'pointer' }}>
+                    {modifier}
+                  </li>
+                </OverlayTrigger>
               ))}
             </ul>
           ) : (
             <p>None</p>
           )}
-
       </div>
     </div>
   );

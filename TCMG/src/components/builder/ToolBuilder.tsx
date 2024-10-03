@@ -70,12 +70,6 @@ const partToCategory: Record<ToolPart, 'head' | 'extra' | 'handle'> = {
 };
 
 const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
-  const [selectedTool, setSelectedTool] = useState<string | null>('Katana'); // Default selected tool
-  const [selectedMaterials, setSelectedMaterials] = useState<Array<Material | null>>([]); // Array to hold material selections for each part
-  const [toolStats, setToolStats] = useState<any>(null);
-  const [materials, setMaterials] = useState<Material[]>([]); // Materials state
-  const [modifiers, setModifiers] = useState<Modifier[]>([]); // State to store the modifier descriptions
-  const [builtTools, setBuiltTools] = useState<BuiltTool[]>([]);
 
   const tools = [
     { name: 'Katana', parts: ['Tough Tool Rod', 'Tough Binding', 'Large Sword Blade', 'Large Sword Blade'] },
@@ -96,6 +90,16 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
     { name: 'Cleaver', parts: ['Tough Tool Rod', 'Tough Tool Rod', 'Large Plate', 'Large Sword Blade'] },
     { name: 'Shuriken', parts: ['Knife Blade', 'Knife Blade', 'Knife Blade', 'Knife Blade'] },
   ];
+
+  const [selectedTool, setSelectedTool] = useState<string | null>('Katana'); // Default selected tool
+  // Initialize selectedMaterials based on the default selected tool's parts
+  const defaultTool = tools.find((tool) => tool.name === selectedTool);
+  const initialMaterials = defaultTool ? Array(defaultTool.parts.length).fill(null) : [];
+  const [selectedMaterials, setSelectedMaterials] = useState<Array<Material | null>>(initialMaterials);
+  const [toolStats, setToolStats] = useState<any>(null);
+  const [materials, setMaterials] = useState<Material[]>([]); // Materials state
+  const [modifiers, setModifiers] = useState<Modifier[]>([]); // State to store the modifier descriptions
+  const [builtTools, setBuiltTools] = useState<BuiltTool[]>([]);
 
   // Fetch materials for the specific version
   useEffect(() => {
@@ -142,15 +146,18 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
 
   // Handle tool selection
   const handleToolSelection = (toolName: string) => {
-    // console.log(`Tool selected: ${toolName}`);
-    
-    // Clear the selected materials when switching tools
-    setSelectedMaterials(new Array(tools.find(tool => tool.name === toolName)?.parts.length).fill(null));
-
-    // Reset stats
-    setToolStats(null); 
     setSelectedTool(toolName); // Set the new tool
+  
+    // Get the parts of the selected tool
+    const toolParts = tools.find((tool) => tool.name === toolName)?.parts || [];
+  
+    // Reset selected materials based on the new tool's parts
+    setSelectedMaterials(Array(toolParts.length).fill(null));
+  
+    // Reset stats
+    setToolStats(null);
   };
+  
 
   // Handle material selection for a part
   const handleMaterialSelection = (selectedOption: { value: Material | null }, partIndex: number, _part: ToolPart) => {
@@ -438,6 +445,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({ version }) => {
                 toolName={builtTool.toolName}
                 materials={builtTool.materials}
                 stats={builtTool.stats}
+                modifiersData={modifiers}
                 onRemove={() => {
                   const updatedBuiltTools = [...builtTools];
                   updatedBuiltTools.splice(index, 1);
