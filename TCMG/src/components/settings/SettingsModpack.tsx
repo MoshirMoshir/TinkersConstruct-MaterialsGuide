@@ -18,7 +18,6 @@ const SettingsModpack: React.FC<SettingsModpackProps> = ({ settings, setSettings
   useEffect(() => {
     const fetchModpacks = async () => {
       try {
-        // Assuming you can fetch the list of modpack filenames from the server
         const response = await fetch('/assets/modpacks/modpacks.json');
         if (response.ok) {
           const modpackList = await response.json(); // ['MCEternal.json', 'AnotherModpack.json']
@@ -45,20 +44,23 @@ const SettingsModpack: React.FC<SettingsModpackProps> = ({ settings, setSettings
 
   return (
     <div className="settings-modpack">
-      <h3>Select Modpack</h3>
-      <div className="modpack-options">
-        {modpackOptions.map((option) => (
-          <label key={option.value} className="modpack-option">
-            <input
-              type="radio"
-              name="modpack"
-              value={option.value}
-              checked={settings.modpack === option.value}
-              onChange={handleModpackChange}
-            />
-            {option.label}
-          </label>
-        ))}
+      <div className="modpack-box">
+        <h3>Select Modpack</h3>
+        <div className="modpack-options">
+          {modpackOptions.map((option) => (
+            <div key={option.value} className="modpack-option">
+              <input
+                type="radio"
+                id={`modpack-${option.value}`}
+                name="modpack"
+                value={option.value}
+                checked={settings.modpack === option.value}
+                onChange={handleModpackChange}
+              />
+              <label htmlFor={`modpack-${option.value}`}>{option.label}</label>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
