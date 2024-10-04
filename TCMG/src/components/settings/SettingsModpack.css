@@ -1,6 +1,3 @@
-/* SettingsModpack.css */
-
-/* Container for the modpack settings section */
 .settings-modpack {
   margin-bottom: 30px;
   display: flex;
@@ -26,7 +23,7 @@
 }
 
 /* Container for the modpack options */
-.modpack-options {
+.modpack-list {
   display: flex;
   flex-direction: column;
 }
