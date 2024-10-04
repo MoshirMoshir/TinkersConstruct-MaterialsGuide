@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import SettingsModpack from '@components/settings/SettingsModpack';
 import SettingsMods from '@components/settings/SettingsMods';
 import './Settings.css';
