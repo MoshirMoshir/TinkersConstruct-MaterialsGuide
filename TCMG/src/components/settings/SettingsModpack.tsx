@@ -46,7 +46,7 @@ const SettingsModpack: React.FC<SettingsModpackProps> = ({ settings, setSettings
     <div className="settings-modpack">
       <div className="modpack-box">
         <h3>Select Modpack</h3>
-        <div className="modpack-options">
+        <div className="modpack-list">
           {modpackOptions.map((option) => (
             <div key={option.value} className="modpack-option">
               <input

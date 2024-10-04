@@ -1,0 +1,78 @@
+.settings-mods {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Center the box horizontally */
+  }
+  
+
+  /* Box styling for the modpack options */
+.mods-box {
+    width: 100%;
+    max-width: 500px; /* Maximum width */
+    padding: 20px;
+    background-color: var(--background2-color);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .settings-mods h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    text-align: center;
+  }
+  
+  .settings-mods p {
+    color: var(--text-light-color);
+    margin-bottom: 12px;
+  }
+  
+  .mods-list {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .mod-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: var(--text-color);
+  }
+  
+  .mod-option input {
+    margin-right: 8px;
+  }
+
+  /* Hover effect */
+  .mod-option:hover {
+    background-color: var(--background-color);
+    color: white; /* Assuming you have a variable for text color on primary background */
+  }
+  
+/* Selected option styling */
+  .mod-option.checked {
+    font-weight: bold;
+    color: #da727e;
+  }
+  
+  
+  /* Scrollbar styling */
+  .mods-list::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .mods-list::-webkit-scrollbar-track {
+    background: var(--background2-color);
+  }
+  
+  .mods-list::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+  }
+  
+  .mods-list::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark-color);
+  }

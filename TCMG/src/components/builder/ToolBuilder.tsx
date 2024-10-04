@@ -171,7 +171,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     const fetchMaterials = async () => {
       try {
         const baseResponse = await fetch(`/assets/${version}.json`);
-        let baseMaterials = [];
+        let baseMaterials: Material[] = [];
         if (baseResponse.ok) {
           baseMaterials = await baseResponse.json();
         } else {
@@ -181,23 +181,37 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
         if (settings.modpack && settings.modpack !== 'None') {
           const modpackResponse = await fetch(`/assets/modpacks/${settings.modpack}.json`);
           if (modpackResponse.ok) {
-            const modpackMaterials = await modpackResponse.json();
+            const modpackMaterials: Material[] = await modpackResponse.json();
             // Merge baseMaterials and modpackMaterials
             const mergedMaterials = mergeMaterials(baseMaterials, modpackMaterials);
-            setMaterials(mergedMaterials);
+            // Filter materials only if selectedMods is defined and not empty
+            const filteredMaterials =
+              settings.selectedMods && settings.selectedMods.length > 0
+                ? mergedMaterials.filter((material: Material) => settings.selectedMods.includes(material.mod))
+                : mergedMaterials;
+            setMaterials(filteredMaterials);
           } else {
             console.error('Error fetching modpack materials');
-            setMaterials(baseMaterials);
+            setMaterials(
+              settings.selectedMods && settings.selectedMods.length > 0
+                ? baseMaterials.filter((material: Material) => settings.selectedMods.includes(material.mod))
+                : baseMaterials
+            );
           }
         } else {
-          setMaterials(baseMaterials);
+          setMaterials(
+            settings.selectedMods && settings.selectedMods.length > 0
+              ? baseMaterials.filter((material: Material) => settings.selectedMods.includes(material.mod))
+              : baseMaterials
+          );
         }
       } catch (error) {
         console.error('Error fetching materials:', error);
       }
     };
     fetchMaterials();
-  }, [version, settings.modpack]);
+  }, [version, settings.modpack, settings.selectedMods]);
+
 
   // Function to merge base materials with modpack materials
   const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[]) => {
@@ -223,7 +237,7 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
           console.error('Error fetching modifiers');
         }
       } catch (error) {
-        console.error('Error:', error);
+        console.error('Error fetching modifiers:', error);
       }
     };
 
@@ -241,7 +255,6 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     if (selectedTool !== toolName) {
       setSelectedTool(toolName);
     }
-
   };
 
   // Handle material selection for a part
@@ -250,10 +263,8 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
     partIndex: number,
     _part: ToolPart
   ) => {
-
     const newMaterials = [...selectedMaterials]; // Clone the array
     newMaterials[partIndex] = selectedOption.value; // Update the material at the specific index
-
     // Update the state with the newly selected material
     setSelectedMaterials(newMaterials);
   };
@@ -386,6 +397,8 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
 
   return (
     <div className="tool-builder">
+      <h1>Tool Builder</h1>
+      <br/>
       {/* Main Content */}
       <div className="tool-builder-main">
         {/* Tool Selection Section */}
