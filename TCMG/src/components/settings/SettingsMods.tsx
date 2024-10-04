@@ -60,20 +60,22 @@ const SettingsMods: React.FC<SettingsModsProps> = ({ settings, setSettings, vers
 
   return (
     <div className="settings-mods">
-      <h2>Mods Settings</h2>
-      <p>Select the mods you want to exclude:</p>
-      <div className="mods-list">
-        {modOptions.map((mod, index) => (
-          <label key={mod.name} className="mod-option">
-            <input
-              type="checkbox"
-              checked={mod.checked}
-              onChange={() => handleCheckboxChange(index)}
-            />
-            {mod.name}
-          </label>
-        ))}
-      </div>
+      <div className = "mods-box">
+        <h3>Mods Blacklist</h3>
+        <p>Select mods to <span style={{ color: '#da727e' }}>exclude</span> their materials from the database:</p>
+        <div className="mods-list">
+            {modOptions.map((mod, index) => (
+            <label key={mod.name} className={`mod-option ${mod.checked ? 'checked' : ''}`}>
+                <input
+                type="checkbox"
+                checked={mod.checked}
+                onChange={() => handleCheckboxChange(index)}
+                />
+                {mod.name}
+            </label>
+            ))}
+        </div>
+        </div>
     </div>
   );
 };

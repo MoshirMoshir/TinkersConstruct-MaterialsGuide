@@ -1,16 +1,25 @@
 .settings-mods {
-    background-color: var(--background2-color);
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Center the box horizontally */
   }
   
-  .settings-mods h2 {
-    color: var(--text-color);
-    margin-bottom: 8px;
+
+  /* Box styling for the modpack options */
+.mods-box {
+    width: 100%;
+    max-width: 500px; /* Maximum width */
+    padding: 20px;
+    background-color: var(--background2-color);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .settings-mods h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    text-align: center;
   }
   
   .settings-mods p {
@@ -19,12 +28,11 @@
   }
   
   .mods-list {
-    max-height: 200px;
+    max-height: 500px;
     overflow-y: auto;
     border: 1px solid var(--border-color);
     padding: 8px;
     border-radius: 4px;
-    background-color: var(--background-color);
   }
   
   .mod-option {
@@ -37,6 +45,19 @@
   .mod-option input {
     margin-right: 8px;
   }
+
+  /* Hover effect */
+  .mod-option:hover {
+    background-color: var(--background-color);
+    color: white; /* Assuming you have a variable for text color on primary background */
+  }
+  
+/* Selected option styling */
+  .mod-option.checked {
+    font-weight: bold;
+    color: #da727e;
+  }
+  
   
   /* Scrollbar styling */
   .mods-list::-webkit-scrollbar {
