@@ -60,7 +60,7 @@ const Version1_12_2: React.FC = () => {
           />
         )}
         {activeTab === 'modifiers' && <ModifierAccordion />}
-        {activeTab === 'settings' && <Settings settings={settings} setSettings={setSettings} />}
+        {activeTab === 'settings' && <Settings settings={settings} setSettings={setSettings} version="1.12.2"/>}
       </div>
     </div>
   );

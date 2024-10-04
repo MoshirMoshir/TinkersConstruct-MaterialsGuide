@@ -70,16 +70,24 @@ const Materials: React.FC<MaterialsProps> = ({ version, settings }) => {
   }, [version, settings.modpack]);
 
   // Function to merge materials
-const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[]) => {
-  const materialMap = new Map<string, Material>();
-  baseMaterials.forEach((material) => {
-    materialMap.set(material.name, material);
+  const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[]) => {
+    const materialMap = new Map<string, Material>();
+    baseMaterials.forEach((material) => {
+      materialMap.set(material.name, material);
+    });
+    modpackMaterials.forEach((material) => {
+      materialMap.set(material.name, material); // Overwrite or add new material
+    });
+    return Array.from(materialMap.values());
+  };
+
+  // Filter materials based on selected mods
+  const filteredByMods = materials.filter((material) => {
+    if (settings.selectedMods) {
+      return settings.selectedMods.includes(material.mod);
+    }
+    return true;
   });
-  modpackMaterials.forEach((material) => {
-    materialMap.set(material.name, material); // Overwrite or add new material
-  });
-  return Array.from(materialMap.values());
-};
 
   // Sorting function based on the selected field and direction
   const sortMaterials = (materials: Material[]) => {
@@ -122,7 +130,7 @@ const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[])
   };
 
   // Filter materials based on search term and search field (name or modifiers)
-  const filteredMaterials = materials.filter((material) => {
+  const filteredMaterials = filteredByMods.filter((material) => {
     if (searchField === 'name') {
       return material.name.toLowerCase().includes(searchTerm.toLowerCase());
     } else if (searchField === 'modifiers') {
@@ -131,7 +139,7 @@ const mergeMaterials = (baseMaterials: Material[], modpackMaterials: Material[])
         ...(material.handle?.modifiers || []),
         ...(material.extra?.modifiers || []),
       ];
-      return allModifiers.some(modifier => 
+      return allModifiers.some(modifier =>
         modifier.toLowerCase().includes(searchTerm.toLowerCase())
       );
     } else if (searchField === 'mod') {
