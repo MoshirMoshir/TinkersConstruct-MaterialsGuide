@@ -18,7 +18,8 @@ const Settings: React.FC<SettingsProps> = ({ settings, setSettings, version }) =
 
   return (
     <div className="settings">
-      <h2>Settings</h2>
+      <h1>Settings</h1>
+      <br/>
       <SettingsModpack settings={settings} setSettings={setSettings} />
       <SettingsMods settings={settings} setSettings={setSettings} version={version}/>
     </div>
