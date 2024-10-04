@@ -14,7 +14,7 @@ const Version1_12_2: React.FC = () => {
   const [selectedTool, setSelectedTool] = useState<string | null>('Katana');
   const [selectedMaterials, setSelectedMaterials] = useState<Array<Material | null>>([]);
   const [builtTools, setBuiltTools] = useState<BuiltTool[]>([]);
-  const [settings, setSettings] = useState<SettingsType>({ modpack: 'None' });
+  const [settings, setSettings] = useState<SettingsType>({ modpack: 'None' } as SettingsType);
 
   return (
     <div className="version-page">
