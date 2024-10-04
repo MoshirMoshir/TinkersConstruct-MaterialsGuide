@@ -386,6 +386,8 @@ const ToolBuilder: React.FC<ToolBuilderProps> = ({
 
   return (
     <div className="tool-builder">
+      <h1>Tool Builder</h1>
+      <br/>
       {/* Main Content */}
       <div className="tool-builder-main">
         {/* Tool Selection Section */}
