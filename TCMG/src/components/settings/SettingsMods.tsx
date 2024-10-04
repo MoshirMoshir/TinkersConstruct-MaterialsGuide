@@ -1,37 +1,38 @@
 import React, { useState, useEffect } from 'react';
+import { Settings as SettingsType } from './Settings';
 import './SettingsMods.css';
+
+interface SettingsModsProps {
+    settings: SettingsType;
+    setSettings: React.Dispatch<React.SetStateAction<SettingsType>>;
+    version: string;
+  }
 
 interface ModOption {
   name: string;
   checked: boolean;
 }
 
-interface SettingsModsProps {
-  version: string;
-  onModSelectionChange: (selectedMods: string[]) => void;
-}
-
-const SettingsMods: React.FC<SettingsModsProps> = ({ version, onModSelectionChange }) => {
+const SettingsMods: React.FC<SettingsModsProps> = ({ settings, setSettings, version }) => {
   const [modOptions, setModOptions] = useState<ModOption[]>([]);
 
   useEffect(() => {
-    console.log('useEffect triggered');
-    let isMounted = true;
     const fetchMaterialsData = async () => {
       try {
         const response = await fetch(`/assets/${version}.json`);
         if (response.ok) {
           const materialsData = await response.json();
-          console.log('Received materials data:', materialsData);
-
           // Extract unique mods from the materials list
           const uniqueMods = Array.from(new Set(materialsData.map((material: { mod: string }) => material.mod))) as string[];
-          console.log('Unique mods extracted:', uniqueMods);
 
-          const initialModOptions = uniqueMods.map((mod) => ({ name: mod, checked: false }));
-          console.log('Initial mod options:', initialModOptions);
-
-          if (isMounted) {
+          if (settings.selectedMods === undefined) {
+            const initialModOptions = uniqueMods.map((mod) => ({ name: mod, checked: false }));
+            setModOptions(initialModOptions);
+          } else {
+            const initialModOptions = uniqueMods.map((mod) => ({
+              name: mod,
+              checked: !settings.selectedMods.includes(mod),
+            }));
             setModOptions(initialModOptions);
           }
         } else {
@@ -42,12 +43,7 @@ const SettingsMods: React.FC<SettingsModsProps> = ({ version, onModSelectionChan
       }
     };
 
-    if (version) {
       fetchMaterialsData();
-    }
-    return () => {
-      isMounted = false;
-    };
   }, [version]);
 
   const handleCheckboxChange = (index: number) => {
@@ -57,7 +53,7 @@ const SettingsMods: React.FC<SettingsModsProps> = ({ version, onModSelectionChan
       );
       console.log('Updated mod options:', updatedOptions);
       const selectedMods = updatedOptions.filter((option) => !option.checked).map((option) => option.name);
-      onModSelectionChange(selectedMods);
+      setSettings({ ...settings, selectedMods });
       return updatedOptions;
     });
   };
